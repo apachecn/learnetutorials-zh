@@ -1,35 +1,3 @@
-<!--
-    需要填充的占位符：
-    
-    README.md
-    
-        LearnETutorial 中文系列教程：文档中文名
-        LearnETutorial：文档英文名
-        https://learnetutorials.com/：文档原始链接
-        let：域名前缀
-        飞龙：负责人名称
-        wizardforcel：负责人 Github 用户名
-        562826179：负责人 QQ
-        learnetutorials-zh：ApacheCN 的 Github 仓库名称
-        learnetutorials-zh：DockerHub 仓库名称
-        learnetutorials-zh：PYPI 包名称
-        learnetutorials-zh：NPM 包名称
-    
-    CNAME
-    
-        let：域名前缀
-
-    index.html
-    
-        LearnETutorial 中文系列教程：文档中文名
-        #127ac3：显示颜色
-        learnetutorials-zh：ApacheCN 的 Github 仓库名称
-
-    asset/docsify-apachecn-footer.js
-    
-        learnetutorials-zh：ApacheCN 的 Github 仓库名称
--->
-
 # LearnETutorial 中文系列教程
 
 > 原文：[LearnETutorial](https://learnetutorials.com/)
