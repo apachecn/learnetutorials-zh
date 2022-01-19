@@ -1,0 +1,286 @@
+<html>
+<head>
+<title>Python – Syntax, Comments &amp; Indentation</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>python–语法、注释和缩进</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/syntax-comments">https://learnetutorials.com/python/syntax-comments</a></blockquote>&#13;
+                        &#13;
+                       <!-- Content Area -->&#13;
+&#13;
+&#13;
+                       <p>从前面的教程中，我们已经学会了在系统中成功安装 python。现在让我们开始，学习用 python 编写我们的第一个程序，以及如何运行它。除此之外，我们将掌握一些基础知识，比如什么是注释和缩进，以及它们在 python 中的意义。如果你希望成为一名熟练的代码编写人员，那么本教程就是为你准备的。</p>
+
+<h2>第一个面向初学者的 Python 程序</h2>
+
+<p>我们可以从一个简单而容易的程序开始，这个程序叫做“Hello World”python 程序，它一直被认为是任何编程语言的初学者程序。我们可以用三种方式执行一个程序。它们是:</p>
+
+<h3>a)以交互模式运行 python</h3>
+
+<p>交互模式始终是初学者轻松学习 python 语言的最佳选择。在交互模式下，只要按下回车键，代码就会立即执行。因此，交互模式更倾向于 python 的独特特性，即代码的逐行执行。对于关注较少代码行和即时结果的人来说，交互模式是理想的。<br/>要打开交互式解释器提示，您需要首先打开命令提示符，然后键入 python。屏幕上将出现以下提示。</p>
+
+<p><img alt="Command Prompt" src="../Images/dc51e7d1270f53430d74b4a2931fef43.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/syntax/python-console.png"/></p>
+
+<p>现在输入下面显示 python 打印函数语法的例子。</p>
+
+<div class="code-example">
+<h3>示例:在命令提示符下打印“Hello World”程序</h3>
+
+<pre>
+<code>&gt;&gt;&gt; print("Hello, World !!!")
+ </code>
+</pre>
+</div>
+
+<div class="output">
+<pre>
+<samp>
+Hello, World !!!
+</samp></pre>
+</div>
+
+<ul>
+ <li>”<strong> &gt; &gt; &gt; </strong>的意思是准备运行和解释命令。</li>
+ <li><strong> print() </strong>是一个用来打印大括号内给出的消息的函数。始终将消息包含在单个('…….. '中)或双引号("……").</li>
+ <li>一按<strong>回车键</strong>输出就会出现在后续行。</li>
+</ul>
+
+<p>如果代码中出现任何错误，将输出语法错误，而不是结果。</p>
+
+<div class="code-single error">
+<p>语法错误:扫描字符串文字时终止</p>
+
+<pre>
+<code class="python">&gt;&gt;&gt; print('Hello World!!!)
+  File "<stdin>", line 1
+    print('Hello World!!!)
+                         ^ </stdin></code>
+</pre>
+</div>
+
+<div class="note">
+<p>注意:使用 exit()函数使 python 处于交互模式。</p>
+</div>
+
+<hr/>
+<h3>b)在脚本模式下运行 Python</h3>
+
+<p>执行 python 程序的另一种基本模式是使用脚本模式，在这种模式下，我们需要在一个文件(helloworld.py)中编写代码，并且稍后将执行该文件。</p>
+
+<p>在脚本模式下编写程序的步骤:</p>
+
+<ol>
+ <li>
+ <p>打开记事本编辑器，输入“你好世界！！!"程序如下所示。</p>
+ <img alt="Python Hello World" src="../Images/7d7cb0d5f7c4cbda54dbf439f7238c07.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/syntax/python-helloworld.png"/></li>
+ <li>
+ <p>将文件另存为 helloworld.py</p>
+ </li>
+ <li>现在打开命令提示符，并使用命令“cd”建立路径。在上面的例子中，python 程序保存在一个名为“PY PRO”的文件夹中，该文件夹位于桌面上。使用 cd(更改目录)命令，我们已经更改了目录并建立了运行程序的路径。<img alt="Command Prompt" src="../Images/81d01d284248761603e0f94f5869b985.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/syntax/command-prompt.png"/></li>
+ <li>执行程序的语法是<img alt="Command Prompt" src="../Images/431c24e0ae7b9b0b9334b4bd93e7b05b.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/syntax/syntax.png"/></li>
+ <li>点击输入键，结果将打印在下面一行。</li>
+</ol>
+
+<p>与其他编程语言不同，<strong> Python 对执行顺序</strong>的影响很大。为了清楚地证明逐行执行的重要性，让我们考虑下面的例子，不管模式如何，打印一些几何形状及其变化。</p>
+
+<div class="code-example">
+<h3>示例:打印几何形状-倒三角形</h3>
+
+<pre>
+<code>print("__________")
+print("\        /")
+print(" \      / ")
+print("  \    /  ")
+print("   \  /   ")
+print("    \/    ")
+
+</code>
+</pre>
+</div>
+
+<p><strong>输出</strong></p>
+
+<div class="output">
+<pre>
+<samp>__________
+\        /
+ \      / 
+  \    /  
+   \  /   
+    \/  
+</samp></pre>
+</div>
+
+<p>从上面的例子中，我们可以理解 python 以有序的方式运行它的代码，因此 Python 非常重视它的指令。为了说明上面的例子可以稍微修改一下，看看区别。</p>
+
+<div class="code-example">
+<h3>示例:打印几何形状–逐行执行图解</h3>
+
+<pre>
+<code>print("\        /")
+print(" \      / ")
+print("__________")
+print("  \    /  ")
+print("   \  /   ")
+print("    \/    ")
+
+</code></pre>
+</div>
+
+<p><strong>输出</strong></p>
+
+<div class="output">
+<pre>
+<samp>\        /
+ \      / 
+__________
+  \    /  
+   \  /   
+    \/  
+</samp></pre>
+</div>
+
+<p>脚本模式的主要缺点是编译需要更多的时间。</p>
+
+<hr/>
+<h3>c)使用 IDE 运行 Python</h3>
+
+<p>我们可以用另一种方式执行 python，即使用集成开发环境。集成开发环境比纯文本编辑器工作得更好，因为它启用了一些功能。集成开发环境允许快速编辑、执行和更多能够提高代码速度和生产率的特性。下面列出了一些可供选择的集成开发环境。</p>
+
+<ul>
+ <li>路径</li>
+ <li>spyder python(python 语言)</li>
+ <li>崇高的文本 3</li>
+ <li>黯然失色</li>
+</ul>
+
+<p>如果您的系统中有这些集成开发环境，您可以使用它们来学习 python 编程语言，如果没有，您可以下载并使用它们以方便您。</p>
+
+<h2>Python 注释</h2>
+
+<p>到目前为止，我们已经了解了用 python 执行程序的不同方法。现在让我们掌握书写干净和精确的代码。一个人应该提高他们的注释技巧，让每个人都能读懂代码。</p>
+
+<h3>如何用 python 写注释？</h3>
+
+<p>为了提高代码的透明度，开发人员使用 python 注释。<strong> Python 注释</strong>通常在一些语句或文本后面写有一个散列(#)字符。注释可以放在行首或行内。开头的注释用于描述程序或 python 脚本。如果代码复杂或难以理解，内联注释会给出代码的含义。考虑到注释是为了阐明代码，python 不会解释注释，并且在整个代码中保持不活动。</p>
+
+<div class="code-example">
+<h3>示例:如何用 python 创建注释</h3>
+
+<pre>
+<code>
+#program to find the sum and difference of two numbers
+A = 5       #A is a variable 
+B = 3          #B is a variable
+print("A+B = ",A+B) #prints the sum of A and B
+print("A-B = ",A-B) #prints the difference of A and B 
+
+#programs ends
+</code>
+</pre>
+</div>
+
+<hr/>
+<h3>Python 注释的重要性</h3>
+
+<p>不仅在 python 编程语言中，而且在其他编程语言中，注释都被认为是必不可少的一部分。这是因为以下原因。</p>
+
+<ul>
+ <li>它使代码清晰明了</li>
+ <li>注释有助于其他开发人员和开发人员自己轻松地理解 python 代码及其工作流程。</li>
+</ul>
+
+<hr/>
+<h3>多行注释</h3>
+
+<p>我们现在已经熟悉了前面例子中的单行注释。但是如果我们需要多行评论呢。实际上，python 没有多行注释的特定格式。但总会有这样或那样的方法。一种方法是在每个连续的行前添加一个散列字符，如下所示。</p>
+
+<div class="code-example">
+<h3>示例:多行注释</h3>
+
+<pre>
+<code># this is 
+#one way of
+#writing multi line comment </code>
+</pre>
+</div>
+
+<p>python 语言的另一种注释方式是将所需的文本封装在一个三引号集合中，如下所示。</p>
+
+<div class="code-example">
+<h3>示例:使用三重引号的多行注释</h3>
+
+<pre>
+<code>"""
+this is 
+one way of
+writing multi line comment
+ """</code>
+</pre>
+</div>
+
+<h2>python 中缩进的意义是什么？</h2>
+
+<p>缩进是我们在开始编写代码之前必须学习的一个关键特性。在 python 中，缩进扮演着重要的角色，就好像你不知道如何在 python 中正确地缩进序列，那么你会得到一个缩进错误，你的程序会在没有被编译的情况下卡住。</p>
+
+<h3>什么是 python 缩进？</h3>
+
+<p><strong>缩进</strong>是指在 python 代码中使用空格和 tab，使它们成为一个块。通过缩进，我们将序列分成块，这有助于编译器或解释器理解代码序列必须执行的顺序。</p>
+
+<p>像 C、C++、Java 等编程语言使用花括号来显示代码块的开始和结束。同样，python 使用缩进来指定块的开始和结束。块是语句和声明的集合。如果两个或多个语句遵循相同的缩进(垂直线)，则它们属于一个块。</p>
+
+<p>压痕的图形表示</p>
+
+<p> </p>
+
+<div class="img-div"><img alt="Pictorial representation of indentation" src="../Images/ac34c88da018bc152346476e330618a2.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/syntax/structure.png"/></div>
+
+<p> </p>
+
+<p>在上面的图片中</p>
+
+<ul>
+ <li>块 1 包含语句 1、2 和 7</li>
+ <li>块 2 包含语句 3、5 和 6</li>
+ <li>块 3 包含语句 4</li>
+</ul>
+
+<hr/>
+<h3>python 代码如何缩进？</h3>
+
+<p>下面的例子是缩进的例子。下面的程序显示了 if 语句的工作原理。</p>
+
+<div class="code-example">
+<h3>示例:如何使用缩进</h3>
+
+<pre>
+<code>if  A==10      #block 1  begins
+ Print(“A  contains value 10”)    #block 2 begins         
+else :       #block 1 continues
+ Print(“A  does not contain value 10 ”)   #block 2 continues
+Print(“All done!”)     #block 1 ends  </code>
+</pre>
+</div>
+
+<p><strong>输出</strong></p>
+
+<div class="output">
+<pre>
+<samp>A contains value 10
+All done
+</samp></pre>
+</div>
+
+<p>从上面的程序中可以很清楚地看出缩进在 python 编程语言中是如何工作的。压痕的密度取决于用户，但必须在整个特定区块保持一致。因此，python 中的缩进很重要，它提高了代码的结构简单性和可读性。</p>
+
+<div class="note">
+<p>注意:默认情况下，python 使用 4 个空格进行缩进。</p>
+</div>
+                       &#13;
+                       &#13;
+                       <!-- End Content Area -->&#13;
+&#13;
+                        
+</body>
+</html>

@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Python pop()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python pop()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/set-pop">https://learnetutorials.com/python/methods/set-pop</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 pop()函数有助于从集合中移除任意元素。它还将移除的元素作为输出返回。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>set.pop()</strong> 
+ </code>
+</pre>
+</div>
+
+<h2>pop()参数:</h2>
+
+<p>pop()函数不接受任何参数。它通过移除返回元素来更新集合。</p>
+
+<h2>pop()返回值</h2>
+
+<p>这个函数的返回值是集合中的一个随机元素。如果集合为空，此函数将引发类型错误异常。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>如果设置</td>
+   <td>随机元素</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 pop()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 Python 集中 pop()的工作方式？</h3>
+
+<pre>
+<code class="python">
+
+X ={1, 2, 3, 4}
+
+print('Return Value is', X.pop())
+print('X = ', X)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Return Value is 4
+A =  {1, 2, 3}
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 pop()如何处理空集合？</h3>
+
+<pre>
+<code class="python">
+
+
+# on an empty set
+X = {}
+  
+# Popping elements and printing them
+print(X.pop())
+  
+# The updated set
+print("Updated set is", X)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Traceback (most recent call last):
+  File "/home/7c5b1d5728eb9aa0e63b1d70ee5c410e.py", line 6, in 
+    print(X.pop())
+TypeError: pop expected at least 1 arguments, got 0
+</samp></pre>
+</div>
+                        
+</body>
+</html>

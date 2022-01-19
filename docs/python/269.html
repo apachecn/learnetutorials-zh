@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Python isspace()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python isspace()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/isspace">https://learnetutorials.com/python/methods/isspace</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 isspace()函数有助于检查字符串中的所有字符是否都是空白字符。如果字符串中充满空白字符(制表符、空格、换行符等),则该函数返回 true。)否则返回 false。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>string.isspace()</strong> 
+ </code>
+</pre>
+</div>
+
+<h2>isspace()参数:</h2>
+
+<p>isspace()方法不接受任何参数。</p>
+
+<h2>isspace()返回值</h2>
+
+<p>返回值始终是布尔值。如果字符串为空，函数返回假。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>所有空白字符</td>
+   <td>真实的</td>
+  </tr>
+  <tr>
+   <td>至少一个非空白字符</td>
+   <td>错误的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 isspace()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 isspace()在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+string = '   \t'
+print(string.isspace())
+
+string = ' a '
+print(string.isspace())
+
+string = ''
+print(string.isspace())
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+True
+False
+False
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:如何在 Python 中使用 isspace()？</h3>
+
+<pre>
+<code class="python">
+string = '\t  \n'
+if string.isspace() == True:
+  print('String full of whitespace characters')
+else:
+  print('String contains non-whitespace characters')
+  
+string = '15+3 = 18'
+
+if string.isspace() == True:
+  print('String full of whitespace characters')
+else:
+  print('String contains non-whitespace characters.')
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+String full of whitespace characters
+String contains non-whitespace characters
+</samp></pre>
+</div>
+                        
+</body>
+</html>

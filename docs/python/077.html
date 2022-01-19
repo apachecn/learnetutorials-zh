@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Python Program to print elements of an array in reverse order</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序以相反的顺序打印数组的元素</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/print-reverse-array">https://learnet utortials . com/python/programs/print-reverse-array</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要以相反的顺序打印一个数组。这是一个中级 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/syntax-comments" title="Python Syntax"> Python 语法</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in Python"> Python 循环</a></li>
+ <li><a href="../../python/python-lists" title="Python List"> Python 列表</a></li>
+</ul>
+
+<h2>python 中如何逆序打印数组？</h2>
+
+<p>数组是可由公共变量访问的同一数据类型的一组元素。在这个基本的 python 程序中，我们需要以相反的顺序打印 python 数组中的元素。例如，我们有一个元素 A=[1，2，3，4，5]的数组，然后以相反的顺序打印该数组。我们需要将数组打印为 A =[5，4，3，2，1]。</p>
+
+<p>要以相反的顺序打印元素，我们必须接受带有一些元素的数组。然后我们打印真实的数组，并在 python 中打开一个 for 循环，从数组的末尾开始，到数组的开头，将值减 1。我们使用 python 语言中的 print 语句打印循环的<strong>内的所有元素。</strong></p>
+
+<h3>算法</h3>
+
+<p><strong>步骤 1: </strong>用预定义的值初始化数组<strong> A </strong>。</p>
+
+<p><strong> STEP 2: </strong>打印 python 数组<strong> A </strong>的值，使用从零到数组长度的 for 循环使用<code>range()</code> <strong> </strong>和<code>len()</code> <strong> </strong>所使用的方法。</p>
+
+<p><strong>STEP 3；</strong>使用打印语句，以相反的顺序打印元素。</p>
+
+<p><strong>第 4 步:</strong>使用减量<strong>1</strong>从数组长度<strong> -1 </strong>到零迭代一个 for 循环。</p>
+
+<p><strong> STEP 5: </strong>使用 python 编程语言中的 Print 语句打印数组。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs"> 
+A = [1, 2, 3, 4, 5];      # initialize the array A
+  
+print("Original array: "); 
+   
+for i in range(0, len(A)):   
+ 
+    print(A[i]),     
+
+print("Reverse order Array: ");    # printing the array A in reverse order
+ 
+for i in range(len(A)-1, -1, -1):     
+
+    print(A[i]),</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Original array: 
+1
+2
+3
+4
+5
+Reverse order Array: 
+5
+4
+3
+2
+1
+</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

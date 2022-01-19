@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>Python remove()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 移除()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/set-remove">https://learnetutorials.com/python/methods/set-remove</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 remove()函数有助于从集合中移除指定的元素。如果在集合中找不到给定的元素，该方法将引发键错误。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>set.remove(element)</strong> #where element which is to be remove
+ </code>
+</pre>
+</div>
+
+<h2>移除()参数:</h2>
+
+<p>remove()函数接受一个参数。这个方法类似于 discard()，不同的是 discard()方法不会引发错误，即使找不到元素并且集合保持不变。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>元素</td>
+   <td>要从集合中移除的元素。</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>移除()返回值</h2>
+
+<p>这个方法不返回值。它只是通过移除特定元素来更新集合。如果在集合中找不到给定的元素，此方法将引发键错误。</p>
+
+<h2>Python 中 remove()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何从集合中移除元素？</h3>
+
+<pre>
+<code class="python">
+# flowers set
+flowers = {'Dalia', 'Rose', 'Lotus', 'Sunflower'}
+
+# 'Lotus' is removed
+flowers.remove('Lotus')
+
+# Updated flowers set
+print('Updated flowers Set: ', flowers)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Updated flowers Set:{'Dalia', 'Rose', 'Sunflower'}
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:尝试移除不在集合中的元素</h3>
+
+<pre>
+<code class="python">
+# flowers set
+flowers = {'Dalia', 'Rose', 'Lotus', 'Sunflower'}
+
+# 'Lotus' is removed
+flowers.remove('cat')
+
+# Updated flowers set
+print('Updated flowers Set: ', flowers) </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+    flowers.remove('cat')
+KeyError: 'cat'
+</module></stdin></samp></pre>
+</div>
+                        
+</body>
+</html>

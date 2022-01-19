@@ -1,0 +1,383 @@
+<html>
+<head>
+<title>Python Fundamentals - Keywords</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 基础-关键词</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/keywords">https://learnetutorials.com/python/keywords</a></blockquote>&#13;
+                        &#13;
+                       <!-- Content Area -->&#13;
+&#13;
+&#13;
+                       <p>在本教程中，您将探索关于所有关键字的基本介绍，这些关键字是 python 编程语言的基本构造块。你将学习什么是关键词，如何从其他单词中识别关键词以及它们的用途。</p>
+
+<p>Python 关键字是 python 语言中保留的特殊单词，用于某些独特的编程目的。关键字不能用作变量名、函数名、类名或任何其他标识符，但可以用于特定目的。例如，python 关键字–“break”用于中断 Python 代码流。因此，“break”不能用于命名变量或函数或任何其他实体。</p>
+
+<p>python 的新版本有 35 个关键字(保留字)，为 python 语言提供了很好的词汇。</p>
+
+<h2>如何在列表中列出关键词？</h2>
+
+<p>按照下面提到的简单步骤访问操作系统中的 python 关键字列表。</p>
+
+<ol>
+ <li>打开 python 外壳或命令提示符</li>
+ <li>键入“Python”，然后按回车键。</li>
+ <li>键入“help()”函数，然后按 enter 键。</li>
+ <li>现在只需在帮助实用程序中键入“关键字”。</li>
+ <li>您将获得适用于您安装的 python 版本的 python 关键字列表。</li>
+</ol>
+
+<p>下面是 Python 关键字的列表。输入任何关键字以获得更多帮助。</p>
+
+<div class="table-responsive">
+<table border="0" class="table">
+ <tbody>
+  <tr>
+   <td>错误的</td>
+   <td>等待</td>
+   <td>其他</td>
+   <td>进口</td>
+   <td>及格</td>
+  </tr>
+  <tr>
+   <td>没有人</td>
+   <td>破裂</td>
+   <td>除...之外</td>
+   <td>在</td>
+   <td>上升</td>
+  </tr>
+  <tr>
+   <td>真实的</td>
+   <td>班级</td>
+   <td>最后</td>
+   <td>存在</td>
+   <td>返回</td>
+  </tr>
+  <tr>
+   <td>和</td>
+   <td>继续</td>
+   <td>为</td>
+   <td>希腊字母的第 11 个</td>
+   <td>尝试</td>
+  </tr>
+  <tr>
+   <td>如同</td>
+   <td>极好的</td>
+   <td>从</td>
+   <td>非局部的</td>
+   <td>正在…</td>
+  </tr>
+  <tr>
+   <td>维护</td>
+   <td>是吗</td>
+   <td>全球的</td>
+   <td>不</td>
+   <td>随着</td>
+  </tr>
+  <tr>
+   <td>异步ˌ非同步(asynchronous)</td>
+   <td>艾列弗</td>
+   <td>如果</td>
+   <td>或者</td>
+   <td>产量</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2>Python 中的关键词如何识别？</h2>
+
+<p>Python 提供了许多方法来找出或检查哪些单词是为关键词保留的。它们如下所示:</p>
+
+<ol>
+ <li><strong>使用 help()实用程序</strong>:最简单的方法是在 help()实用程序中传递特定的关键词，它会给你关于那个关键词的信息。下面是你理解的例子。</li>
+ <li><strong>关键词模块处理关键词</strong>:python 中识别关键词的另一种方法是利用包含两个实体的关键词模块来处理关键词。它们是:<ul>
+  <li><strong> kwlist </strong>:提供您正在执行的 python 版本中所有关键字的列表。</li>
+  <li><strong> iskeyword() </strong>:如果提供的词是关键字，则返回 true。</li>
+ </ul>
+ </li>
+ <li><strong>检查语法错误</strong>:这不是识别关键字的简便方法，尽管如此，如果在试图用关键字赋值以将其用作函数名或变量名时出现任何语法错误，我们可以将其视为一个选项。</li>
+ <li>将 IDE 与语法荧光笔一起使用:许多 IDE 都可以与 python 一起使用，python 使用荧光笔来区分关键词和其他单词，这是一种在编码时快速识别关键词的简便方法。</li>
+</ol>
+
+<h2>Python 关键字及其用法</h2>
+
+<p>根据用法，关键字可以分为以下几类。</p>
+
+<ol>
+ <li><strong>Value Keywords: True, False, None</strong> 
+
+ <p>这些关键字是基于值的关键字，因为它们可以反复使用。这些单例值总是引用相同的对象。</p>
+
+ <ul>
+  <li><strong>真</strong>:布尔真；-如果语句为真，则输出真</li>
+  <li><strong>假</strong>:布尔假；-如果语句为假，则输出假</li>
+  <li><strong>无</strong>:表示无值。</li>
+ </ul>
+ </li>
+ <li><strong>Operator Keywords: and, or, not, in, is:</strong>
+ <p>这些关键字用于计算算术和逻辑运算。</p>
+
+ <ul>
+  <li><strong>和</strong>:表示逻辑运算符“与”的功能，当且仅当所有操作数都为真时返回真，否则返回假</li>
+  <li><strong>或</strong>:表示逻辑运算符“或”的功能，当且仅当所有操作数都为假时返回假，否则返回真</li>
+  <li><strong> not </strong>:表示逻辑运算符“not”的功能:返回给定语句或操作数的反方。</li>
+  <li>中的<strong>:是执行类似数学术语包含的，∑的隶属算子。此关键字检查列表或集合中是否存在或包含值。</strong></li>
+  <li><strong>为</strong>:用于检查两个物体的身份</li>
+ </ul>
+ </li>
+ <li><strong>Control flow Keywords: if, elif, else</strong>
+ <p>这些关键字通过允许用户使用条件逻辑和执行有利于条件的代码块来控制代码流。</p>
+
+ <ul>
+  <li><strong> if </strong>:条件正确时返回真结果的条件语句。</li>
+  <li><strong> elif </strong> : CanThis 可以看作 python 中的 switch 语句，其中多个 if 条件被一个接一个地求值。</li>
+  <li><strong>否则</strong>:当条件语句(if 或 elif)中的条件为假时，执行代码块</li>
+ </ul>
+ </li>
+ <li><strong>Iteration Keywords: for, while break, continue</strong>
+ <p>这些关键字用于创建和处理迭代。</p>
+
+ <ul>
+  <li><strong>代表</strong>:用于创建迭代。</li>
+  <li><strong>而</strong>:用于表示循环的关键字。</li>
+  <li><strong> break </strong>:中断或终止循环，转到下一条语句。</li>
+  <li><strong>继续</strong>触发条件时跳过当前迭代，但在 for 循环或 while 循环中继续剩余迭代。</li>
+ </ul>
+ </li>
+ <li>
+ <p><strong>结构关键词:def、class、with、pass、lambda </strong></p>
+
+ <ul>
+  <li><strong> def </strong>:用于定义函数或类</li>
+  <li><strong>类</strong>:定义一个类</li>
+  <li><strong> with: </strong>由上下文管理器探索，通过正确退出来控制资源，如文件或子进程或锁，无论是否引发异常</li>
+  <li><strong> pass: </strong>一个空语句，用作占位符来防止缩进错误</li>
+  <li><strong> lamda: </strong>定义 python 中的匿名或无名函数</li>
+ </ul>
+ </li>
+ <li>
+ <p><strong>退货关键词:退货，产量</strong></p>
+
+ <ul>
+  <li><strong>返回</strong>:一旦终止函数调用的执行，将结果返回给调用者。</li>
+  <li><strong>产量</strong>:作为结果返回一个发电机。</li>
+  <li><strong>导入关键词</strong>:导入，自，作为</li>
+  <li><strong>导入</strong>:用于将特定模块导入到 python 程序中。</li>
+  <li><strong>从</strong>开始:用于包含导入模块的特定部分或功能。总是伴随着进口。</li>
+  <li><strong>为</strong>:为导入的模块提供一个新名称。将计算器作为 calc 导入</li>
+ </ul>
+ </li>
+ <li>
+ <p><strong>异常处理关键词:尝试、除、引发、最后断言</strong></p>
+
+ <ul>
+  <li><strong>尝试</strong>:尝试捕捉程序中的异常错误</li>
+  <li><strong>除外:</strong>与“try”一起工作，用于错误和异常处理</li>
+  <li><strong>引发</strong>:引发用户定义的异常错误。</li>
+  <li><strong>最后</strong>:用于保证代码的顺利执行，不管一次尝试中发生了什么，除了 or else 块。</li>
+  <li><strong>断言</strong>:作为调试工具测试一个条件:如果返回 false，将会出现异常错误，如果返回 true，则空闲</li>
+ </ul>
+ </li>
+ <li><strong>异步编程关键词:异步，等待</strong><ul>
+  <li><strong>异步</strong>:用于定义异步函数或协同程序。</li>
+  <li><strong>等待</strong>:用于指定异步函数中的一个点。</li>
+ </ul>
+ </li>
+ <li><strong>范围关键词:全局、非局部</strong><ul>
+  <li><strong>全局</strong>:表示一个变量在整个程序中的作用域，即使该变量是在函数内部声明的</li>
+  <li><strong>非局部</strong>:表示变量的范围既不是局部声明的，也不是全局声明的。通常与嵌套函数相关联。</li>
+ </ul>
+ </li>
+ <li><strong>删除关键词:del </strong><ul>
+  <li><strong>del</strong>:delete 的缩写。它有助于移除 python 脚本中存在的对象。</li>
+ </ul>
+ </li>
+</ol>
+
+<p>下面以表格形式描述 Python 关键字及其对应的活动，以便于访问。为了更好地理解和可读性，以大写字符开头的关键字会出现在最上面的行中，然后是小写关键字。由此，我们可以认识到 Python 关键字是区分大小写的。</p>
+
+<table border="1">
+ <thead>
+  <tr>
+   <th>Sl No</th>
+   <th>Python 关键字</th>
+   <th>描述</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>one</td>
+   <td>真实的</td>
+   <td>布尔真；如果语句为真，则输出真</td>
+  </tr>
+  <tr>
+   <td>Two</td>
+   <td>错误的</td>
+   <td>布尔假；如果语句为假，则输出假</td>
+  </tr>
+  <tr>
+   <td>three</td>
+   <td>没有人</td>
+   <td>指示无效或空值。</td>
+  </tr>
+  <tr>
+   <td>four</td>
+   <td>和</td>
+   <td>指示逻辑运算符“与”的功能:只有当所有操作数都为真时才返回真，否则返回假</td>
+  </tr>
+  <tr>
+   <td>five</td>
+   <td>或者</td>
+   <td>指示逻辑运算符“或”的功能:只有当所有操作数都为假时才返回假，否则返回真</td>
+  </tr>
+  <tr>
+   <td>six</td>
+   <td>不</td>
+   <td>指示逻辑运算符“非”的功能:返回给定语句或操作数的反义词。</td>
+  </tr>
+  <tr>
+   <td>seven</td>
+   <td>存在</td>
+   <td>用于检查两个对象是否位于同一内存位置，从而测试对象的身份。</td>
+  </tr>
+  <tr>
+   <td>eight</td>
+   <td>如果</td>
+   <td>当正确遇到条件时返回真结果的条件语句。</td>
+  </tr>
+  <tr>
+   <td>nine</td>
+   <td>其他</td>
+   <td>确定条件语句(如果)中的条件为假时执行的下一步</td>
+  </tr>
+  <tr>
+   <td>Ten</td>
+   <td>艾列弗</td>
+   <td>else-if 的简写形式:参考 if 和 else</td>
+  </tr>
+  <tr>
+   <td>Eleven</td>
+   <td>为</td>
+   <td>用于在 python 语言中表示循环。</td>
+  </tr>
+  <tr>
+   <td>Twelve</td>
+   <td>正在…</td>
+   <td>用于在 python 语言中表示循环。</td>
+  </tr>
+  <tr>
+   <td>Thirteen</td>
+   <td>破裂</td>
+   <td>中断或终止循环并移动到下一条语句</td>
+  </tr>
+  <tr>
+   <td>Fourteen</td>
+   <td>继续</td>
+   <td>触发条件时跳过当前迭代，但在 for 循环或 while 循环中继续剩余迭代。</td>
+  </tr>
+  <tr>
+   <td>Fifteen</td>
+   <td>及格</td>
+   <td>用作占位符以防止缩进错误的 null 语句。</td>
+  </tr>
+  <tr>
+   <td>Sixteen</td>
+   <td>返回</td>
+   <td>一旦调用方终止函数调用的执行，就将结果返回给调用方。</td>
+  </tr>
+  <tr>
+   <td>Seventeen</td>
+   <td>产量</td>
+   <td>在生成器函数中用于返回结果。</td>
+  </tr>
+  <tr>
+   <td>Eighteen</td>
+   <td>尝试</td>
+   <td>试图捕捉程序中的异常错误</td>
+  </tr>
+  <tr>
+   <td>Nineteen</td>
+   <td>除...之外</td>
+   <td>与“try”一起用于错误和异常处理</td>
+  </tr>
+  <tr>
+   <td>Twenty</td>
+   <td>上升</td>
+   <td>引发用户定义的异常错误。</td>
+  </tr>
+  <tr>
+   <td>Twenty-one</td>
+   <td>最后</td>
+   <td>用于确保代码的顺利执行，即使“try”是否引发错误</td>
+  </tr>
+  <tr>
+   <td>Twenty-two</td>
+   <td>维护</td>
+   <td>用作测试条件的调试工具:它返回 false，将引发异常错误，如果返回 true，则处于空闲状态</td>
+  </tr>
+  <tr>
+   <td>Twenty-three</td>
+   <td>进口</td>
+   <td>用于将特定模块导入 python 程序。</td>
+  </tr>
+  <tr>
+   <td>Twenty-four</td>
+   <td>从</td>
+   <td>用于包含导入模块中的特定部分或功能。总是伴随着进口。</td>
+  </tr>
+  <tr>
+   <td>Twenty-five</td>
+   <td>如同</td>
+   <td>为导入的模块提供新名称。<br/> Eg:将计算器导入为 calc</td>
+  </tr>
+  <tr>
+   <td>Twenty-six</td>
+   <td>极好的</td>
+   <td>用 python 定义一个普通函数</td>
+  </tr>
+  <tr>
+   <td>Twenty-seven</td>
+   <td>希腊字母的第 11 个</td>
+   <td>在 python 中定义一个匿名函数</td>
+  </tr>
+  <tr>
+   <td>Twenty-eight</td>
+   <td>班级</td>
+   <td>用 python 定义一个类</td>
+  </tr>
+  <tr>
+   <td>Twenty-nine</td>
+   <td>全球的</td>
+   <td>指示变量在整个程序中的范围，即使该变量是在函数中声明的</td>
+  </tr>
+  <tr>
+   <td>Thirty</td>
+   <td>非本地</td>
+   <td>这表明变量的范围既不是局部声明的，也不是全局声明的。通常，与嵌套函数相关联。</td>
+  </tr>
+  <tr>
+   <td>Thirty-one</td>
+   <td>随着</td>
+   <td>内容经理探索通过正确退出来控制资源，如文件或子进程或锁，无论是否引发异常</td>
+  </tr>
+  <tr>
+   <td>Thirty-two</td>
+   <td>在</td>
+   <td>用于检查列表或集合中是否存在值。也用于 for 循环。</td>
+  </tr>
+  <tr>
+   <td>Thirty-three</td>
+   <td>是吗</td>
+   <td>delete 的缩写。它有助于移除 python 脚本中存在的对象。</td>
+  </tr>
+ </tbody>
+</table>
+                       &#13;
+                       &#13;
+                       <!-- End Content Area -->&#13;
+&#13;
+                        
+</body>
+</html>

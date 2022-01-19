@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>Python range()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 范围()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/range">https://learnetutorials.com/python/methods/range</a></blockquote>&#13;
+                         &#13;
+                        <p>内置函数 range()用于通过指定整数序列中的起点和终点来返回该序列。这个结果序列是不可变的，意味着值不能改变。对于重复特定次数的任务，我们可以将 range()方法用于循环。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>range(stop)</strong>
+<strong>range(start, stop[, step])</strong> #where stop is an integer indicates stop position.
+ </code>
+</pre>
+</div>
+
+<h2>范围()参数:</h2>
+
+<p>取三个参数。如果没有给定起始索引，它将从 0 开始，并将值增加 1，直到停止索引。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>开始</td>
+   <td>一个整数，指定从哪个位置开始。默认值为 0</td>
+   <td>可选择的</td>
+  </tr>
+  <tr>
+   <td>停止</td>
+   <td>指定停止位置的整数</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>步骤</td>
+   <td>整数决定序列中每个整数之间的增量</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>范围()返回值</h2>
+
+<p>结果序列从 0 开始到 stop - 1，如果 stop 为负或 0，则返回一个空序列。</p>
+
+<p>r[n] =开始+步骤*n(对于正和负步骤)<br/>其中，n &gt; =0 和 r[n] &lt;停止(正步骤)<br/>其中，n &gt; = 0 和 r[n] &gt;停止(负步骤)</p>
+
+<p>如果步长为零，将引发 ValueError 异常。如果非零，则根据公式返回一个序列。如果它不满足值约束，则返回一个空序列。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>整数</td>
+   <td>整数序列</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 range()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:范围在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+# empty range
+print(list(range(0)))
+
+# using range(stop)
+print(list(range(10)))
+
+# using range(start, stop)
+print(list(range(1, 10)))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>[]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 2, 3, 4, 5, 6, 7, 8, 9]</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:使用 range()创建给定数字之间的偶数列表</h3>
+
+<pre>
+<code class="python">
+start = 2
+stop = 14
+step = 2
+
+print(list(range(start, stop, step)))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>[2, 4, 6, 8, 10, 12]
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>例 range()如何处理负阶跃？</h3>
+
+<pre>
+<code class="python">
+start = 2
+stop = -14
+step = -2
+
+print(list(range(start, stop, step)))
+
+# value constraint not met
+print(list(range(start, 14, step)))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>[2, 0, -2, -4, -6, -8, -10, -12]
+[]
+</samp></pre>
+</div>
+                        
+</body>
+</html>

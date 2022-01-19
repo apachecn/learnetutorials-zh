@@ -1,0 +1,655 @@
+<html>
+<head>
+<title>Python Basic Operators</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 基本运算符</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/python-operators">https://learnetutorials.com/python/python-operators</a></blockquote>&#13;
+                        &#13;
+                       <!-- Content Area -->&#13;
+&#13;
+&#13;
+                       <p>在本教程中，我们将掌握 python 中的所有基本运算符及其表达式。此外，还将学习 python 中不同类型的运算符以及如何使用它们。</p>
+
+<p>Python 运算符是执行某种计算的独特符号。运算符作用的对象或值在 python 中称为<strong>操作数</strong>。任何包含运算符和操作数的语句都称为<strong>表达式</strong>。</p>
+
+<div class="code-example">
+<pre>
+<code class="php">
+X = 50
+Y = 20
+Z = X + Y -10
+print(Z)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>60
+</samp></pre>
+</div>
+
+<p>在上例中，<code>Z = X + Y -10</code>是以<code>+</code><code>-</code>为运算符的表达式，<code>Z</code><code>X</code><code>Y</code>&amp;<code>10</code>为操作数。</p>
+
+<h2>python 中有哪些不同类型的运算符？</h2>
+
+<p id="types">下面列出了 python 中不同类型的运算符。</p>
+
+<ul>
+ <li>算术运算符</li>
+ <li>比较运算符</li>
+ <li>逻辑运算符</li>
+ <li>赋值运算符</li>
+ <li>身份操作符</li>
+ <li>成员操作符</li>
+</ul>
+
+<h2>算术运算符</h2>
+
+<p id="arithmetic">python 中的算术运算符用于数学计算，如加法、减法、乘法、除法、模数等。</p>
+
+<table width="624">
+ <tbody>
+  <tr>
+   <th>操作员</th>
+   <th>意义</th>
+   <th>描述</th>
+   <th>例子</th>
+  </tr>
+  <tr>
+   <td>
+   <p>+</p>
+   </td>
+   <td>
+   <p>添加</p>
+   </td>
+   <td>
+   <p>添加两个操作数或一元加号</p>
+   </td>
+   <td width="131">
+   <p>10+2=12</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   <p>-</p>
+   </td>
+   <td>
+   <p>减法</p>
+   </td>
+   <td>
+   <p>从左操作数中减去右操作数或一元减</p>
+   </td>
+   <td width="131">
+   <p>10-2=8</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   <p>*</p>
+   </td>
+   <td>
+   <p>增加</p>
+   </td>
+   <td>
+   <p>将两个操作数相乘</p>
+   </td>
+   <td width="131">
+   <p>10*2=20</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   <p>/</p>
+   </td>
+   <td>
+   <p>分开</p>
+   </td>
+   <td>
+   <p>将左操作数除以右操作数</p>
+   </td>
+   <td width="131">
+   <p>10/2=5</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   <p>%</p>
+   </td>
+   <td>
+   <p>系数</p>
+   </td>
+   <td>
+   <p>除法后的余数</p>
+   </td>
+   <td width="131">
+   <p>10%2=0</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   <p>**</p>
+   </td>
+   <td>
+   <p>幂运算</p>
+   </td>
+   <td>
+   <p>执行指数计算</p>
+   </td>
+   <td width="131">
+   <p>10**2=100</p>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   <p>//</p>
+   </td>
+   <td>
+   <p>楼层划分</p>
+   </td>
+   <td>
+   <p>仅考虑商的整数部分，同时排除小数点后的值。</p>
+   </td>
+   <td width="131">
+   <p>10//2=5</p>
+
+   <p>10//-4=-3</p>
+   </td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="note">
+<p>注意:在楼层内，当结果为负时，它会降到下一个最小整数值。</p>
+</div>
+
+<p>下面的例子给出了一些算术运算符及其计算。</p>
+
+<div class="code-example">
+<pre>
+<code class="php">
+X = 10
+Y = 2
+
+print('X+Y=',X+Y)
+print('X-Y=',X-Y)
+print('X*Y=',X*Y)
+print('X/Y=',X/Y)
+print('X%Y=',X%Y)
+print('X**Y=',X**Y)
+print('X//Y=',X//Y)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+X+Y= 12
+X-Y= 8
+X*Y= 20
+X/Y= 5.0
+X%Y= 0
+X**Y= 100
+X//Y= 5
+</samp></pre>
+</div>
+
+<div class="note">
+<p>注意:除法的结果(商)总是用浮点数表示。</p>
+</div>
+
+<h2>比较运算符</h2>
+
+<p id="com">顾名思义，比较运算符也称为<strong>关系运算符</strong>比较两个操作数，并返回 True(如果条件满足)或 False(在 python 中作为结果)。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>操作员</th>
+   <th>意义</th>
+   <th>描述</th>
+   <th>例子</th>
+  </tr>
+  <tr>
+   <td>==</td>
+   <td>等于</td>
+   <td>如果两个操作数相等，则返回真</td>
+   <td>a==b</td>
+  </tr>
+  <tr>
+   <td>！=</td>
+   <td>不等于</td>
+   <td>如果两个操作数不相等，则返回真</td>
+   <td>a！=b</td>
+  </tr>
+  <tr>
+   <td>&gt;</td>
+   <td>大于</td>
+   <td>如果左操作数大于右操作数，则返回真</td>
+   <td>a&gt;b</td>
+  </tr>
+  <tr>
+   <td>&lt;</td>
+   <td>不到</td>
+   <td>如果左操作数小于右操作数，则返回真</td>
+   <td>一<b> </b></td>
+  </tr>
+  <tr>
+   <td>&gt;=</td>
+   <td>大于或等于</td>
+   <td>如果左操作数大于或等于右操作数，则返回真</td>
+   <td>a&gt;=b</td>
+  </tr>
+  <tr>
+   <td>&lt;=</td>
+   <td>小于或等于</td>
+   <td>如果左操作数小于或等于右操作数，则返回真</td>
+   <td>a&lt;=b</td>
+  </tr>
+ </tbody>
+</table>
+
+<div class="code-example">
+<h3>示例:比较运算符</h3>
+
+<pre>
+<code class="php">
+a = 10
+b = 2
+
+print('a==b is',a==b)
+print('a!=b is',a!=b)
+print('a&gt;b is',a&gt;b)
+print('a<b is="">=b is',a&gt;=b)
+print('a&lt;=b is',a&lt;=b)
+ </b></code><b is="">
+</b></pre>
+</div>
+
+<p><b is=""> <strong>输出:</strong> </b></p>
+
+<div class="output">
+<pre>
+<b is="">
+<samp>
+a==b is False
+a!=b is True
+a&gt;b is True
+a<b a="" false="" is="">=b is True
+a&lt;=b is False
+</b></samp></b></pre>
+</div>
+
+<div class="note">
+<p>注意:比较运算符通常用于控制程序的流程。</p>
+</div>
+
+<h2>逻辑运算符</h2>
+
+<p id="logic">逻辑运算符用于计算两个表达式或语句。三个基本的逻辑运算符是<code>and</code>、<code>or</code>和<code>not</code>。它们通常用于在类似于比较运算符的布尔上下文中控制程序的流程。布尔值为<code>True</code> (T)或<code>False</code> (F)。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>操作员</th>
+   <th>意义</th>
+   <th>描述</th>
+   <th>例子</th>
+  </tr>
+  <tr>
+   <td>和</td>
+   <td>逻辑与/合取</td>
+   <td>当且仅当两个语句都为真时，返回真</td>
+   <td>x 和 Y</td>
+  </tr>
+  <tr>
+   <td>或者</td>
+   <td>逻辑或/析取</td>
+   <td>如果任一语句为真，则返回真</td>
+   <td>x 还是 Y</td>
+  </tr>
+  <tr>
+   <td>不</td>
+   <td>逻辑非/否定</td>
+   <td>如果操作数是否定的，则返回 true</td>
+   <td>不是 X</td>
+  </tr>
+ </tbody>
+</table>
+
+<p><img alt="Python Logical Operators Truth Table" src="../Images/dc3ef3c6b93c8a8f6e22255053cf5b45.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/operators/truth-table.png"/></p>
+
+<p>下面是一个例子:</p>
+
+<div class="code-example">
+<pre>
+<code class="php">
+x=12
+print('x&gt;5 and x&lt;10 is',x&gt;5 and x&lt;10)
+print('x&gt;5 or x&lt;10 is',x&gt;5 or x&lt;10)
+print('not x&lt;10 is', not x&lt;10)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+x&gt;5 and x&lt;10 is False
+x&gt;5 or x&lt;10 is True
+not x&lt;10 is True
+</samp></pre>
+</div>
+
+<h2>按位运算符</h2>
+
+<p id="bit">按位运算符用于操作位级数据。常见的逻辑运算符如算术运算符、比较运算符等处理字节，而按位运算符处理字节中的位。下表列出了常见的按位运算符。3 的二进制表示是 0000 0011，4 的二进制表示是 0000 0100。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>经营者</th>
+   <th>意义</th>
+   <th>描述</th>
+   <th>例子</th>
+  </tr>
+  <tr>
+   <td>&amp;</td>
+   <td>二进制与</td>
+   <td>如果两个操作数都为真，则结果为 1，否则为 0</td>
+   <td>3&amp;4 =0</td>
+  </tr>
+  <tr>
+   <td>|</td>
+   <td>二进制或</td>
+   <td>如果任何操作数为真，则结果为 1，否则为 0</td>
+   <td>3|4=7</td>
+  </tr>
+  <tr>
+   <td>^</td>
+   <td>二进制异或</td>
+   <td>当且仅当两个操作数都为真时，结果为 1，否则为 0</td>
+   <td>3^4=7</td>
+  </tr>
+  <tr>
+   <td>~</td>
+   <td>二进制一的补码</td>
+   <td>结果是操作数的否定</td>
+   <td>~3=-4</td>
+  </tr>
+  <tr>
+   <td>&lt;&lt;</td>
+   <td>二进制左移位</td>
+   <td>将位向左对齐</td>
+   <td>Twelve</td>
+  </tr>
+  <tr>
+   <td>&gt;&gt;</td>
+   <td>二进制右移</td>
+   <td>将位向右对齐</td>
+   <td>Zero</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>按位运算符示例:</p>
+
+<div class="code-example">
+<pre>
+<code class="php">
+a=3
+b=4
+
+print('a&amp;b is',a&amp;b)
+print('a|b is',a|b)
+print('a^b is',a^b)
+print('~a is',~a)
+print('a&lt;&lt;2 is',a&lt;&lt;2)
+print('a&gt;&gt;2 is',a&gt;&gt;2)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+a&amp;b is 0
+a|b is 7
+a^b is 7
+~a is -4
+a&lt;&lt;2 is 12
+a&gt;&gt;2 is 0
+</samp></pre>
+</div>
+
+<h2>我们在哪里使用按位运算符？</h2>
+
+<p>位运算在现实世界中并不常见，因为它们通常用于低级运算。低级操作使用二进制格式 0 和 1 来操作数据。下面列出了使用按位运算符的一些领域。</p>
+
+<ul>
+ <li>主要用于嵌入式系统</li>
+ <li>数据压缩</li>
+ <li>加密</li>
+ <li>建立关系网</li>
+ <li>硬件操作</li>
+ <li>制图法</li>
+</ul>
+
+<h2 id="assign">赋值运算符</h2>
+
+<p>赋值运算符如前面教程中所研究的，为变量赋值。例如，<code>a = 10</code>给变量<code>a</code>赋值<code>10</code>。python 中有一些复合赋值运算符。他们采用了相当于<code>a= a+10</code>的表达方式<code>a+=10</code>。让我们了解一些赋值运算符，如下表所示。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>经营者</th>
+   <th>例子</th>
+   <th>意义</th>
+  </tr>
+  <tr>
+   <td>=</td>
+   <td>a = 10</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>+=</td>
+   <td>a+=10</td>
+   <td>a=a+10</td>
+  </tr>
+  <tr>
+   <td>-=</td>
+   <td>a-=10</td>
+   <td>a=a-10</td>
+  </tr>
+  <tr>
+   <td>*=</td>
+   <td>a*=10</td>
+   <td>a=a*10</td>
+  </tr>
+  <tr>
+   <td>/=</td>
+   <td>a/=10</td>
+   <td>a=a/10</td>
+  </tr>
+  <tr>
+   <td>%=</td>
+   <td>a%=10</td>
+   <td>a=a</td>
+  </tr>
+  <tr>
+   <td>//=</td>
+   <td>a/</td>
+   <td>a=a//10</td>
+  </tr>
+  <tr>
+   <td>**=</td>
+   <td>a**=10</td>
+   <td>a=a**10</td>
+  </tr>
+  <tr>
+   <td>&amp;=</td>
+   <td>a&amp;=10</td>
+   <td>a=a&amp;10</td>
+  </tr>
+  <tr>
+   <td>|=</td>
+   <td>a|=10</td>
+   <td>a=a|10</td>
+  </tr>
+  <tr>
+   <td>=</td>
+   <td>a^=10</td>
+   <td>a=a^10</td>
+  </tr>
+  <tr>
+   <td>&gt;&gt;=</td>
+   <td>a&gt;&gt;=10</td>
+   <td>a=a&gt;&gt;10</td>
+  </tr>
+  <tr>
+   <td>&lt;&lt;=</td>
+   <td>a&lt;&lt;=10</td>
+   <td>a=a&lt;&lt;10</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="member">成员操作符</h2>
+
+<p>从前面的教程中，我们熟悉了成员操作符。python 中的成员操作符用于验证序列中成员的存在，如字符串、列表、元组、集合和字典。</p>
+
+<p>python 中的两个成员操作符是:</p>
+
+<ul>
+ <li>中的<strong>:如果该成员存在于序列中，则返回真</strong></li>
+ <li><strong>不在</strong>中如果该成员在序列中不存在，则返回真。</li>
+</ul>
+
+<div class="code-example">
+<h3>成员运算符示例</h3>
+
+<pre>
+<code class="php">
+A = {1,3,5,7,8}
+print(3 in A)
+print(8 not in A)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+True
+False
+</samp></pre>
+</div>
+
+<h2 id="identity">身份操作符</h2>
+
+<p>python 中的标识运算符用于比较两个变量的内存位置。如果两个变量的存储位置相同，则结果为真。</p>
+
+<p>python 中的两个标识运算符是:</p>
+
+<ul>
+ <li><strong>为</strong>:如果操作数指向相同的对象或相同的位置，则为真</li>
+ <li><strong>不是</strong>:如果操作数指向相同的对象或相同的位置，则为假</li>
+</ul>
+
+<div class="code-example">
+<h3>身份操作员示例:</h3>
+
+<pre>
+<code class="php">
+x1=10
+x2=10
+y1=y2='OP'
+x1=[1,2,3]
+print('x1 is x2 evaluates to',x1 is x2)
+print('y1 is not x2 evaluates to',x1 is not x2)
+print('x1 is x1 evaluates to',x1 is x1)
+</code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+x1 is x2 evaluates to False
+y1 is not x2 evaluates to True
+x1 is x1 evaluates to True
+</samp></pre>
+</div>
+
+<h2 id="prece">Python 中的运算符优先级</h2>
+
+<p>运算符优先级是指运算符对表达式求值的顺序。下面的列表提供了 python 中的运算符优先级。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>命令</th>
+   <th>算术运算符</th>
+   <th>逻辑运算符</th>
+   <th>关系运算符</th>
+  </tr>
+  <tr>
+   <td>one</td>
+   <td>幂运算(**)</td>
+   <td>不</td>
+   <td>相等(==)</td>
+  </tr>
+  <tr>
+   <td>Two</td>
+   <td>补码()一元正，一元负</td>
+   <td>和</td>
+   <td>不等式(&lt;&gt;)</td>
+  </tr>
+  <tr>
+   <td>three</td>
+   <td>乘法(*)，除法(/)</td>
+   <td>或者</td>
+   <td>小于(</td>
+  </tr>
+  <tr>
+   <td>four</td>
+   <td>楼层划分(\)</td>
+   <td> </td>
+   <td>大于(&gt;)</td>
+  </tr>
+  <tr>
+   <td>five</td>
+   <td>模量(%)</td>
+   <td> </td>
+   <td>小于或等于(&lt; =)</td>
+  </tr>
+  <tr>
+   <td>six</td>
+   <td>加法(+)、减法(-)</td>
+   <td> </td>
+   <td>大于或等于(&gt; =)</td>
+  </tr>
+ </tbody>
+</table>
+                       &#13;
+                       &#13;
+                       <!-- End Content Area -->&#13;
+&#13;
+                        
+</body>
+</html>

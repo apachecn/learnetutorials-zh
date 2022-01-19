@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>Python encode()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 编码()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/encode">https://learnetutorials.com/python/methods/encode</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 encode()函数有助于将给定的字符串转换为编码格式。如果未指定编码，默认情况下将使用 UTF-8。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>string.encode(encoding='UTF-8',errors='strict')</strong> #where encodings being utf-8, ascii, etc
+ </code>
+</pre>
+</div>
+
+<h2>编码()参数:</h2>
+
+<p>encode()函数接受两个可选参数。这里的参数错误有六种类型。</p>
+
+<ul>
+ <li>失败时的严格默认响应。</li>
+ <li>忽略-忽略不可编码的 unicode</li>
+ <li>replace -将不可编码的 unicode 替换为问号(<strong>？)</strong></li>
+ <li>XML arreffreplace-它不是不可编码的 unicode，而是插入 XML 字符引用</li>
+ <li>backslashreplace 插入\ uNNNN 转义序列，而不是不可编码的 unicode</li>
+ <li>名称替换-它插入了一个\N{而不是不可编码的 unicode...}转义序列</li>
+</ul>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>编码</td>
+   <td>字符串必须编码到的编码类型</td>
+   <td>可选择的</td>
+  </tr>
+  <tr>
+   <td>错误</td>
+   <td>编码失败时的响应</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>编码()返回值</h2>
+
+<p>默认情况下，函数使用 utf-8 编码，如果出现任何故障，它会引发一个 UnicodeDecodeError 异常。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>线</td>
+   <td>编码字符串</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 encode()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何将字符串编码为默认的 Utf-8 编码？</h3>
+
+<pre>
+<code class="python">
+# unicode string
+string = 'pythön!'
+
+# print string
+print('The original string is:', string)
+
+# default encoding to utf-8
+string_utf8 = string.encode()
+
+# print result
+print('The encoded string is:', string_utf8)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+The original string is: pythön!
+The encoded string is: b'pyth\xc3\xb6n!'
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:编码如何处理错误参数？</h3>
+
+<pre>
+<code class="python">
+# unicode string
+string = 'pythön!'
+
+# print string
+print('The original string is:', string)
+
+# ignore error
+print('The encoded string (with ignore) is:', string.encode("ascii", "ignore"))
+
+# replace error
+print('The encoded string (with replace) is:', string.encode("ascii", "replace"))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+The original string is: pythön!
+The encoded string (with ignore) is: b'pythn!'
+The encoded string (with replace) is: b'pyth?n!'
+</samp></pre>
+</div>
+                        
+</body>
+</html>

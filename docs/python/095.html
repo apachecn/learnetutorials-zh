@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Python Program to printing all divisors of a number in a range</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>打印一个范围内的所有除数的 Python 程序</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/print-divisors">https://learnetutorials.com/python/programs/print-divisors</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要找到一个数的所有除数。这是一个基于算术运算的 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/syntax-comments" title="Python Syntax"> Python 语法</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in Python"> Python 循环</a></li>
+ <li><a href="../../python/decision-making-statements" title="Python decision making statements"> Python 决策语句</a></li>
+</ul>
+
+<h2>如何用 python 得到一个数字在一个范围内的所有除数？</h2>
+
+<p>一个<a href="../../python/introduction-tutorial" title="python introduction">简单的 python 程序</a>来显示一个数的所有除数，这意味着打印所有在某个范围内可以被给定数整除的数。通过检查余数是否为零来检查一个数是否能被给定的数整除。如果除法后余数为零，那么它是可分的。</p>
+
+<p>例如，让我们取数字 5，检查数字 15 是否能被 5 整除。15 / 5，得到的余数为零，所以它是可分的。</p>
+
+<p>为了在 python 语言中应用这个简单的逻辑，我们从用户那里获取下限和上限的值。那么这个数就是检查它是否可分。为此，我们打开一个<code>for loop</code>从较低范围到较高范围迭代每个数字。现在使用 python 中 if 条件内的<strong> mod </strong>运算符检查所选数字是否可被给定数字整除，并打印该数字。</p>
+
+<p>算法</p>
+
+<p><strong>步骤 1: </strong>使用输入法接受用户输入的上下限值，并使用 python 编程中的<code>int()</code>将该字符串转换为整数。</p>
+
+<p><strong>第二步:</strong>接受<strong> n </strong>的值，这个数要除以给定范围内的数。</p>
+
+<p><strong>第三步:</strong>使用 python 中的 range 方法从下往上打开一个<code>for loop</code>。</p>
+
+<p><strong>步骤 4: </strong>使用 if 条件和<strong> mod </strong>运算符检查范围内每个数字的提醒是否为零。如果条件匹配，则打印号码。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">lower=int(input("Enter lower range limit:"))
+
+upper=int(input("Enter upper range limit:"))
+
+n=int(input("Enter the number to be divided by:"))
+
+for i in range(lower,upper+1):
+
+    if(i%n==0):
+
+        print(i)</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter lower range limit: 10
+
+Enter upper range limit: 25
+
+Enter the number to be divided by: 5
+
+10
+15
+20
+25</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

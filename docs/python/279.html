@@ -1,0 +1,110 @@
+<html>
+<head>
+<title>Python rstrip()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python rstrip()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/rstrip">https://learnetutorials.com/python/methods/rstrip</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 rstrip()函数根据给定的参数删除原始字符串副本中的尾随字符。方法将此副本作为输出返回。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>string.rstrip([chars])</strong> #where chars are those to remove from right
+ </code>
+</pre>
+</div>
+
+<h2>rstrip()参数:</h2>
+
+<p>函数的作用是:将一组字符作为参数。如果未提供字符，则从字符串中删除尾随空格。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>烧焦</td>
+   <td>要作为尾随字符移除的字符</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>rstrip()返回值</h2>
+
+<p>返回值始终是字符串。在找到第一个匹配之前，所有字符组合都将从右侧开始移除。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>线</td>
+   <td>字符串的副本</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 rstrip()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 rstrip()在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+string1 = "     python     "
+
+string2 = string1.rstrip()
+
+print("of all programming languages", string2, "is my favorite")
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+of all programming languages     python is my favorite
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:在 Python 中使用 rstrip()</h3>
+
+<pre>
+<code class="python">
+# Variable declaration  
+string1 = "Python and Java* "  
+# Calling function  
+string2 = string1.rstrip(*)  
+# Displaying result  
+print("Before strip: ",string1)  
+print("After strip: ",string2)  
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Before strip:  Python and Java* 
+After strip:  Python and Java 
+</samp></pre>
+</div>
+                        
+</body>
+</html>

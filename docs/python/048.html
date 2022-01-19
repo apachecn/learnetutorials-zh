@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Python Program to find the length of a string</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>寻找字符串长度的 Python 程序</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/string-length">https://learnetutorials.com/python/programs/string-length</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <h2>什么是字符串？我们如何用 python 计算长度？</h2>
+
+<p>在这个 python 程序中，我们要检查一个字符串的长度，所以我们需要知道什么是 python 中的<a href="../../python/python-string" title="python string">一个字符串</a>。字符串是字母或字符的序列，我们必须找到它的长度。为此，我们必须使用一个计数器，当我们遍历字符串的每个字符时，该计数器将增加 1。</p>
+
+<p>接受用户的字符串后，我们将其存储在一个变量中。然后在 python 程序中使用<a href="../../python/python-loop-tutorials" title="loop structure in python">进行循环，直到字符串结束。使用变量<strong>计数</strong>在每次循环迭代中递增。最后，打印计数器值。在 Python 中，我们不需要初始化<code>for loop</code>中的变量。让我们破译密码。</a></p>
+
+<h3>算法</h3>
+
+<p>步骤 1:我们使用 python 编程中的输入函数从用户那里接受字符串，并将其存储在变量中。</p>
+
+<p>第二步:将计数器初始化为<strong>零</strong>；此计数器用于在遍历字符串时增加值。</p>
+
+<p>第三步:使用<code>for loop</code>直到绳子结束。</p>
+
+<p>第四步:每次我们在<code>for loop</code>内移动直到绳子结束时，将计数器增加<strong>一</strong>。</p>
+
+<p>第五步:使用 python 语言中的<code>print</code>将计数器的值打印为字符串的长度。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">str = input("Enter any string: ")
+count = 0  # initialize the counter to zero
+for s in str:  # Use a for loop till the string ends.
+    count = count + 1 # increment the counter by 1 every time control gets inside the for loop
+print("Length of the string is:", count)</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter any string :  Hello
+
+Length of the string is: 5</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

@@ -1,0 +1,165 @@
+<html>
+<head>
+<title>Python classmethod()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 类方法()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/classmethod">https://learnetutorials.com/python/methods/classmethod</a></blockquote>&#13;
+                         &#13;
+                        <p>通常要调用一个类的方法，我们需要首先创建该类的一个实例或对象。但是类方法绑定到类，而不是它的对象，所以类方法函数的创建返回给定函数的类方法</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>classmethod(function)</strong> #where function is an name of function</code>
+</pre>
+</div>
+
+<h2>classmethod()参数:</h2>
+
+<p>classmethod()函数只接受一个参数</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>函数</td>
+   <td>要转换为类方法的函数</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>classmethod()返回值</h2>
+
+<p>方法的返回值或输出是类方法，可以在没有类实例的情况下调用。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>功能</td>
+   <td>返回传递函数的类方法</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 classmethod()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何创建类方法？</h3>
+
+<pre>
+<code class="python">
+class Products:
+getcode = ‘P36’
+
+def getProductCode(cls):
+print('The Product Code is:', cls.getcode)
+
+# create printCode class method
+Products.getProductCode = classmethod(Products .getProductCode ) 
+Products.getProductCode ()
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>The Product Code is: P36
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:如何使用类方法创建工厂方法？</h3>
+
+<pre>
+<code class="python">
+# random Person
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @classmethod
+    def fromBirthYear(cls, name, birthYear):
+        return cls(name, date.today().year - birthYear)
+
+    def display(self):
+        print(self.name + "'s age is: " + str(self.age))
+ pers 19)
+person.display()
+ pers  1985)
+person1.display()
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Adam's age is: 19
+John's age is: 31
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 3:类方法如何用于继承？</h3>
+
+<pre>
+<code class="python">
+from datetime import date
+
+# random Person
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    @staticmethod
+    def fromFathersAge(name, fatherAge, fatherPersonAgeDiff):
+        return Person(name, date.today().year - fatherAge + fatherPersonAgeDiff)
+
+    @classmethod
+    def fromBirthYear(cls, name, birthYear):
+        return cls(name, date.today().year - birthYear)
+
+    def display(self):
+        print(self.name + "'s age is: " + str(self.age))
+
+class Man(Person):
+    sex = 'Male'
+
+man = Man.fromBirthYear('John', 1985)
+print(isinstance(man, Man))
+
+man1 = Man.fromFathersAge('John', 1965, 20)
+print(isinstance(man1, Man))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>True
+False
+</samp></pre>
+</div>
+                        
+</body>
+</html>

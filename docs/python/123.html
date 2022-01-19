@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>Python Program to find largest element in a array using bubble sort</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>使用冒泡排序寻找数组中最大元素的 Python 程序</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/largest-element-bubble-sort">https://learnet utortials . com/python/programs/最大元素-冒泡-排序</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要找到最大的元素。这是一个基于数字的 python 程序。</p>
+
+<p>为了更好地理解这个例子，我们总是建议您学习下面列出的<a href="../" title="Python tutorial"> Python 编程</a>的基本主题:</p>
+
+<ul>
+ <li><a href="../../python/python-operators" title="operators in python"> Python 运算符</a></li>
+ <li><a href="../../python/python-modules-tutorials" title="python modules"> Python 模块</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in python"> Python 循环</a></li>
+</ul>
+
+<h2>什么是泡沫类型？</h2>
+
+<p>在这个 python 程序中，我们需要使用 Bubble 排序找到列表中最大的元素。所以首先，要对列表进行排序，然后从排序后的列表中选择最大的元素。为了对列表进行排序，使用了冒泡排序方法。</p>
+
+<p><strong>冒泡排序:</strong>这是一种使用最简单的排序类型，但在现实世界中很少使用。也叫<strong>比较</strong>排序。它的工作原理是，我们必须从列表中取出一个元素，并将其与相邻的元素进行比较，直到取出的元素在列表中处于正确的位置。</p>
+
+<p>在第二遍中，我们获取下一个元素，并将其与相邻元素进行比较，使其处于正确的位置。我们继续这样做，直到列表完全排序。冒泡排序的最坏情况复杂度是<strong> O(n**2) </strong>。其中 n 是列表中元素的数量。</p>
+
+<h2>我们如何使用 python 实现冒泡排序并找到最大的元素？</h2>
+
+<p>让我们在初始化一个列表后检查 python 程序，在<code>for loop</code>的帮助下，使用<code>append</code>操作符将元素添加到列表中。然后打开一个嵌套的 for 循环来实现冒泡排序，因为在外部 for 循环中，我们将每个元素从零到列表的长度。使用内部 for 循环，我们将该元素与列表中的所有其他元素进行比较。借助 python 编程中的<code>if</code>条件语句，如果比较元素大于被比较元素，我们使用临时变量进行<code>swap</code>。</p>
+
+<h3>算法</h3>
+
+<p>步骤 1:初始化一个列表，用 python 语言存储列表中的值。</p>
+
+<p>第二步:使用 python 中的<code>input</code>方法接受用户列表中需要的术语数量。</p>
+
+<p>第三步:在 python 编程中使用<code>for loop</code>和<code>append</code>运算符将输入的元素插入列表。</p>
+
+<p>第四步:从<strong>零</strong>到列表的<strong>长度</strong>开始外 for 循环，比较列表中的每个元素。</p>
+
+<p>步骤 5:打开内部 for 循环，从零到一个小于列表长度的元素。</p>
+
+<p>第六步:借助<code>if</code>条件比较，该元素高于列表中的相邻元素。</p>
+
+<p>步骤 7:借助于<strong>临时</strong>变量，使用<code>swap</code>方法将元素与相邻元素交换。</p>
+
+<p>步骤 8:打印列表的最后一个元素，作为列表中最大的元素。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">a=[]
+n=int(input("Enter number of elements:"))
+for i in range(1,n+1):
+    b=int(input("Enter element:"))
+    a.append(b)
+for i in range(0,len(a)):
+    for j in range(0,len(a)-i-1):
+        if(a[j]&gt;a[j+1]):
+            temp=a[j]
+            a[j]=a[j+1]
+            a[j+1]=temp 
+print('Largest element in the list is:',a[n-1])</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter number of elements: 5
+Enter element: 12
+Enter element: 14
+Enter element: 5
+Enter element: 7
+Enter element: 2
+
+Largest element in the list is: 14</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

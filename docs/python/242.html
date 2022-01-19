@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>Python intersection()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 交集()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/intersection">https://learnetutorials.com/python/methods/intersection</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的交集()函数有助于找到集合中的公共元素。该函数返回一个包含所有比较集中共有元素的新集合。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>A.intersection(*other_sets)</strong> #where A is a set of any iterables, like strings, lists, and dictionaries.
+ </code>
+</pre>
+</div>
+
+<h2>交叉点()参数:</h2>
+
+<p>intersection()函数可以接受许多用于比较的集合参数(*表示)，并用逗号分隔这些集合。我们还可以使用&amp;运算符(交集运算符)来查找集合的交集。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>A</td>
+   <td>要在其中搜索相等项目的集合</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>其他集</td>
+   <td>另一组用于搜索相等的项目。</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>交叉点()返回值</h2>
+
+<p>返回值总是一个集合。如果没有传递任何参数，它将返回该集合的一个浅层副本。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>设置</td>
+   <td>有共同元素的集合</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中的交集()方法示例</h2>
+
+<div class="code-example">
+<h3>示例 1:交集()在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+A = {'a', 'b', 'c', 'd'}
+B = {'c', 'e', 'f', 'a'}
+C = {'d', 'f', 'a', 'g'}
+
+print(A.intersection(B))
+print(B.intersection(C))
+print(A.intersection(C))
+print(C.intersection(A, B))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+{'a', 'c'}
+{'f', 'a'}
+{'a', 'd'}
+{'a'}
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:如何使用&amp;运算符设置交集？</h3>
+
+<pre>
+<code class="python">
+A = {'a', 'b', 'c', 'd'}
+B = {'c', 'e', 'f', 'a'}
+C = {'d', 'f', 'h', 'g'}
+
+print(A &amp; B)
+print(B &amp; C)
+print(A &amp; C)
+print(A &amp; B &amp; C)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+{'a', 'c'}
+{'f'}
+{'d'}
+{}
+</samp></pre>
+</div>
+                        
+</body>
+</html>

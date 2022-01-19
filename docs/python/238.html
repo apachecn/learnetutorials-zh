@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Python clear()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python clear()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/set-clear">https://learnetutorials.com/python/methods/set-clear</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 clear()函数用于删除集合中的所有元素。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>set.clear()</strong> 
+ </code>
+</pre>
+</div>
+
+<h2>清除()参数:</h2>
+
+<p>clear()方法不接受任何参数。要从集合中移除特定元素，我们可以使用 remove()或 discard()方法。</p>
+
+<h2>清除()返回值</h2>
+
+<p>clear()方法不返回值(返回 None)。它通过清空集合来更新集合。</p>
+
+<h2>Python 中 clear()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何使用 clear()从集合中移除所有元素？</h3>
+
+<pre>
+<code class="python">
+# set of alphabet 
+alphabets = {'a', 'b', 'c','d'}
+print('Alphabets (before clear):', alphabets )
+
+# clearing alphabets 
+alphabets .clear()
+print('Alphabets (after clear):', alphabets )
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Alphabets (before clear): {'a', 'b', 'c','d'}
+Alphabets (after clear): set()
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:如何清除数字集？</h3>
+
+<pre>
+<code class="python">
+# Numbers set
+numbers = {1, 2, 3, 4, 5}
+
+# Set before clear()
+print("Original Set is:", numbers)
+
+# removing all the elements from the set
+numbers.clear()
+
+# Set after clear()
+print("Updated Set is:", numbers)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Original Set is: {1, 2, 3, 4, 5}
+Updated  Set is: set()
+</samp></pre>
+</div>
+                        
+</body>
+</html>

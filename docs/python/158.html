@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>Python divmod()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python divmod（）</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/divmod">https://learnetutorials.com/python/methods/divmod</a></blockquote>&#13;
+                         &#13;
+                        <p>在 Python divmod 中，函数取两个数字，第一个除以第二个，返回商和提醒的元组。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>divmod(dividend,divisor)</strong> #The dividend will be divided by </code>
+</pre>
+</div>
+
+<h2>divmod()参数:</h2>
+
+<p>该函数采用两个强制参数，第一个参数被视为被除数，第二个参数被视为除数。第二个参数不能为零，因为</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>红利</td>
+   <td>一个数字，将被划分</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>除数</td>
+   <td>用来除的数字。该数字不能为零</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>divmod()返回值</h2>
+
+<p>该函数总是根据输入返回商数和余数的元组。这两个参数都是强制性的。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>被除数和除数</td>
+   <td>商数和提醒的元组</td>
+  </tr>
+  <tr>
+   <td>字符串作为第一个参数，编码作为第二个参数</td>
+   <td>编码为字节的字符串</td>
+  </tr>
+  <tr>
+   <td>可重复的</td>
+   <td>字节与可迭代的大小相同</td>
+  </tr>
+  <tr>
+   <td>无参数</td>
+   <td>创建没有元素的字节对象</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 divmod()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:将整数作为参数传递</h3>
+
+<pre>
+<code class="python">
+result = divmod(2,1)
+print(“Divmod of 2 and 1 are :”, result)
+result = divmod(3.5,2.5)
+print(“Divmod of 3.5 and 2.5 are :”, result)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Divmod of 2 and 1 are : (2, 0)
+Divmod of 3.5 and 2.5 are : (1.0, 1.0)
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:将浮点作为参数传递</h3>
+
+<pre>
+<code class="python">
+print('divmod(8.0, 3) = ', divmod(8.0, 3))
+print('divmod(3, 8.0) = ', divmod(3, 8.0))
+print('divmod(7.5, 2.5) = ', divmod(7.5, 2.5))
+print('divmod(2.6, 0.5) = ', divmod(2.6, 0.5))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+divmod(8.0, 3) =  (2.0, 2.0)
+divmod(3, 8.0) =  (0.0, 3.0)
+divmod(7.5, 2.5) =  (3.0, 0.0)
+divmod(2.6, 0.5) =  (5.0, 0.10000000000000009)
+</samp></pre>
+</div>
+                        
+</body>
+</html>

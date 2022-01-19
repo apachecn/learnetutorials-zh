@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Python Program to print the elements in even position of array</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序打印数组偶数位置的元素</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/print-even-array-elements">https://learnet utortials . com/python/programs/print-偶数数组元素</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们必须打印数组的偶数元素。这是一个基于列表的 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/syntax-comments" title="Python Syntax"> Python 语法</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in Python"> Python 循环</a></li>
+ <li><a href="../../python/python-lists" title="Python list or array"> Python 列表</a></li>
+</ul>
+
+<h2>如何打印数组中的偶数元素？</h2>
+
+<p>在这个简单的 python 程序中，我们需要打印数组偶数位置上的元素。所以我们必须了解数组在 python 中是如何工作的。在数组中，元素存储在内存位置序列中，可以通过变量进行索引。为了得到第一个元素，我们使用索引<strong>a【0】</strong>，它存储在位置一。</p>
+
+<p>例如，让我们举一个数组 A = [0，1，2，3，4，5]的例子；这里，元素 0 存储在位置 1，可以被 A[0]访问。所以每个元素的位置比索引大一个。</p>
+
+<pre>
+Position  1  2  3  4  5
+array A=[ a, b, c, d, e ]
+Index =   0  1  2  3  4 
+</pre>
+
+<p> </p>
+
+<p>为了解决初级 python 程序，我们使用 python 中的 for 循环，从数组 1 的位置开始到数组的长度，通过递增 2 到达数组的末尾，以获得数组的下一个偶数索引，因此我们在第一次迭代中使用元素 b，因为数组[1]是位置 2。我们得到 d，因为它增加了 2。</p>
+
+<h3>算法</h3>
+
+<p>步骤 1:使用一些预定义的元素初始化数组<strong> X </strong>。</p>
+
+<p>第二步:使用打印语句打印“元素在均匀的位置。”</p>
+
+<p>第三步:使用<code>for loop</code>从 1 开始，直到数组<strong> X </strong>的长度，递增<strong> 2 </strong>。我们用 1 开始 For 循环，因为<strong>X【1】</strong>将在位置 2。</p>
+
+<p>步骤 4:使用 python 编程语言中的打印语句打印数组<strong> X </strong>中的偶数元素。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">     
+arr = [1, 2, 3, 4, 5];     
+     
+print("Array elements in even position : ");    
+
+for i in range(1, len(arr), 2):    # use the for loop to get the even index position elements. 
+    print(arr[i]);   </code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Array elements in even position : 
+2
+4</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

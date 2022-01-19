@@ -1,0 +1,174 @@
+<html>
+<head>
+<title>Python input()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 输入()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/input">https://learnetutorials.com/python/methods/input</a></blockquote>&#13;
+                         &#13;
+                        <p>input()函数有助于接受用户的输入，并以字符串格式返回输出。用户可以输入字符串或数字格式。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>input([prompt]) </strong>#Where prompt is a string value<strong>
+ </strong></code>
+</pre>
+</div>
+
+<h2>输入()参数:</h2>
+
+<p>接受单个参数。无论用户键入什么，它都将作为输入参数。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>提示</td>
+   <td>写入标准输出(通常是屏幕)的字符串，不带尾随换行符</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>输入()返回值</h2>
+
+<p>input()函数实际上是对输入字符串进行求值，并尝试将其作为 Python 代码运行，输出作为字符串返回。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>线</td>
+   <td>通过移除尾部换行符来创建字符串</td>
+  </tr>
+  <tr>
+   <td>如果电渗流</td>
+   <td>它会引发 EOFError 异常。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 input()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:输入()在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+# get input from user
+
+inputString = input()
+
+print('The inputted string is:', inputString)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Python is interesting.
+The inputted string is: Python is interesting
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:通过提示获取用户输入</h3>
+
+<pre>
+<code class="python">
+# get input from user
+
+inputString = input('Enter a string:')
+
+print('The inputted string is:', inputString)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Enter a string: Python is interesting.
+The inputted string is: Python is interesting
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 3:输入员工详细信息</h3>
+
+<pre>
+<code class="python">
+# take three values from user
+name = input("Enter Employee Name: ")
+salary = input("Enter salary: ")
+company = input("Enter Company name: ")
+
+# Display all values on screen
+print("\n")
+print("Printing Employee Details")
+print("Name", "Salary", "Company")
+print(name, salary, company)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Enter Employee Name: Jessa
+Enter salary: 8000
+Enter Company name: Google
+
+Printing Employee Details
+Name Salary Company
+Jessa 8000 Google
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 4:计算两个输入整数相加的程序</h3>
+
+<pre>
+<code class="python">
+# convert inout into int
+first_number = int(input("Enter first number ")) sec second number "))
+
+print("\n")
+print("First Number:", first_number)
+print("Second Number:", second_number)
+sum1 = first_number + second_number
+print("Addition of two number is: ", sum1)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Enter first number 28
+Enter second number 12
+
+First Number: 28
+Second Number: 12
+Addition of two number is:  40
+</samp></pre>
+</div>
+                        
+</body>
+</html>

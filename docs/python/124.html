@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Python Program to find the union of two list</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序寻找两个列表的并集</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/find-list-union">https://learnetutorials.com/python/programs/find-list-union</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要计算两个列表的并集。这是一个基于数字的 python 程序。</p>
+
+<p>为了更好地理解这个例子，我们总是建议您学习下面列出的<a href="../" title="Python tutorial"> Python 编程</a>的基本主题:</p>
+
+<ul>
+ <li><a href="../../python/python-operators" title="operators in python"> Python 运算符</a></li>
+ <li><a href="../../python/identifiers-variables" title="operators in python"> Python 基础-，标识符，变量</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in python"> Python 循环</a></li>
+</ul>
+
+<h2>什么是工会？</h2>
+
+<p>在这个简单的 python 列表程序中，我们需要找到两个列表的并集。所以让我们来看看工会是什么意思。<strong>并集</strong>是一个集合运算，可以描述为集合 A 有一些元素，集合 B 有一些元素。集合 A 和集合 B 的并集是集合 A 和集合 B 的总元素，不是重复。</p>
+
+<p>我们举个例子，集合 A { 1，2，3，4}和集合 B = {3，5，7，4}那么集合 A 和 B 的并集将是 U = { 1，2，3，4，5，7}。</p>
+
+<h2>如何用 python 实现一个并集？</h2>
+
+<p>现在，让我们检查一下如何用 python 编程语言实现这一点。在这个 python 程序中，我们使用 python 语言中的<code>for loop</code>和<code>append</code>操作符在两个列表中添加元素。在两个列表中添加元素后，我们使用内置函数集<code>union()</code>应用联合。</p>
+
+<p>然后使用 python 中的<code>print</code>语句打印列表。set <code>union</code>函数是 python 编程中的内置函数，从所有列表中返回所有不重复的值。这是一个基本的集合运算。union 函数的基本语法是<strong> list.union(*list name) </strong>，其中 list 是列表名，参数是我们想要取 union 的列表。</p>
+
+<h3>算法</h3>
+
+<p><strong> STEP 1: </strong>初始化一个列表，用于在 python 编程语言中将数字添加到列表中。</p>
+
+<p><strong>步骤 2: </strong>由用户输入术语的数量，并使用<code>int</code>和<code>input</code>方法将该值存储在变量中。</p>
+
+<p><strong>步骤 3: </strong>使用<code>for loop</code>、<code>append</code>将数字添加到用户输入的列表中。</p>
+
+<p><strong>步骤 4: </strong>初始化第二个列表。</p>
+
+<p><strong>步骤 5: </strong>接受元素的数量，并使用与第一个列表相同的<code>append</code>运算符插入数字。</p>
+
+<p><strong> STEP 6: </strong>应用并集内置函数获取两个列表的并集。</p>
+
+<p><strong>步骤 7: </strong>使用 Python 编程语言中的<code>print</code>语句打印集合的并集。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">l1 = []
+num1 = int(input('Enter size of list 1: '))
+for n in range(num1):
+    numbers1 = int(input('Enter any number:'))
+    l1.append(numbers1)
+ 
+l2 = []
+num2 = int(input('Enter size of list 2:'))
+for n in range(num2):
+    numbers2 = int(input('Enter any number:'))
+    l2.append(numbers2) 
+un = list(set().union(l1,l2))
+print('The Union of two lists is:',un)</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter size of list 1: 4
+
+Enter any number: 2
+Enter any number: 4
+Enter any number: 3
+Enter any number: 6
+
+Enter size of list 2: 4
+
+Enter any number: 1
+Enter any number: 2
+Enter any number: 5
+Enter any number: 4
+
+The Union of two lists is: [1, 2, 3, 4, 5, 6]
+</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>Python isinstance()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python isinstance()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/isinstance">https://learnetutorials.com/python/methods/isinstance</a></blockquote>&#13;
+                         &#13;
+                        <p>如果函数的第一个参数是第二个参数的实例或子类，则 isinstance()函数返回 true。实际上，我们可以说这个函数用于检查给定的对象是给定类的实例还是子类。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>isinstance(object, classinfo) </strong> # Where object specify name of the object</code>
+</pre>
+</div>
+
+<h2>isinstance()参数:</h2>
+
+<p>接受 2 个参数，其中第一个参数是 string、int、float、long 或自定义类型的对象。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>目标</td>
+   <td>要检查的对象。</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>分类(classify)</td>
+   <td>类名或类名元组。</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>isinstance()返回值</h2>
+
+<p>它返回真或假的布尔值。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>对象是一个实例</td>
+   <td>真实的</td>
+  </tr>
+  <tr>
+   <td>对象不是实例</td>
+   <td>错误的</td>
+  </tr>
+  <tr>
+   <td>classinfo 不是类型或类型元组</td>
+   <td>TypeError exception</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 isinstance()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 isinstance()是如何工作的？</h3>
+
+<pre>
+<code class="python">
+class Foo:
+  a = 5
+  
+fooInstance = Foo()
+
+print(isinstance(fooInstance, Foo))
+print(isinstance(fooInstance, (list, tuple)))
+print(isinstance(fooInstance, (list, tuple, Foo)))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>True
+False
+True
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:使用本机类型处理 isinstance()</h3>
+
+<pre>
+<code class="python">
+numbers = [1, 2, 3]
+
+result = isinstance(numbers, list)
+print(numbers,'instance of list?', result)
+
+result = isinstance(numbers, dict)
+print(numbers,'instance of dict?', result)
+
+result = isinstance(numbers, (dict, list))
+print(numbers,'instance of dict or list?', result)
+
+number = 5
+
+result = isinstance(number, list)
+print(number,'instance of list?', result)
+
+result = isinstance(number, int)
+print(number,'instance of int?', result)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>[1, 2, 3] instance of list? True
+[1, 2, 3] instance of dict? False
+[1, 2, 3] instance of dict or list? True
+5 instance of list? False
+5 instance of int? True
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 isinstance()的工作方式另一个示例？</h3>
+
+<pre>
+<code class="python">
+# Python isinstance() function example  
+class Student:  
+    id = 101  
+    name = "John"  
+    def __init__(self, id, name):  
+        self.id=id  
+        self.name=name  
+  
+student = Student(1010,"John")  
+lst = [12,34,5,6,767]  
+# Calling function   
+print(isinstance(student, Student)) # isinstance of Student class  
+print(isinstance(lst, Student))  
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>True
+False
+</samp></pre>
+</div>
+                        
+</body>
+</html>

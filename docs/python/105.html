@@ -1,0 +1,81 @@
+<html>
+<head>
+<title>Python Program to print an inverted star pattern</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>打印倒星形图案的 Python 程序</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/inverted-star-pattern">https://learnet utortials . com/python/programs/倒星形模式</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要打印倒星形图案。这是一个模式 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/syntax-comments" title="Python Syntax"> Python 语法</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in Python"> Python 循环</a></li>
+ <li><a href="../../python/python-operators" title="Python operators"> Python 运算符</a></li>
+</ul>
+
+<h2>什么是倒星形图案？</h2>
+
+<p>在这个关于图案打印的简单 python 程序中，我们需要打印一个倒星形图案。为此，我们必须了解倒挂的恒星模式。倒置的星形模式是每行的星星递减。假设以 5 为例，这意味着我们需要打印 5 行星，因为第一行有 5 颗星，第二行有 4 颗星，就像最后一行有 1 颗星一样。</p>
+
+<pre>
+* * * * *
+
+  * * * *
+
+    * * *
+
+      * *
+
+        *
+</pre>
+
+<h2>如何用 python 打印倒星形图案？</h2>
+
+<p>在这个模式 python 程序示例中，我们使用了一个 for 循环，在每次迭代中从数字到零递减<strong> 1 </strong>。每次<code>for loop</code>迭代，我们都要打印星星数和空格数的和。对于第一行，我们使用公式<strong>[(n-I)* ' '+I * ' *]</strong>，这意味着<strong> (n-i) </strong>乘以空格<strong> + i </strong>乘以<strong> *。</strong></p>
+
+<p>所以在第一个为循环值的<strong> </strong>中 n = 5 且 i = 5。所以 n - i = 5 -5 = 0，所以不会有空格，在下一部分中，i = 5 so 5 乘以<strong> * </strong>所以我们得到打印的 5 颗星<strong>* * * *</strong>，在每一次迭代中，值都发生了变化，我们使用 python 编程基础知识得到了反转模式星。</p>
+
+<h3>算法</h3>
+
+<p><strong>步骤 1: </strong>使用输入功能接受用户输入的数字，并使用<code>int()</code>将该字符串转换为整数。</p>
+
+<p><strong>步骤 2: </strong>在每次迭代中使用从数字到零的<code>for loop</code>递减<strong> 1 </strong>。</p>
+
+<p><strong> STEP 3: </strong>使用 python 编程语言中的 print 通过应用公式<strong> (n-i) * ' ' + i * '* . '来打印开始</strong></p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">n=int(input("Enter number of rows: "))
+for i in range (n,0,-1):
+    print((n-i) * ' ' + i * '*')</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter number of rows: 5
+*****
+ ****
+  ***
+   **
+    *</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

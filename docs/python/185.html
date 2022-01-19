@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>Python next()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 下一个()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/next">https://learnetutorials.com/python/methods/next</a></blockquote>&#13;
+                         &#13;
+                        <p>内置函数 next()用于从迭代器返回下一个元素。通常该函数用在循环中。当它到达迭代器的末尾时，它会抛出一个错误。为了避免这种情况，我们可以指定默认值。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>next(iterator, default)</strong> #where iterable can be list, tuple etc
+ </code>
+</pre>
+</div>
+<h2>下一个()参数:</h2>
+
+<p>接受两个参数。在这种情况下，迭代器可以是字符串、字节、元组、列表或范围，集合可以是字典、集合或冻结集合。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>可迭代的</td>
+   <td>从迭代器中检索到下一项</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>系统默认值</td>
+   <td>如果迭代器用尽，则返回该值</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>下一个()返回值</h2>
+
+<p>如果它到达迭代器的末尾，并且没有指定默认值，它将引发 StopIteration 异常。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>迭代程序</td>
+   <td>迭代器的下一个元素</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 next()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何获取下一个项目</h3>
+
+<pre>
+<code class="python">
+random = [5, 9, 'cat']
+
+# converting the list to an iterator
+random_iterator = iter(random)
+print(random_iterator)
+
+# Output: 5
+print(next(random_iterator))
+
+# Output: 9
+print(next(random_iterator))
+
+# Output: 'cat'
+print(next(random_iterator))
+
+# This will raise Error
+# iterator is exhausted
+print(next(random_iterator))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp><list_iterator at="" object="">
+5
+9
+cat
+Traceback (most recent call last):
+  File "python", line 18, in <module>
+StopIteration
+</module></list_iterator></samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:将默认值传递给下一个()</h3>
+
+<pre>
+<code class="python">
+random = [5, 9]
+
+# converting the list to an iterator
+random_iterator = iter(random)
+
+# Output: 5
+print(next(random_iterator, '-1'))
+
+# Output: 9
+print(next(random_iterator, '-1'))
+
+# random_iterator is exhausted
+# Output: '-1'
+print(next(random_iterator, '-1'))
+print(next(random_iterator, '-1'))
+print(next(random_iterator, '-1'))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>5
+9
+-1
+-1
+-1
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 3:函数到达集合末尾时抛出一个错误</h3>
+
+<pre>
+<code class="python">
+# Python next() function example  
+number = iter([256, 32, 82]) # Creating iterator  
+# Calling function  
+item = next(number)   
+# Displaying result  
+print(item)  
+# second item  
+item = next(number)  
+print(item)  
+# third item  
+item = next(number)  
+print(item)  
+# fourth item  
+item = next(number) # error, no item is present  
+print(item)  
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Traceback (most recent call last): 
+  File "source_file.py", line 14, in 
+    item = next(number)
+StopIteration 
+256
+32
+82
+</samp></pre>
+</div>
+                        
+</body>
+</html>

@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Python Program to read the contents of a file</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>读取文件内容的 Python 程序</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/read-content-file">https://learnet utortials . com/python/programs/read-content-file</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要读取文件的内容。这是一个基于数字的 python 程序。</p>
+
+<p>为了更好地理解这个例子，我们总是建议您学习下面列出的<a href="../" title="Python tutorial"> Python 编程</a>的基本主题:</p>
+
+<ul>
+ <li><a href="../../python/file-operations" title="operators in python"> Python 文件</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="operators in python"> Python 循环</a></li>
+</ul>
+
+<h2>python 中的文件是什么？</h2>
+
+<p>在这个文件 python 程序中，我们需要了解文件。<strong>文件</strong>用作命名的位置，用于在硬盘中永久存储某些相关数据。我们知道，随机存取存储器(<strong> RAM </strong>)是一种易失性存储器，当断电时，RAM 中的所有数据都会被删除。因此，我们需要一些方法来将我们的数据存储在非易失性存储器中，即硬盘，也就是文件。</p>
+
+<h2>python 中对文件的基本操作是什么？</h2>
+
+<p>我们需要一些基本操作来保存文件中的数据。也就是说，</p>
+
+<ul>
+ <li><strong>打开文件</strong></li>
+ <li><strong>文件读/写</strong>(文件操作)</li>
+ <li><strong>关闭文件</strong></li>
+</ul>
+
+<p>文件可以通过内置函数打开，即<code>open()</code>返回一个文件对象，用于读写文件。此外，为了关闭文件，我们使用<code>close()</code>功能，这将释放文件使用的所有内存和资源。Python 有一个内置的垃圾收集器来执行这个功能。但我们没有用它来释放资源。为了阅读，我们必须在阅读模式下打开文件，我们有很多方法来阅读文件。同样，为了写文件，我们需要以写模式打开文件。</p>
+
+<h2>如何用 python 读取文件内容？</h2>
+
+<p>在这个文件 python 程序中，我们需要接受一个带有<strong>的字符串作为文件名。txt </strong>扩展名，然后我们在读取模式下使用<code>open()</code>打开文件。现在使用<code>readline</code>函数读取文件的第一行，并将其保存到变量中。现在打开一个 while 循环，打印文件的所有剩余行，并使用<code>print</code>功能打印所有行。然后使用<code>close()</code>功能关闭文件。</p>
+
+<h3>算法</h3>
+
+<p><strong>步骤 1: </strong>接受文本格式的文件名，并将其保存在变量中。</p>
+
+<p><strong>步骤 2: </strong>在<strong>模式下打开文件，读取</strong>模式，并将其保存在变量中。</p>
+
+<p><strong>步骤 3: </strong>使用<code>readline</code>方法读取文件第一行。</p>
+
+<p><strong>步骤 4: </strong>使用 while 循环读取并打印文件的其他行。</p>
+
+<p><strong> STEP 5: </strong>打印第一行，使用 python 语言的<code>close</code>关闭文件。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">a=str(input("Enter the file with .txt:"))
+file2=open(a,'r')
+line=file2.readline()
+while(line!=""):
+    print(line)
+    line=file2.readline()
+file2.close()</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Contents of file: 
+Python Programming
+ 
+Output: 
+Enter the file with .txt: data2.txt
+Python Programming.</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

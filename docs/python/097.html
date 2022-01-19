@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Python Program to read three digits and print all combinations</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序读取三位数并打印所有组合</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/print-digit-combinations">https://learnet utortials . com/python/programs/print-digital-组合拳</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要读取三位数并打印所有的组合。这是一个中级 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/syntax-comments" title="Python Syntax"> Python 语法</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in Python"> Python 循环</a></li>
+ <li><a href="../../python/decision-making-statements" title="Python decision making statements"> Python 决策语句</a></li>
+</ul>
+
+<h2>python 中三位数的所有组合怎么打印？</h2>
+
+<p>在这个 python 程序中，我们需要接受三个数字，并且我们必须打印这些数字的所有组合。所以检查这个 python 程序的唯一条件是数字中不会有任何重复。我们通过在 python 中使用 if 条件来保证这一点。</p>
+
+<p>让我们举一个三位数 1，2，3 的例子来说明，那么可能的组合是 1 2 3，1 3 2，2 3 1，我们永远不会得到任何像 1 1 2 这样重复的数字。</p>
+
+<p>为了解决这个 python 问题，我们从用户那里获取数字，并使用 python 语言中的<code>append</code> <strong> </strong>方法将数字追加到列表中。我们使用三个 for 循环嵌套来获取每个数字，并打印这些数字的所有组合。<code>If</code>嵌套中的条件<code> for loop</code>将检查组合数字中的任何重复。如果我们发现任何重复，那么我们不会打印该组合。</p>
+
+<h3>算法</h3>
+
+<p><strong>步骤 1: </strong>输入 3 个输入数字，使用输入法将数字保存到变量中，并使用 Python 编程语言中的<code>int()</code>将该字符串转换为整数。</p>
+
+<p><strong>步骤 2: </strong>用<strong>零</strong>值初始化列表。</p>
+
+<p><strong>第三步:</strong>使用<code>append</code> <strong> </strong>方法，我们给 python 列表赋值。</p>
+
+<p><strong> STEP 4: </strong>从零到 3 打开三个嵌套<code>for loop</code>。数字的长度是取每一个数字，用 3 个数字检查每一个组合。</p>
+
+<p><strong>步骤 5: </strong>使用 python 语言中的<code>if</code>条件检查数字的值是否相同。如果不一样，那么用 python 打印那个组合。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">a=int(input("Enter first number:"))
+
+b=int(input("Enter second number:"))    # accept the digits from the user
+
+c=int(input("Enter third number:"))
+
+d=[]
+
+d.append(a)
+
+d.append(b)        # append the digits into the list
+
+d.append(c)
+
+for i in range(0,3):
+
+    for j in range(0,3):       # nested for loop to take each combination
+
+        for k in range(0,3):
+
+            if(i!=j&amp;j!=k&amp;k!=i):
+
+                print(d[i],d[j],d[k])</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter first number :  1
+Enter second number : 2
+Enter third number : 3
+1 2 3
+1 3 2
+2 1 3
+2 3 1
+3 1 2
+3 2 1</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

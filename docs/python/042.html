@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Python Program to check a number is prime or not</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序检查一个数是否是质数</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/check-prime-number">https://learnet utortials . com/python/programs/check-质数</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要检查给定的数字是否是质数。这是一个初级 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/python-loop-tutorials" title="Python Loops"> Python 循环结构</a></li>
+ <li><a href="../../python/python-datatypes" title="Datatypes in Python"> Python 数据类型</a></li>
+ <li><a href="../../python/decision-making-statements" title="Python decision making statements"> Python 决策语句</a></li>
+</ul>
+
+<h2>质数是多少？</h2>
+
+<p>在这个 python 程序中，我们需要检查一个素数。素数是可被<strong> 1 </strong>整除的正数，并且只能被该数整除。所以对于一个质数，只有两个因素。</p>
+
+<p>举个例子，我们取一个数 7，那么我们来检查一下，7 是正数，只能被 7 和 1 整除，所以它是一个<strong>质数</strong>数。</p>
+
+<h2>python 程序中如何检查一个数是不是质数？</h2>
+
+<p><strong>注:</strong> 1 不是质数，因为 1 只有一个因子，所以我们把它当作 1 不是质数。</p>
+
+<p>在这个简单的 python 程序中，我们需要从用户那里接受一个数字，并将其保存到一个变量中。现在我们通过检查数字是否为正数来检查数字是否为质数。如果不是正数，我们就查不出质数。我们必须在 python 中使用从 2 到数字的 for 循环，并使用 python 语言中的<a href="../../python/decision-making-statements" title="python Decision making structures"> if 条件</a>检查该数字是否可被该数字以下的任何数字整除。最后，打印数字是不是质数。</p>
+
+<h3>算法</h3>
+
+<p><strong> STEP 1: </strong>使用 python 中的输入函数接受来自用户的数字，并将其存储在变量中。</p>
+
+<p><strong>步骤 2: </strong>检查数量是否大于<strong> 1 </strong>。如果是，在<code>if</code>条件<code>else</code>内移动，打印的数字不是质数，因为它不是正数。</p>
+
+<p><strong>第三步:</strong>打开一个从 2 到输入数字的<code>for loop</code>，检查数字的可除性。</p>
+
+<p><strong>步骤 4: </strong>打开一个内部<code>if</code>条件，用从<strong> 2 </strong>到该数字的每个数字来修改该数字。打印给定的数字不是可以被任何数字整除的质数，并使用 break 语句中断循环。</p>
+
+<p><strong>第五步:</strong>如果循环结束，没有发现任何数能被给定数整除，则将给定数打印为质数。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">num = int(input("Enter any number: "))  # Accept the number from the user.
+
+if num &gt; 1:   # check the number is greater than 1.
+
+    for i in range(2, num):         # for loop to check the number is divisible by any number
+
+        if (num % i) == 0:      # If condition to check any divisor for the number
+
+            print(num, "it is not a prime number")
+
+            break     # break from the for loop
+
+    else:
+
+        print(num, "it is a prime number")    # if the number is less than or equal to zero then it is not a prime number
+else:
+
+    print(num, "it is not a prime number")</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter any number:  7
+
+7 It is a prime number</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

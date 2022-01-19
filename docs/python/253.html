@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Python center()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 中心()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/center">https://learnetutorials.com/python/methods/center</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 center()函数有助于使字符串居中对齐。伴随着这个函数，我们可以指定包含填充字符的字符串的宽度，以及需要在缺少的地方填充哪个字符。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>string.center(width[, fillchar])</strong> #where width is an integer number
+ </code>
+</pre>
+</div>
+
+<h2>中心()参数:</h2>
+
+<p>center()函数接受两个参数。如果缺少参数“fillchar ”,它将使用空格(" ")作为默认值。填充在左侧和右侧完成。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>宽度</td>
+   <td>返回字符串的长度</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>菲勒</td>
+   <td>插入字符</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>中心()返回值</h2>
+
+<p>方法返回一个字符串，该字符串以指定的宽度在中心对齐，并用给定的填充字符填充。它不会修改原始字符串。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>如果参数</td>
+   <td>返回一个字符串</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 center()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:默认为 fillchar 的 python center()方法</h3>
+
+<pre>
+<code class="python">
+string = "How are you?"
+
+updated_string = string.center(24)
+
+print("Centered String is: ", updated_string )
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Centered String is:     How are you?    
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:带有* fillchar 的 Python center()方法</h3>
+
+<pre>
+<code class="python">
+string = "How are you?"
+
+updated_string = string.center(24, '*')
+
+print("Centered String is: ", updated_string )
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Centered String is:  ***How are you?****
+</samp></pre>
+</div>
+                        
+</body>
+</html>

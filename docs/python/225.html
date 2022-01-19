@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>Python extend()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 扩展()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/extend">https://learnetutorials.com/python/methods/extend</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 extend()函数通过将给定 iterable 的所有元素添加到列表的末尾来帮助增加列表的长度。</p>
+
+<div class="syntax">
+<pre>
+<code class="python"> 
+<strong>list1.extend(iterable)</strong> #where iterable may be list, tuple, string etc.
+
+
+ </code>
+</pre>
+</div>
+
+<h2>扩展()参数:</h2>
+
+<p>extend()函数接受一个参数。这个方法类似于 append()，不同的是 append()在列表的末尾添加了一个元素，但是在 extend()中我们可以添加多个元素。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>可重复的</td>
+   <td>可能是列表、元组、字符串等。</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>扩展()返回值</h2>
+
+<p>这个方法不返回值。它通过添加元素来修改原始列表。</p>
+
+<h2>Python 中 extend()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何在 Python 中扩展 works()方法</h3>
+
+<pre>
+<code class="python">
+# flowers list
+flowers = ['Rose', 'Lotus', 'Jasmine']
+
+# another list of flowers
+flowers1 = ['Sunflower', 'Dalia']
+
+# appending flowers1 elements to flowers
+flowers.extend(flowers1)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Flowers List : ['Rose', 'Lotus', 'Jasmine','Sunflower', 'Dalia']
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:如何将元组和集合的元素添加到列表中？</h3>
+
+<pre>
+<code class="python">
+# flowers list
+flowers = ['Dalia']
+
+# flowers tuple
+flowers_tuple = ('Rose', 'Lotus')
+
+# flowers set
+flowers_set = {'Jasmine', 'Sunflower'}
+
+# appending flowers_tuple elements to flowers
+flowers.extend(flowers_tuple)
+
+print('New flowers List:', flowers)
+
+# appending flowers_set elements to flowers
+flowers.extend(flowers_set)
+
+print('Newer flowers List:', flowers)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+New flowers List: ['Dalia', 'Rose', 'Lotus']
+Newer flowers List: ['Dalia', 'Rose', 'Lotus', 'Sunflower', 'Jasmine']
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 3:extend()&amp; append()在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+x1 = [1, 2]
+x2 = [3, 4]
+y = (5, 6)
+
+# x1 = [1, 2, 5, 6]
+x1.extend(y) 
+print(x1)
+
+# x2 = [1, 2, (5, 6)]
+x2.append(y)
+print(x2)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+[1, 2, 5, 6]
+[1, 2, (5, 6)]
+</samp></pre>
+</div>
+                        
+</body>
+</html>

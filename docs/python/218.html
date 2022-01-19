@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>Python setdefault()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python setdefault()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/setdefault">https://learnetutorials.com/python/methods/setdefault</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 setdefault()函数有助于返回字典中的键值。如果该键不在字典中，则将带有指定值的新键插入字典。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>dict.setdefault(key[, default_value])</strong> #where the key is to be searched
+ </code>
+</pre>
+</div>
+
+<h2>setdefault()参数:</h2>
+
+<p>setdefault()函数接受两个参数。如果没有给定参数“default_value”，它将被视为无。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>键</td>
+   <td>要在字典中搜索的关键字</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>默认值</td>
+   <td>如果关键字不在字典中，则值为 default_value 的关键字会插入到字典中</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>设置默认值()返回值</h2>
+
+<p>该方法的返回值取决于给定的输入参数。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>如果它在字典里</td>
+   <td>键值</td>
+  </tr>
+  <tr>
+   <td>如果关键字不在字典中&amp;没有 defalt _ value</td>
+   <td>没有人</td>
+  </tr>
+  <tr>
+   <td>如果键不在字典中&amp; defalt _ value 被给出</td>
+   <td>默认值</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 setdefault()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:当关键字在字典中时，python 中的 setdefault()是如何工作的？</h3>
+
+<pre>
+<code class="python">
+persondet = {'name': 'Jhon', 'age': 35}
+
+age = persondet.setdefault('age')
+print('personal details = ',persondet)
+print('Age = ',age)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+personal details =  {'name': 'Jhon', 'age': 35}
+Age =  35
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:当键不在字典中时，setdefault()在 python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+persondet = {'name': 'Jhon'}
+
+# key is not in the dictionary
+salary = persondet.setdefault('salary')
+print('personal details = ',persondet)
+print('salary = ',salary)
+
+# key is not in the dictionary
+# default_value is provided
+age = persondet.setdefault('age', 35)
+print('personal details = ',persondet)
+print('age = ',age)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+personal details =  {'name': 'Jhon', 'salary': None}
+salary =  None
+personal details =  {'name': 'Jhon', 'age': 35, 'salary': None}
+age =  35
+</samp></pre>
+</div>
+                        
+</body>
+</html>

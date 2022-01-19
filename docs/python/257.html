@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Python expandtabs()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 扩展选项卡()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/expandtabs">https://learnetutorials.com/python/methods/expandtabs</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 expandtabs()函数有助于将字符串中的' \t '字符替换为空格。该函数允许指定所需的空间量。最后，修改后的字符串作为输出返回。</p>
+
+<div class="syntax">
+<pre>
+<code class="python"><strong>string.expandtabs(tabsize)</strong> #where tabsize is an integer value </code></pre>
+</div>
+
+<h2>expandtabs()参数:</h2>
+
+<p>expandtabs()函数接受一个参数。如果我们需要替换多个制表符，那么制表符之前的字符只有在到达前一个制表符时才被计数。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>tabsize</td>
+   <td>指定 tabsize 的数字。默认 tabsize 为 8</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>expandtabs()返回值</h2>
+
+<p>返回值始终是字符串。它返回使用空格扩展后的原始字符串的副本。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>线</td>
+   <td>带有空格的字符串</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 expandtabs()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何在没有参数的情况下使用 expandtabs()？</h3>
+
+<pre>
+<code class="python">
+string = 'abc\t56789\tefg'
+
+# no argument is passed
+# default tabsize is 8
+result = string.expandtabs()
+
+print(result)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+abc     56789   efg
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:如何用不同的参数扩展？</h3>
+
+<pre>
+<code class="python">
+string = "abc\t56789\tdef"
+print('Original String:', str)
+
+# tabsize is set to 2
+print('Expanded tabsize 2:', string.expandtabs(2))
+
+# tabsize is set to 3
+print('Expanded tabsize 3:', string.expandtabs(3))
+
+# tabsize is set to 4
+print('Expanded tabsize 4:', string.expandtabs(4))
+
+# tabsize is set to 5
+print('Expanded tabsize 5:', string.expandtabs(5))
+
+# tabsize is set to 6
+print('Expanded tabsize 6:', string.expandtabs(6))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Original String: abc 56789 def
+Expanded tabsize 2: abc 56789 def
+Expanded tabsize 3: abc   56789 def
+Expanded tabsize 4: abc 56789   def
+Expanded tabsize 5: abc  56789     def
+Expanded tabsize 6: abc   56789 def</samp></pre>
+</div>
+                        
+</body>
+</html>

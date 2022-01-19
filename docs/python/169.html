@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>Python hasattr()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python hasattr()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/hasattr">https://learnetutorials.com/python/methods/hasattr</a></blockquote>&#13;
+                         &#13;
+                        <p>hasattr()方法有助于检查给定的对象是否具有指定的属性。如果属性存在，则返回 true，否则返回 false。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>hasattr(object, name)  </strong>#Where object,name shows object name and attribute name respectively.
+ </code>
+</pre>
+</div>
+
+<h2>hasattr()参数:</h2>
+
+<p>取 3 个参数。getattr()调用 hasattr()方法，检查是否要引发<strong>属性错误</strong>。getattr()用于获取指定对象的属性值。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>目标</td>
+   <td>要检查其命名属性的对象</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>名字</td>
+   <td>要搜索的属性的名称</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>hasattr()返回值</h2>
+
+<p>返回值取决于 getattr()函数。如果它引发了属性错误，则返回假。否则，返回真。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>对象具有给定的命名属性</td>
+   <td>真实的</td>
+  </tr>
+  <tr>
+   <td>对象没有给定的命名属性</td>
+   <td>错误的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 hasattr()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 hasattr()在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+class Person:
+    age = 23
+    name = 'Adam'
+ pers
+
+print('Person has age?:', hasattr(person, 'age'))
+print('Person has salary?:', hasattr(person, 'salary'))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Person has age?: True
+Person has salary?: False
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 hasattr()如何使用示例？</h3>
+
+<pre>
+<code class="python">
+class Employee:
+    id = 0
+    name = ''
+
+    def __init__(self, i, n):
+        self.id = i
+        self.name = n
+
+
+d = Employee(10, 'Pankaj')
+
+if hasattr(d, 'name'):
+    print(getattr(d, 'name'))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Pankaj
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 hasattr()如何返回布尔值？</h3>
+
+<pre>
+<code class="python">
+class Employee:  
+    age = 21  
+    name = 'Phill'  
+  
+employee = Employee()  
+  
+print('Employee has age?:', hasattr(employee, 'age'))  
+print('Employee has salary?:', hasattr(employee, 'salary'))  
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Employee has age?: True
+Employee has salary?: False
+</samp></pre>
+</div>
+                        
+</body>
+</html>

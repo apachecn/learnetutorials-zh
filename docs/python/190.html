@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>Python open()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 打开()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/open">https://learnetutorials.com/python/methods/open</a></blockquote>&#13;
+                         &#13;
+                        <p>内置函数 open()是处理文件的好方法。此方法将检查文件是否存在于指定的路径中，如果存在，它将返回文件对象，否则它将返回错误。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)</strong> #where file specifies the path
+ </code>
+</pre>
+</div>
+<h2>打开()参数:</h2>
+
+<p>本例中需要 8 个参数，其余都是可选的。在这种模式下类型有很多选项(r:读，w:写，x:独占创建，a:追加，t:文本模式，b:二进制模式，+:更新(读，写))</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>文件</td>
+   <td>类路径物体</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>方式</td>
+   <td>模式(可选)-打开文件时的模式。如果未提供，则默认为“r”</td>
+   <td>可选择的</td>
+  </tr>
+  <tr>
+   <td>减轻</td>
+   <td>用于设置缓冲策略</td>
+   <td>可选择的</td>
+  </tr>
+  <tr>
+   <td>编码</td>
+   <td>编码格式</td>
+   <td>可选择的</td>
+  </tr>
+  <tr>
+   <td>错误</td>
+   <td>指定如何处理编码/解码错误的字符串</td>
+   <td>可选择的</td>
+  </tr>
+  <tr>
+   <td>新行</td>
+   <td>换行符模式如何工作(可用值:无' '，' \n '，' r '和' \r\n ')</td>
+   <td>可选择的</td>
+  </tr>
+  <tr>
+   <td>关门了</td>
+   <td>必须为真(默认)；如果给定为其他值，将引发异常</td>
+   <td>可选择的</td>
+  </tr>
+  <tr>
+   <td>开启工具</td>
+   <td>定制的开瓶器；必须返回打开的文件描述符</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>打开()返回值</h2>
+
+<p>如果文件存在于指定的路径中，它将返回一个文件对象，该对象可用于读取、写入和修改。如果文件不存在，它将引发 FileNotFoundError 异常。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>如果文件存在</td>
+   <td>文件对象</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 open()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何用 Python 打开文件？</h3>
+
+<pre>
+<code class="python">
+# opens test.text file of the current directory
+f = open("test.txt")
+
+# specifying the full path
+f = open("C:/Python33/README.txt")
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Since the mode is omitted, the file is opened in 'r' mode; opens for reading.</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:提供打开模式()</h3>
+
+<pre>
+<code class="python">
+# opens the file in reading mode
+f = open("path_to_file", mode='r')
+
+# opens the file in writing mode 
+f = open("path_to_file", mode = 'w')
+
+# opens for writing to the end 
+f = open("path_to_file", mode = 'a')
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Open a file in read,write and append mode.
+</samp></pre>
+</div>
+                        
+</body>
+</html>

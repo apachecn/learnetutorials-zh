@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Python keys()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 键()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/keys">https://learnetutorials.com/python/methods/keys</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 keys()函数返回一个视图对象，该对象以列表形式显示字典中的所有键。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>dict.keys()</strong> 
+ </code>
+</pre>
+</div>
+
+<h2>键()参数:</h2>
+
+<p>keys()不接受任何参数。当字典更新时，它将反映出进行这些更改的键。</p>
+
+<h2>键()返回值</h2>
+
+<p>如果我们对字典进行任何更改，它也会反映视图对象。如果字典是空的，它会返回一个空列表。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>词典</td>
+   <td>查看对象</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 key()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 keys()在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+persondet = {'name': 'Albert', 'age': 30, 'salary': 5000.0}
+print(persondet.keys())
+ empty_dict
+print(empty_dict.keys())
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+dict_keys(['name', 'salary', 'age'])
+dict_keys([])
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:字典更新时键()的工作？</h3>
+
+<pre>
+<code class="python">
+persondet = {'name': 'Albert', 'age': 30, }
+
+print('Before dictionary is updated')
+keys = persondet.keys()
+print(keys)
+
+# adding an element to the dictionary
+persondet.update({'salary': 5000.0})
+print('\nAfter dictionary is updated')
+print(keys)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Before dictionary is updated
+dict_keys(['name', 'age'])
+
+After dictionary is updated
+dict_keys(['name', 'age', 'salary'])
+</samp></pre>
+</div>
+                        
+</body>
+</html>

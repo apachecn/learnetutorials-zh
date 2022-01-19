@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Python Program to find area of a triangle</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>寻找三角形面积的 Python 程序</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/find-triangle-area">https://learnet utortials . com/python/programs/find-三角区</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要找到一个三边三角形的面积。这是一个初级 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/syntax-comments" title="Python Syntax"> Python 语法</a></li>
+ <li><a href="../../python/python-datatypes" title="Datatypes in Python"> Python 数据类型</a></li>
+ <li><a href="../../python/python-operators" title="Python Operators"> Python 运算符</a></li>
+</ul>
+
+<h2>如何在 python 中找到三角形区域？</h2>
+
+<p>这是一个寻找三角形面积的简单 python 程序。三角形是有三条边的形状。为了找到三角形的面积，我们使用 Heron 公式。Heron 公式定义为(<strong> s*(s-a)*(s-b)*(s-c) </strong>)的平方根。这里</p>
+
+<ul>
+ <li><strong> a、b </strong>和<strong> c </strong>是三角形的边。</li>
+ <li><strong> s </strong>是给定三角形的半周长。</li>
+</ul>
+
+<p>在这里应用这个公式，我们必须找到半周长'<strong> s </strong>。为此，我们使用公式<strong> s = (a + b + c) / 2 </strong>，然后我们应用苍鹭公式中的半周长。我们使用 python 中的<a href="../../python/python-operators" title="Operators in python">算术运算符</a>来实现。为了在这个初级 python 程序中应用这个逻辑，我们必须接受用户给出的三角形的边，并应用半周长公式。然后用半周长，我们用 heron 公式。并使用 python 语言中的<code>print</code>函数打印结果。</p>
+
+<h3>算法</h3>
+
+<p>步骤 1:使用 python 编程中的输入函数从用户那里接受三角形的边，并使用 float 数据类型将 python 字符串转换为 float。</p>
+
+<p>第二步:使用公式<strong> (a + b + c) / 2 </strong>计算半周长，其中<strong> a、b、c </strong>是三角形的边。</p>
+
+<p>第三步:用 heron 的公式“<strong>(s *(s-a)*(s-b)*(s-c))* * 0.5</strong>”计算三角形的面积，这里用的是 0.5 而不是 python 程序中的平方根。</p>
+
+<p>步骤 4:打印结果，因为三角形区域使用的是 0.2 精度浮点数据类型。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">a = float(input('Enter the first side: '))
+b = float(input('Enter the second side: '))
+c = float(input('Enter the third side: '))
+s = (a + b + c) / 2  # semi perimeter calculation in python
+area = (s * (s - a) * (s - b) * (s - c)) ** 0.5  # heron's formula apply to find area
+print ('The area of the triangle is %0.2f' % area)</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter the first side: 20
+
+Enter the second side: 20
+
+Enter the third side: 20
+
+The area of the triangle is 96.82</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

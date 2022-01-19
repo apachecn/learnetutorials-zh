@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Python Program to copy all the elements of an array to another array</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序将一个数组的所有元素复制到另一个数组</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/copy-array-elements">https://learnet utortials . com/python/programs/copy-array-elements</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们必须将一个数组的元素复制到另一个数组中。这是一个中级 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/syntax-comments" title="Python Syntax"> Python 语法</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in Python"> Python 循环</a></li>
+ <li><a href="../../python/python-lists" title="Python list"> Python 列表</a></li>
+</ul>
+
+<h2>什么是数组或列表？</h2>
+
+<p>在这个 python 程序示例中，我们使用了 python 中数组的概念。数组是存储在顺序存储位置的一组相同数据类型的元素，可以通过索引进行访问。数组元素必须是相同的类型。该数组由[i]表示，其中“a”是数组名称，“1”是指向该元素的下标，a[0]将是数组“a”的第一个元素。</p>
+
+<h2>如何在 python 中将一个数组的元素复制到另一个数组？</h2>
+
+<p><strong> <em>在 python 语言中，这里没有数组，我们使用列表作为数组，这与数组</em> </strong>相同。在这个数组 python 程序中，我们将把一个数组的元素复制到另一个数组中，为了实现这一点，我们必须用一些预定义的元素初始化一个数组<strong> arr1 </strong>。按照第一个数组的长度创建另一个数组<strong> arr2 </strong>。然后我们使用 python 语言中的 for 循环将第一个数组<strong> arr1[i] </strong>的每个元素复制到第二个数组<strong> arr2[i] </strong>。最后，我们显示两个数组。</p>
+
+<h3>算法</h3>
+
+<p><strong> STEP 1: </strong>使用 python 语言中的数组概念初始化我们需要复制的第一个数组。</p>
+
+<p><strong>步骤 2: </strong>使用<strong>透镜()</strong>方法创建第一个阵列的另一个长度阵列。</p>
+
+<p><strong>步骤 3: </strong>使用从零开始到第一个数组长度的<code>for loop</code>。</p>
+
+<p><strong> STEP 4: </strong>使用<strong> arr2[i] = arr1[i]将第一个数组的每个值分配给 for 循环中的第二个数组；</strong></p>
+
+<p><strong>步骤 5: </strong>使用从零到第一个数组长度的<code>for loop</code>，并使用 python 编程语言中的 print 打印第一个数组的元素</p>
+
+<p><strong>步骤 6: </strong>使用另一个从零到第二个数组长度的<code>for loop</code>使用 print 语句显示第二个复制数组中的元素。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">arr1 = [1, 2, 3, 4, 5];     # define the first array with elements
+     
+arr2 = [None] * len(arr1);    # create a second array using the len()
+     
+
+for i in range(0, len(arr1)):    # Use for loop to assign first array elements to second array
+    arr2[i] = arr1[i];     
+     
+
+print("Elements of  first array: ");    # display first array
+for i in range(0, len(arr1)):    
+   print(arr1[i]),    
+     
+print();    
+     
+print("Elements of second array: ");    # display the second array
+for i in range(0, len(arr2)):    
+   print(arr2[i]),  </code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Elements of  first array: 
+1
+2
+3
+4
+5
+
+Elements of second array: 
+1
+2
+3
+4
+5</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

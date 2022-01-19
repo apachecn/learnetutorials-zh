@@ -1,0 +1,643 @@
+<html>
+<head>
+<title>Python Files</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 文件</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/file-operations">https://learnetutorials.com/python/file-operations</a></blockquote>&#13;
+                        &#13;
+                       <!-- Content Area -->&#13;
+&#13;
+&#13;
+                       <p>在本教程中，您将通过示例掌握所有关于 python 文件和文件操作的知识。您将学习什么是文件，如何打开和关闭文件，以及 python 中读写文件的一些基本方法。</p>
+
+<h2 id="what">python 中的文件是什么？</h2>
+
+<p>文件是系统存储器上的一个命名位置，用于存储相关数据以备将来使用。数据可以是简单的文本文件、视频或音频文件，也可以是任何复杂的可执行程序。我们使用文件系统在硬盘等非易失性存储器中实现持久存储。文件由以下三个重要部分组成。</p>
+
+<ul>
+ <li><strong>文件头</strong>保存文件的元数据，即文件的名称、大小、类型等细节。</li>
+ <li><strong>数据</strong>是文件中的文本、图片、音频等内容。</li>
+ <li><strong> EOF </strong>表示文件结束。</li>
+</ul>
+
+<p>接下来，在访问一个文件时，我们必须知道文件存储在哪里。为此，我们使用<strong>文件路径</strong>，它给出了文件的路径或位置。文件路径包含 3 个部分，如下所示。</p>
+
+<ul>
+ <li><strong>文件夹路径</strong>表示文件所在文件夹的位置。</li>
+ <li><strong>文件名</strong>表示文件的实际名称。</li>
+ <li><strong>文件扩展名</strong>显示文件类型。</li>
+</ul>
+
+<h2 id="types">python 中的文件类型</h2>
+
+<p>python 中有两种类型的文件。它们是:</p>
+
+<div class="img-div"><img alt="Types of files in python" src="../Images/2b5547b9390e577faf0f91bc54743c1a.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/files/types.png"/>
+<h3>python 中的文件类型</h3>
+</div>
+
+<ol>
+ <li><strong>二进制文件</strong>是包含图像、音频等非文本值的文件。通常，二进制文件包含 0 和 1 形式的对象。</li>
+ <li><strong>文本文件</strong>是包含结构化为行的文本值的文件。简而言之，文本文件包含多行文本值。每一行都以一个特殊的字符结束，称为行尾。</li>
+</ol>
+
+<p>当您想要处理文件时，您需要执行以下按处理顺序列出的 3 个基本操作。</p>
+
+<ol>
+ <li><strong>打开文件</strong></li>
+ <li><strong>读或写操作</strong></li>
+ <li><strong>关闭文件</strong></li>
+</ol>
+
+<div class="img-div"><img alt="Flow chart for file handling" src="../Images/047788b986ede893578fd1f161bba099.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/files/flow-chart.png"/>
+<h3>文件处理流程图</h3>
+</div>
+
+<p>上面的流程图给出了 python 中文件处理的工作流程。最初，我们需要创建一个文件。这可以由用户在任何需要的地方手动完成，并用有效的文件名和扩展名保存。另外，python 支持文件创建，这将在以后的会话中遇到。</p>
+
+<h2 id="open">如何用 python 打开文件</h2>
+
+<p>文件的首要操作是打开文件。一个文件可以通过调用 python 内置函数<code>open()</code>打开。open 函数返回文件对象，以后可以用来读取或写入文件。</p>
+
+<h6>open()函数的基本语法是:</h6>
+
+<div class="syntax">
+<pre>
+<code class="python">File object = open(file_name [,access_mode] [,buffersize])</code>
+</pre>
+</div>
+
+<p>哪里，</p>
+
+<ul>
+ <li><strong>文件名</strong>是给出文件名的强制字符串参数。</li>
+ <li><strong> <access mode=""/> </strong>是可选参数。它决定了文件的打开方式(读、写、追加)。除此之外，我们还可以以文本模式或二进制模式打开文件。二进制模式用字母“b”表示。默认情况下，该模式被设置为作为返回字符串的文本读取。相反，二进制模式返回字节，因为它用于读取非文本文件，如图像或可执行文件。</li>
+ <li><strong> <buffering/> </strong>是另一个可选的论点。默认情况下，缓冲值设置为 0。当缓冲区值为 1 时，在文件访问期间会发生行缓冲。如果大于 1，缓冲将发生在缓冲区的大小中。</li>
+</ul>
+
+<div class="code-example">
+<h3>例子</h3>
+
+<pre>
+<code class="python">open("testfile.txt")
+open("testfile.txt",'r')
+ </code>
+</pre>
+</div>
+
+<p>下表显示了文件的不同打开模式。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>模式</th>
+   <th>意义</th>
+   <th>描述</th>
+  </tr>
+  <tr>
+   <td>r</td>
+   <td>阅读</td>
+   <td>默认模式。打开文件阅读。如果文件不存在，则出现错误</td>
+  </tr>
+  <tr>
+   <td>w</td>
+   <td>写</td>
+   <td>以只写模式打开文件进行覆盖。如果文件不存在，则创建一个文件</td>
+  </tr>
+  <tr>
+   <td>a</td>
+   <td>附加</td>
+   <td>在文件末尾追加文件，而不修剪现有的。创建一个不存在的文件。</td>
+  </tr>
+  <tr>
+   <td>x</td>
+   <td>创造</td>
+   <td>创建定义的文件。如果文件已经存在，则出现错误。</td>
+  </tr>
+  <tr>
+   <td>b</td>
+   <td>二进制的</td>
+   <td>以二进制模式打开文件</td>
+  </tr>
+  <tr>
+   <td>t</td>
+   <td>文本</td>
+   <td>以文本模式打开文件。默认模式。</td>
+  </tr>
+  <tr>
+   <td>r+</td>
+   <td>直读式记录</td>
+   <td>打开文件进行读取和写入</td>
+  </tr>
+  <tr>
+   <td>元素铷的符号</td>
+   <td>二进制读取</td>
+   <td>以读取和二进制模式打开文件</td>
+  </tr>
+  <tr>
+   <td>rb+</td>
+   <td>二进制读写</td>
+   <td>以二进制模式打开文件进行读写</td>
+  </tr>
+  <tr>
+   <td>w+</td>
+   <td>直读式记录</td>
+   <td>以读写模式打开文件</td>
+  </tr>
+  <tr>
+   <td>世界银行</td>
+   <td>二进制写入</td>
+   <td>以写入和二进制模式打开文件</td>
+  </tr>
+  <tr>
+   <td>wb+</td>
+   <td>二进制读写</td>
+   <td>以二进制模式打开文件进行写入和读取</td>
+  </tr>
+  <tr>
+   <td>a+</td>
+   <td>追加读写</td>
+   <td>以附加模式打开文件进行读写。</td>
+  </tr>
+  <tr>
+   <td>腹肌</td>
+   <td>二进制追加</td>
+   <td>以追加模式和二进制模式打开</td>
+  </tr>
+  <tr>
+   <td>ab+</td>
+   <td>二进制追加读写</td>
+   <td>以读写二进制模式打开文件进行附加</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>创建文件对象后，您可以使用几个属性来获取文件的详细信息。下面列出了一些属性。</p>
+
+<ul>
+ <li><strong> <file_object>。关闭</file_object> </strong>:当文件关闭时返回真，否则返回假</li>
+ <li><strong> <file_object>。模式</file_object> </strong>:返回打开文件的文件模式。</li>
+ <li><strong> <file_object>。名称</file_object> </strong>:返回文件的名称。</li>
+ <li><strong> <file_object>。软空间</file_object> </strong>:如果 print 语句不需要显式空间，则返回 true，否则返回 false</li>
+</ul>
+
+<div class="note">
+<p>注意:在文本模式下处理文件时，指定编码总是一种好的做法。</p>
+</div>
+
+<h2 id="close">如何在 python 中关闭文件</h2>
+
+<p>关闭一个文件根本不是一个大任务，但是一旦工作完成，用户就有责任正确地关闭文件。Python 支持两种关闭文件的方法，下面将通过示例进行描述。</p>
+
+<ol>
+ <li>
+ <h3>使用 close()方法</h3>
+
+ <p>我们可以使用 python 中可用的 close()方法关闭打开的文件。这将释放文件保护的资源。</p>
+
+ <div class="code-example">
+ <pre>
+<code class="python">f_obj = open(“testfile.txt”)
+,.......................
+,.......................
+f_obj.close()</code>
+</pre>
+ </div>
+
+ <p>尽管这是一种简单的方法，但它有一个缺点，即仅使用 close 方法不能解决任何错误或异常。遇到异常时，它会立即退出代码，而不会正确关闭文件。那么我们下一步该怎么做呢？</p>
+ <b>try...finally, block</b>
+
+ <p>要解决上述问题，我们可以尝试..最后，块，每当它引发异常时处理异常，从而确保文件的正确关闭。</p>
+
+ <div class="code-example">
+ <pre>
+<code class="python">try:
+  f_obj = open(“testfile.txt”)
+  ,.......................
+  ,.......................
+finally:
+f_obj.close()</code>
+</pre>
+ </div>
+ </li>
+ <li>
+ <h3>使用 with 语句</h3>
+
+ <p>在 python 中，使用“with 语句”被认为是关闭文件的最佳方式。with 语句在退出“with 块”时会不自觉地控制关闭文件。所以我们不需要在代码中显式指定 close()方法。换句话说，使用“with 语句”提高了处理异常的容易程度，并允许代码完美无缺。</p>
+
+ <div class="code-example">
+ <pre>
+<code class="python">with open(“testfile.txt”) as f_obj:
+  ……………………………………
+  …………………………………...
+finally:
+f_obj.close()</code>
+</pre>
+ </div>
+ </li>
+</ol>
+
+<h2 id="read">如何读取文件</h2>
+
+<p>一旦我们打开一个文件，我们就可以对它执行所需的操作。一个文件可以做的两个操作是<strong>读</strong>和<strong>写</strong>操作。首先，我们可以看看如何读取文件。要读取文件，我们首先要做的是在读取模式下打开文件<strong> (r) </strong>。假设我们在 python 中的相同位置有名为 testfile.txt 的文件中的以下内容。</p>
+
+<p><strong>测试文件. txt </strong></p>
+
+<div class="output">
+<pre>
+<samp>Hello World
+Welcome to Programming Tutorials
+We Love Python
+See You..Bye
+</samp></pre>
+</div>
+
+<p>下面给出了可以在文件对象上调用来读取文件的三种方法。</p>
+
+<hr/>
+<h3>真实(尺寸)法</h3>
+
+<p>使用这种方法，我们可以读取指定大小字节的文件。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">f_obj=open("testfile.txt",'r')
+print(f_obj.read(6))  #reads the first 6 characters(Hello ) in the file
+print(f_obj.read(4))  #reads the next 4 characters(Worl) in the file
+f_obj.close()</code>
+</pre>
+</div>
+
+<p>在上面的例子中，大小被指定为<code>6</code>，所以它只读取第一个<code>6</code>字符并返回相同的值。下一次提到大小为<code>4</code>，则读取文件中 Hello 之后的下一个<code>4</code>字符(第一个<code>6</code>字符)。这表明 read()方法在每次函数调用后都会返回一个换行符。<br/><code>read()</code>方法在以下情况下读取整个文件:</p>
+
+<ul>
+ <li>没有一个作为参数传递</li>
+ <li>-1 被指定为参数的大小</li>
+ <li>该参数未被传递</li>
+</ul>
+
+<p>下面的例子清楚地说明了这个概念。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">f_obj=open("testfile.txt",'r')
+print(f_obj.read(-1)) </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Hello World
+Welcome to Programming Tutorials
+We Love Python
+See You..Bye
+</samp></pre>
+</div>
+
+<hr/>
+<h3>读取线(尺寸)方法</h3>
+
+<p>此方法用于读取文件中的每一行，并将逐行返回输出。让我们在下面的例子中看看 readline 方法是如何工作的。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">f_obj=open("testfile.txt",'r')
+print(f_obj.readline())  #reads first line in the file 
+print(f_obj.readline())  #reads second line in the file 
+print(f_obj.readline())  #reads third line in the file 
+f_obj.close() </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Hello World
+
+Welcome to Programming Tutorials
+
+We Love Python
+</samp></pre>
+</div>
+
+<p>类似地，当传递的参数为无或-1 时，函数返回每一行。然而，当我们指定大小时，会发生一些不同的事情。它不返回行，而是像 read 方法一样将字符返回到指定的大小。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">f_obj=open("testfile.txt",'r')
+print(f_obj.readline(6))
+print(f_obj.readline(4))
+print(f_obj.readline(-1))
+f_obj.close() </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Hello
+Worl
+d
+</samp></pre>
+</div>
+
+<hr/>
+<h3>readlines()方法</h3>
+
+<p><code>readlines()</code>方法以列表的形式返回所有行。对于每一行，行尾表示为\n。上面的示例可以更改为:</p>
+
+<div class="code-example">
+<pre>
+<code class="python">f_obj=open("testfile.txt",'r')
+print(f_obj.readline(6))
+print(f_obj.readline(4))
+print(f_obj.readlines())  #returns remaining lines as a list
+f_obj.close()</code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Hello
+Worl
+['d\n', 'Welcome to Programming Tutorials\n', 'We Love Python\n', 'See You..Bye']
+</samp></pre>
+</div>
+
+<div class="note">
+<p>注意:当遇到电渗流时，所有读取模式将返回空值。</p>
+</div>
+
+<hr/>
+<h3>循环文件中的行</h3>
+
+<p>另一种逐行读取文件的方法是遍历每一行。这可以使用 for 循环或 while 循环和读取线方法来完成。以下示例将说明打印文件中的行的两种不同方式。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">with open("testfile.txt",'r') as f_obj:
+ for line in f_obj:
+  print(f_obj.readlines()) </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>(['Hello World\n', 'Welcome to Programming Tutorials\n', 'We Love Python\n', 'See You..Bye']
+</samp></pre>
+</div>
+
+<div class="code-example">
+<pre>
+<code class="python">
+with open("testfile.txt",'r') as f_obj:
+ for line in f_obj.readlines():
+  print(line ,end =' ') </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Hello World
+ Welcome to Programming Tutorials
+ We Love Python
+ See You..Bye
+</samp></pre>
+</div>
+
+<p>但是，可以将上面的示例更改为另一种形式来简化它。这里，我们迭代文件对象，而不是循环方法。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">with open("testfile.txt",'r') as f_obj:
+ for line in f_obj:
+  print(line ,end =' ') </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Hello World
+ Welcome to Programming Tutorials
+ We Love Python
+ See You..Bye
+</samp></pre>
+</div>
+
+<h2 id="write">如何写入文件</h2>
+
+<p>要写入文件，我们需要使用两种模式——写入模式和追加模式。我们已经讨论过，以写模式打开的文件会通过擦除所有现有行而被覆盖。而当文件以追加模式打开时，它会将新文本追加到文件中，而不会截断以前的文本。写入文件的内置方法是 write()方法。</p>
+
+<p>以下示例显示了写入模式和追加模式之间的区别:</p>
+
+<div class="code-example">
+<pre>
+<code class="python">with open("testfile.txt",'w') as f_obj:
+ f_obj.write('OVER WRITES FILES')</code>
+</pre>
+</div>
+
+<p>当我们执行上面的代码时，发生的事情是 textfile.txt 被覆盖，如下图所示。</p>
+
+<div class="img-div"><img alt="overwritten file" src="../Images/e275bd7015e8d66118cdfef2e69c278c.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/files/overwrite.png"/>
+<h3>覆盖的文件</h3>
+</div>
+
+<p>现在我们以追加模式打开同一个文件，并在文件中添加一些文本，如下例所示。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">with open("testfile.txt",'a') as f_obj:
+ f_obj.write('Here iam opened the file in append mode and appends this statment') </code>
+</pre>
+</div>
+
+<p>输出显示出显著的差异。这里，文件不会被覆盖，而是在现有文本的末尾追加文本。</p>
+
+<div class="img-div"><img alt="append file" src="../Images/73eff119bb3b27d21f80109247cda192.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/files/append.png"/>
+<h3>以追加模式打开文件</h3>
+</div>
+
+<p>在写入或追加后找到文件差异的另一种可能方法是再次使用，并以读取模式打开文件并打印文件。</p>
+
+<h2 id="create">如何创建文件</h2>
+
+<p>要在 python 中创建新文件，请使用以下任一模式打开该文件。</p>
+
+<p>"<code>x</code> "= <strong>创建</strong>:创建一个文件，当存在同名文件时返回错误。<br/> " <code>a</code> "= <strong>追加</strong>:当定义的文件不存在时创建一个文件。<br/> " <code>w</code> "= <strong>写</strong>:当定义的文件不存在时创建一个文件</p>
+
+<div class="code-example">
+<pre>
+<code class="python">open('New_file_x.txt','x')
+open('New_file_a.txt','a')
+open('New_file_w.txt','w')</code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<p><img alt="Create a file" src="../Images/e7afa74c4f2c25ba9ae4bbef758b3698.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/files/output.png"/></p>
+
+<p>从上面的例子中，很明显 Python 已经在您的系统中使用上述模式创建了 3 个文本文件。现在让我们检查一下当我们试图创建一个现有文件时会发生什么。显然 python 会产生一个错误，即<a href="../python/errors-exceptions-tutorial">文件存在错误</a>，如下所示。</p>
+
+<div class="code-single error">
+<pre>
+<code class="python">open('New_file_a.txt','x') </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>  open('New_file_a.txt','x')
+FileExistsError: [Errno 17] File exists: 'New_file_a.txt'</samp></pre>
+</div>
+
+<p>为了避免这个错误，我们可以将文件重命名为新的名称，或者删除现有的文件，如果它不是一个重要的文件</p>
+
+<h2 id="delete">如何重命名或删除文件</h2>
+
+<p>可以重命名或删除现有文件。对于重命名，我们使用内置方法<code>os.rename()</code>，对于从系统中移除文件，使用方法<code>os.remove</code>。这两种方法都位于操作系统模块中。因此，在执行这些任务之前，有必要导入操作系统模块。Python 标准实用程序模块下的操作系统模块帮助我们与操作系统交互，从而提供使用操作系统相关功能的方法。</p>
+
+<h2>重命名文件</h2>
+
+<p>重命名方法用新名称更改现有文件的名称。重命名方法的基本语法是:</p>
+
+<div class="syntax">
+<pre>
+<code class="python">os.rename(‘Current_File_name’,’New_File_name’) </code>
+</pre>
+</div>
+
+<div class="code-example">
+<h3>例子</h3>
+
+<pre>
+<code class="python">import os
+os.rename('New_file_x.txt','New.txt')
+ </code>
+</pre>
+</div>
+
+<p>结果将通过更改文件名反映在您的系统中。</p>
+
+<h2>删除文件</h2>
+
+<p>我们可以通过两种可能的方式删除文件。一种方法是在系统中手动搜索文件并删除该文件。另一种方法是站在交互式外壳中，使用 python 方法删除文件。</p>
+
+<p>要删除一个文件，我们使用内置方法<code>os.remove()</code>，语法是</p>
+
+<div class="syntax">
+<pre>
+<code class="python">os.remove(‘File_name’) </code>
+</pre>
+</div>
+
+<p>在尝试删除一个文件之前，我们需要检查它是否存在，以避免任何不想要的错误。我们可以使用<code>os.path.exists()</code>方法检查文件的存在，如下例所示:</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import os
+if os.path.exists('New_file_a.txt'):
+ os.remove('New_file_a.txt')
+ print('Removed file')
+else:
+ print('File doesnot exist')
+ </code>
+</pre>
+</div>
+
+<h2 id="methods">Python 文件方法</h2>
+
+<p>在本教程中，我们遇到了一些用于操作文件的方法。下表给出了 python 中使用的文件方法的完整列表。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>方法</th>
+   <th>描述</th>
+  </tr>
+  <tr>
+   <td>关闭()</td>
+   <td>关闭打开的文件。</td>
+  </tr>
+  <tr>
+   <td>文件（）</td>
+   <td>返回文件描述符的数量。</td>
+  </tr>
+  <tr>
+   <td>齐平()</td>
+   <td>刷新文件流的写缓冲区。</td>
+  </tr>
+  <tr>
+   <td>isatty()</td>
+   <td>当文件流是交互式的时返回真，否则返回假</td>
+  </tr>
+  <tr>
+   <td>已读()</td>
+   <td>读取整个文件。</td>
+  </tr>
+  <tr>
+   <td>可读()</td>
+   <td>检查文件是否可读</td>
+  </tr>
+  <tr>
+   <td>读行（）</td>
+   <td>读取文件中的个别行。</td>
+  </tr>
+  <tr>
+   <td>读取线()</td>
+   <td>读取整个文件并作为列表返回</td>
+  </tr>
+  <tr>
+   <td>seek()</td>
+   <td>更改文件的位置</td>
+  </tr>
+  <tr>
+   <td>可查找()</td>
+   <td>检查位置是否可变</td>
+  </tr>
+  <tr>
+   <td>tell()</td>
+   <td>返回文件的当前位置</td>
+  </tr>
+  <tr>
+   <td>截断()</td>
+   <td>将文件调整到指定的大小。如果未指定，将调整到当前位置。</td>
+  </tr>
+  <tr>
+   <td>可写()</td>
+   <td>当文件可写时返回真</td>
+  </tr>
+  <tr>
+   <td>写入()</td>
+   <td>将定义的字符串写入文件。</td>
+  </tr>
+  <tr>
+   <td>writelines()</td>
+   <td>将字符串或行列表写入文件。</td>
+  </tr>
+ </tbody>
+</table>
+                       &#13;
+                       &#13;
+                       <!-- End Content Area -->&#13;
+&#13;
+                        
+</body>
+</html>

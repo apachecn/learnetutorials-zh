@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>Python remove()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 移除()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/remove">https://learnetutorials.com/python/methods/remove</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 remove()函数有助于从列表中移除给定的元素。如果列表中有多个匹配元素，则只删除第一个匹配元素。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>list.remove(element)</strong> #where element may be string, number, list etc
+ </code>
+</pre>
+</div>
+
+<h2>移除()参数:</h2>
+
+<p>remove()函数接受一个参数。如果在列表中找不到给定的元素，它将引发 ValueError</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>元素</td>
+   <td>要移除的元素</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>移除()返回值</h2>
+
+<p>这个方法不返回值。它通过从原始列表中移除元素来修改原始列表。</p>
+
+<h2>Python 中 remove()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何从列表中移除元素</h3>
+
+<pre>
+<code class="python">
+# flowers list
+flowers = ['Dalia', 'Rose', 'Lotus', 'Sunflower']
+
+# 'Sunflower' is removed
+flowers.remove('Sunflower')
+
+# Updated flowers List
+print('Updated flowers list: ', flowers)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Updated flowers list:['Dalia', 'Rose', 'Lotus']
+
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:如何在有重复元素的列表上使用 remove()方法？</h3>
+
+<pre>
+<code class="python">
+# flowers list
+flowers = ['Dalia', 'Rose', 'Lotus', 'Sunflower', 'Rose']
+
+# 'Rose' is removed
+flowers.remove('Rose')
+
+# Updated flowers List
+print('Updated flowers list: ', flowers)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Updated flowers list: ['Dalia', 'Lotus', 'Sunflower', 'Rose']
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 remove()方法如何在缺少元素的情况下工作？</h3>
+
+<pre>
+<code class="python">
+# flowers list
+flowers = ['Dalia', 'Rose', 'Lotus', 'Sunflower']
+
+# Deleting 'jasmine' element
+flowers.remove('jasmine')
+
+# Updated flowers List
+print('Updated flowers list: ', flowers)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Traceback (most recent call last):
+  File ".. .. ..", line 5, in <module>
+    flowers.remove('jasmine')
+ValueError: list.remove(x): x not in list
+</module></samp></pre>
+</div>
+                        
+</body>
+</html>

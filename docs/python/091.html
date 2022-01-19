@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>Python Program to calculate the average of numbers in a list</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>计算列表中数字平均值的 Python 程序</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/calculate-average-list">https://learnet utortials . com/python/programs/calculate-average-list</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要找到数字的平均值。这是一个初级 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/syntax-comments" title="Python Syntax"> Python 语法</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in Python"> Python 循环</a></li>
+ <li><a href="../../python/python-operators" title="Python Operators"> Python 运算符</a></li>
+</ul>
+
+<h2>python 中如何求数字的平均值？</h2>
+
+<p>在这个简单的列表 python 程序中，我们必须计算列表中数字的平均值。为了计算数字的平均值，我们需要取列表中数字的总和，然后将总和除以列表中元素的数量。</p>
+
+<p>让我们举个例子，因为我们有一些数字 1，2，3，4，5，现在我们通过计算总和 1+2+3+4+5 = 15 来取平均值。现在我们取平均值，将总和除以元素的数量。as 15 / 5 = 3。</p>
+
+<p>在这个简单的 python 程序中，我们必须使用 python 中的 for 循环添加来自用户的元素。我们介绍一个叫做 python 列表<code>append()</code>的方法。python 中的 list append 方法用于向列表中添加一个元素。</p>
+
+<p>追加方法的语法是<strong> list.append(item) </strong></p>
+
+<p>其中项目被添加到列表中。Append 有一个名为 item 的参数，它是 python 语言中要添加到列表中的元素。项目可以是字符串、数字或任何东西。</p>
+
+<p>算法</p>
+
+<p><strong> STEP 1: </strong>使用 python 语言的输入法输入列表中的元素个数，使用 int 将字符串转换为整数。</p>
+
+<p><strong>步骤 2: </strong>初始化列表。</p>
+
+<p><strong>步骤 3: </strong>使用范围法从零到列表中的元素编号使用<code>for loop</code>。</p>
+
+<p><strong> STEP 4: </strong>使用输入法输入元素，并使用 python 语言中的 int 将其转换为整数，然后使用<code>append</code>方法将其添加到列表中。</p>
+
+<p><strong> STEP 5: </strong>取列表元素之和，除以列表元素个数，计算平均值。</p>
+
+<p><strong> STEP 6: </strong>使用打印方法打印 python 列表的平均值。</p>
+
+<p><strong>注意:</strong>我们在 python 编程中使用了一个<code>round</code>内置函数来将浮点数的数字舍入到一个舍入值。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">n=int(input("Enter the number of elements to be inserted: "))
+
+a=[]
+
+for i in range(0,n):
+
+    elem=int(input("Enter the element to the list: "))
+
+    a.append(elem)
+
+avg=sum(a)/n
+
+print("Average of elements in the list", round(avg,2))</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter the number of elements to be inserted: 5
+Enter element: 1
+Enter element: 2
+Enter element: 3
+Enter element: 4
+Enter element: 5
+
+Average of elements in the list : 3</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

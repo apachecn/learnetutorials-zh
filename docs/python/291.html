@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>Python startswith()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>python startswith()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/startswith">https://learnetutorials.com/python/methods/startswith</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 startswith()函数返回一个布尔值。如果字符串以指定的前缀开头，函数返回 true，否则返回 false。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>str.startswith(prefix[, start[, end]])</strong> #where prefix may be a string or tuple
+ </code>
+</pre>
+</div>
+
+<h2>开始于()参数:</h2>
+
+<p>startswith()函数接受三个参数。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>前缀</td>
+   <td>检查字符串是否以开头的值</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>开始</td>
+   <td>一个整数，指定开始搜索的位置</td>
+   <td>可选择的</td>
+  </tr>
+  <tr>
+   <td>目标</td>
+   <td>字符串中检查前缀的结束位置</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>开始于()返回值</h2>
+
+<p>返回值总是一个布尔值。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>如果以指定的前缀开头</td>
+   <td>真实的</td>
+  </tr>
+  <tr>
+   <td>如果不是，则以指定的前缀开头</td>
+   <td>错误的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 startswith()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 startswith()在没有开始和结束参数的情况下如何工作？</h3>
+
+<pre>
+<code class="python">
+string = "It was a good day"
+
+output = string.startswith('was a')
+# returns False
+print(output)
+
+output = string.startswith('It was ')
+# returns True
+print(output)
+
+output = string.startswith('It was a good day.')
+# returns True
+print(output)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+False
+True
+True
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 startswith()如何使用开始和结束参数？</h3>
+
+<pre>
+<code class="python">
+string = "It was a good day."
+
+# start parameter: 3
+# 'was a good day.' string is searched
+output = string.startswith('was a good day', 3)
+print(output)
+
+# start: 3, end: 7
+# 'was a good' string is searched
+output = string.startswith('was a good', 3, 7)
+print(output)
+
+output = string.startswith('was a good', 3, 14)
+print(output) </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+True
+False
+True
+</samp></pre>
+</div>
+                        
+</body>
+</html>

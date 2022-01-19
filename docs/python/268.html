@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>Python isprintable()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 是可打印的()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/isprintable">https://learnetutorials.com/python/methods/isprintable</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 isprintable()函数有助于检查字符串中的所有字符是可打印字符还是空字符串。如果所有字符都是可打印的或为空字符串，则函数返回真，否则返回假。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>string.isprintable()</strong>
+ </code>
+</pre>
+</div>
+
+<h2>isprintable()参数:</h2>
+
+<p>isprintable()方法不接受任何参数。字符串中可打印的字符包括字母和符号、数字、标点符号和空白。不可打印字符是指那些在打印时不可见且不占用空间的字符(转义字符，如' \n '，' \t '，' \r '，' \x16 '，' \xlf '等)。</p>
+
+<h2>isprintable()返回值</h2>
+
+<p>返回值始终是布尔值。即使是空字符串，该函数也会返回 true，因为它被认为是可打印的。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>所有字符都是可打印的</td>
+   <td>真实的</td>
+  </tr>
+  <tr>
+   <td>至少一个不可打印</td>
+   <td>错误的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 isprintable()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 isprintable()在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+string = 'Space is a printable?'
+print(string)
+print(string.isprintable())
+
+string = '\nNew Line is printable?'
+print(string)
+print(string.isprintable())
+
+string = ''
+print('\nEmpty string is printable?', string.isprintable())
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Space is a printable?
+True
+
+New Line is printable?
+False
+
+Empty string is printable? True
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:在 Python 中使用 isprintable()</h3>
+
+<pre>
+<code class="python">
+
+# chr(27) is escape character,char(97) is letter 'a'
+
+string = chr(27) + chr(97)
+
+if string.isprintable() == True:
+  print('Is Printable')
+else:
+  print('Not Printable')
+  
+string = '5+5 = 10'
+
+if string.isprintable() == True:
+  print('Is Printable')
+else:
+  print('Not Printable')
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Not Printable
+Is Printable
+</samp></pre>
+</div>
+                        
+</body>
+</html>

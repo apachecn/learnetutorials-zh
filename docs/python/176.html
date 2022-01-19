@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>Python int()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python int()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/int">https://learnetutorials.com/python/methods/int</a></blockquote>&#13;
+                         &#13;
+                        <p>int()函数有助于将给定值转换为整数。结果整数值总是以 10 为基数。如果我们对一个自定义对象使用 int()，那么将调用对象<code>__int__() </code>函数。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>int(x=0, base=10)</strong># Where x can be Number or string</code>
+</pre>
+</div>
+
+<h2>int()参数:</h2>
+
+<p>接受 2 个参数，其中第一个参数“x”的默认值为 0。而第二个参数‘base’的默认值是 10，它也可以在 0(代码文字)或 2-36 之间。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>x</td>
+   <td>要转换为整数对象的数字或字符串。</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>基础</td>
+   <td>x 中数字的基数</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>int()返回值</h2>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>整数对象</td>
+   <td>基数为 10</td>
+  </tr>
+  <tr>
+   <td>没有参数</td>
+   <td>返回 0</td>
+  </tr>
+  <tr>
+   <td>如果给定基数</td>
+   <td>在给定的基数(0，2，8，10，16)下</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 int()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 int()在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+# integer
+print("int(123) is:", int(123))
+
+# float
+print("int(123.23) is:", int(123.23))
+
+# string
+print("int('123') is:", int('123'))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>int(123) is: 123
+int(123.23) is: 123
+int('123') is: 123
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 int()如何处理十进制、八进制和十六进制？</h3>
+
+<pre>
+<code class="python">
+# binary 0b or 0B
+print("For 1010, int is:", int('1010', 2))
+print("For 0b1010, int is:", int('0b1010', 2))
+
+# octal 0o or 0O
+print("For 12, int is:", int('12', 8))
+print("For 0o12, int is:", int('0o12', 8))
+
+# hexadecimal
+print("For A, int is:", int('A', 16))
+print("For 0xA, int is:", int('0xA', 16))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>For 1010, int is: 10
+For 0b1010, int is: 10
+For 12, int is: 10
+For 0o12, int is: 10
+For A, int is: 10
+For 0xA, int is: 10
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 3:自定义对象的 int()</h3>
+
+<pre>
+<code class="python">
+class Person:
+    age = 23
+
+    def __index__(self):
+        return self.age
+    
+    def __int__(self):
+        return self.age
+ pers
+print('int(person) is:', int(person))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>int(person) is: 23
+</samp></pre>
+</div>
+
+<p><strong>注意</strong>:在内部，int()方法调用对象的 __int__()方法。这两种方法应该返回相同的值。情况是旧版 Python 使用 __int__()，而新版 Python 使用 __index__()方法。</p>
+                        
+</body>
+</html>

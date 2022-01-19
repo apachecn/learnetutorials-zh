@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>Python difference_update()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 差异 _ 更新()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/difference_update">https://learnet utortials . com/python/methods/difference _ update</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 difference_update()函数有助于集合更新。它首先找出给定的两个集合之间的集合差。并用集合差的结果元素更新第一个集合。集合差给出了一个新的集合，它包含只存在于第一个集合中的元素，而不存在于第二个集合中。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>A.difference_update(B)</strong> #where A &amp; B are sets
+ </code>
+</pre>
+</div>
+
+<h2>差异 _ 更新()参数:</h2>
+
+<p>difference()函数将 set 作为其参数。在此方法调用之后，集合 A 将被更新为 A-B。集合 B 保持不变。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>设置</td>
+   <td>要检查差异的集合</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>差异 _ 更新()返回值</h2>
+
+<p>这个方法不返回值。它用一组不同的值更新原始集。</p>
+
+<h2>Python 中的 difference_update()方法示例</h2>
+
+<div class="code-example">
+<h3>示例 difference _ update()在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+A = {1, 2, 3, 4, 6}
+B = {5, 2, 4, 7}
+
+# Before update
+print('A = ', A)
+result = A.difference_update(B)
+# After update
+print('A = ', A)
+print('B = ', B)
+print('result = ', result)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+# Before update
+A =  {1, 2, 3, 4, 6}
+
+# After update
+A =  {1, 3, 6}
+B =  {5, 2, 4, 7}
+result =  None
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 Python 中 difference_update()的工作原理？</h3>
+
+<pre>
+<code class="python">
+A = {'a', 'b', 'c', 'd'}
+B = {'c', 'f', 'd'}
+# Before update
+print('A = ', A)
+result = A.difference_update(B)
+# After update
+print('A = ', A)
+print('B = ', B)
+print('result = ', result)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+# Before update
+A =  {'a', 'b', 'c', 'd'}
+
+# After update
+A =  {'a', 'b'}
+B =  {'c', 'd', 'f'}
+result =  None
+</samp></pre>
+</div>
+                        
+</body>
+</html>

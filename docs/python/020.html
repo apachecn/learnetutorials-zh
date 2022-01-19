@@ -1,0 +1,362 @@
+<html>
+<head>
+<title>Python Directory</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 目录</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/python-directories">https://learnetutorials.com/python/python-directories</a></blockquote>&#13;
+                        &#13;
+                       <!-- Content Area -->&#13;
+&#13;
+&#13;
+                       <p>在本教程中，您将掌握关于 python 目录的一切，python 中操作系统模块的意义是什么，以及如何通过示例创建、更改、重命名和删除目录。</p>
+
+<h2 id="what">什么是 python 目录？</h2>
+
+<p>目录是一个简单的文件夹，包含一系列文件和子目录，而子目录又可能包含子目录和文件。在计算机系统中，目录用于以结构良好的方式组织文件。要获取文件或文件本身的内容，python 需要与操作系统进行交互，因此 python 允许将操作系统模块导入某个程序。</p>
+
+<h2 id="os">什么是操作系统模块？</h2>
+
+<p>标准实用程序模块下的 python 操作系统模块支持与操作系统相关功能的交互。操作系统模块提供了一些有助于操作文件和目录的功能。</p>
+
+<p>在之前的教程中，我们已经学习了<a href="../python/python-modules-packages">导入一个模块</a>。先回忆一下。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import os </code>
+</pre>
+</div>
+
+<p>要获取本模块中的方法，请使用以下语法:</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import os
+print(dir(os))</code>
+</pre>
+</div>
+
+<p>输出将是操作系统模块中使用的方法列表，如下所示:</p>
+
+<div class="output">
+<pre>
+<samp>['DirEntry', 'F_OK', 'MutableMapping', 'O_APPEND', 'O_BINARY', 'O_CREAT', 'O_EXCL', 'O_NOINHERIT', 'O_RANDOM', 'O_RDONLY', 'O_RDWR', 'O_SEQUENTIAL', 'O_SHORT_LIVED', 'O_TEMPORARY', 'O_TEXT', 'O_TRUNC', 'O_WRONLY', 'P_DETACH', 'P_NOWAIT', 'P_NOWAITO', 'P_OVERLAY', 'P_WAIT', 'PathLike', 'R_OK', 'SEEK_CUR', 'SEEK_END', 'SEEK_SET', 'TMP_MAX', 'W_OK', 'X_OK', '_AddedDllDirectory', '_Environ', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_check_methods', '_execvpe', '_exists', '_exit', '_fspath', '_get_exports_list', '_putenv', '_unsetenv', '_wrap_close', 'abc', 'abort', 'access', 'add_dll_directory', 'altsep', 'chdir', 'chmod', 'close', 'closerange', 'cpu_count', 'curdir', 'defpath', 'device_encoding', 'devnull', 'dup', 'dup2', 'environ', 'error', 'execl', 'execle', 'execlp', 'execlpe', 'execv', 'execve', 'execvp', 'execvpe', 'extsep', 'fdopen', 'fsdecode', 'fsencode', 'fspath', 'fstat', 'fsync', 'ftruncate', 'get_exec_path', 'get_handle_inheritable', 'get_inheritable', 'get_terminal_size', 'getcwd', 'getcwdb', 'getenv', 'getlogin', 'getpid', 'getppid', 'isatty', 'kill', 'linesep', 'link', 'listdir', 'lseek', 'lstat', 'makedirs', 'mkdir', 'name', 'open', 'pardir', 'path', 'pathsep', 'pipe', 'popen', 'putenv', 'read', 'readlink', 'remove', 'removedirs', 'rename', 'renames', 'replace', 'rmdir', 'scandir', 'sep', 'set_handle_inheritable', 'set_inheritable', 'spawnl', 'spawnle', 'spawnv', 'spawnve', 'st', 'startfile', 'stat', 'stat_result', 'statvfs_result', 'strerror', 'supports_bytes_environ', 'supports_dir_fd', 'supports_effective_ids', 'supports_fd', 'supports_follow_symlinks', 'symlink', 'sys', 'system', 'terminal_size', 'times', 'times_result', 'truncate', 'umask', 'uname_result', 'unlink', 'urandom', 'utime', 'waitpid', 'walk', 'write']
+</samp></pre>
+</div>
+
+<h2 id="current">如何获取当前工作目录？</h2>
+
+<p>现在如果你想知道你正在工作的当前目录的路径，你可以使用<code>getcwd()</code> <b> </b>方法。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import os
+os.getcwd()</code>
+</pre>
+</div>
+
+<div class="output">
+<pre>
+<samp>'C:\\Users\\AppData\\Local\\Programs\\Python\\Python38-32'
+</samp></pre>
+</div>
+
+<p><code>getcwd()</code>方法以字符串形式返回 python 中当前工作目录的路径，如示例所示。您甚至可以使用<code>type()</code>方法检查结果的类型。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import os
+type(os.getcwd())</code>
+</pre>
+</div>
+
+<p>仔细思考<code>getcwd()</code>的输出，我们可以看到路径中使用了两个黑色斜线(<code>\\</code>)来分隔路径组件。额外的反斜杠充当以下字符串的转义字符。我们可以使用打印功能将它取出，同样的路径将更改为如下所示:</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import os
+print(os.getcwd())</code>
+</pre>
+</div>
+
+<div class="output">
+<pre>
+<samp>C:\Users\AppData\Local\Programs\Python\Python38-32
+</samp></pre>
+</div>
+
+<p>如果想以字节对象的形式获取当前工作目录的路径，只需在<code>getcwd()</code>方法后追加‘b’，即使用<code>getcwdb()</code>方法。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import os
+os.getcwdb() </code>
+</pre>
+</div>
+
+<div class="output">
+<pre>
+<samp>b'C:\\Users\\AppData\\Local\\Programs\\Python\\Python38-32'
+</samp></pre>
+</div>
+
+<h2 id="change">如何更改工作目录？</h2>
+
+<p>要更改当前工作目录，我们可以使用内置方法<code>chdir()</code>。新路径应该作为参数给出。反斜杠(\\)和正斜杠(/)都可以用来分隔路径中的元素。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import os
+os.chdir('C:\\Users\\Desktop') </code>
+</pre>
+</div>
+
+<p>现在工作目录从 python 文件夹变成了 Desktop。您可以通过简单地列出目录中的元素来检查目录中的更改。</p>
+
+<h2 id="list">如何列出文件或目录</h2>
+
+<p>我们可以使用<code>listdir()</code>方法列出目录或文件中的元素。如果您没有传递参数，那么它将提供当前目录中的所有元素。返回的列表将包含指定目录中的所有目录或文件。在这里，在我们的例子中，桌面上的所有文件夹和文件都显示为列表。</p>
+
+<p>观察以下示例:</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import os
+os.chdir('C:\\Users\\Desktop')
+os.listdir() </code>
+</pre>
+</div>
+
+<p>输出将是:</p>
+
+<div class="output">
+<pre>
+<samp>['desktop.ini', 'EMAIL TEMPLATES.docx', ' 'New Microsoft Excel Worksheet.xlsx', 'New Microsoft Word Document (2).docx', 'New Microsoft Word Document.docx', 'notepad.py', 'PY PRO']
+</samp></pre>
+</div>
+
+<h2 id="create">如何创建目录</h2>
+
+<p>要创建目录，我们使用内置的方法 mkdir()。我们应该传递目录的路径作为参数。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import os
+os.mkdir('C:\\Users\\Desktop\\Directory_1') </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<p><img alt="create a directory" src="../Images/0e806f27c9aa2d1e4190768c2c781481.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/directory/create.png"/></p>
+
+<p>如果您试图创建一个已经存在于系统中的目录，那么您将会得到一个如下图所示的错误消息<a href="../python/errors-exceptions-tutorial"> <strong>文件存在错误</strong> </a>。</p>
+
+<div class="code-single error">
+<pre>
+<code class="python">import os
+os.mkdir('C:\\Users\\Desktop\\PY PRO') </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+    os.mkdir('C:\\Users\\Desktop\\PY PRO')
+FileExistsError: [WinError 183] Cannot create a file when that file 
+</module></pyshell></samp></pre>
+</div>
+
+<p>只要看一下<code>listdir()</code>的输出，就可以看到系统中已经有“PY PRO”文件夹了。</p>
+
+<p>Python 还有一个名为<code>makedirs()</code>的内置方法，用于以嵌套结构创建目录。换句话说<code>makedirs()</code>该方法递归地创建目录，如下例所示:</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import os
+os.makedirs('PYTHON/DataTypes/int')
+os.makedirs('C/DataTypes/float')
+os.makedirs('Java/DataTypes/float')
+os.listdir() </code>
+</pre>
+</div>
+
+<p>输出:</p>
+
+<div class="output">
+<pre>
+<samp>['C', 'JAVA', 'PYTHON']
+</samp></pre>
+</div>
+
+<p>这将在目录中创建一个路径，即使它没有找到 1 级文件夹或目录。它按照我们给他们的顺序嵌套文件。在本例中，第 0 级文件夹是<strong>目录 _1 </strong>，在第 1 级创建了一个 PYTHON 文件夹，它在第 2 级又创建了另一个名为数据类型的文件夹，在第 3 级它包含文件夹 int。但是在上面的 os.listdir()中只列出了特定级别的目录。</p>
+
+<div class="img-div"><img alt="Hierarchical structure of the Directory" src="../Images/59ddcfbb884e4a02e03164ab97109bb7.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/directory/level.png"/>
+<h3>目录的层次结构</h3>
+</div>
+
+<h2 id="traverse ">递归遍历目录</h2>
+
+<p>要列出一个目录的嵌套结构，我们可以使用<code>os.walk()</code>方法，它允许我们递归遍历一个目录。<code>os.walk()</code>方法在 for 循环的帮助下返回一个目录的根目录、子目录和文件。以下示例打印<strong>目录 _1 </strong>中的所有子目录和文件。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import os
+rootdir='C:\\Users\\TP-E540\\Desktop\\Programming Languages'
+for roots,dirs,files in os.walk(rootdir):
+ print("{0} has {1} files".format(roots, len(files))) </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Output:
+C:\Users\Desktop\Programming Languages has 8 files
+C:\Users\Desktop\Programming Languages\C has 2 files
+C:\Users\Desktop\Programming Languages\JAVA has 2 files
+C:\Users\Desktop\Programming Languages\PYTHON has 2 files
+C:\Users\Desktop\Programming Languages\PYTHON\DataTypes has 1 files
+C:\Users\Desktop\Programming Languages\PYTHON\DataTypes\float has 1 file
+</samp></pre>
+</div>
+
+<h2 id="rename">如何重命名目录？</h2>
+
+<p>假设您想要重命名一个目录，那么您可以使用 os 模块中可用的方法<strong>重命名(源，目标)</strong>。这个<strong>重命名()</strong>的方法需要两个参数，</p>
+
+<p><strong> Source_name </strong>:表示要更改的名称</p>
+
+<p><strong>目的地名称</strong>:表示新名称</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import os
+os.rename('Directory_1','Programming Languages') </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<p><img alt="Rename Directory" src="../Images/f6d08c2ef02c37e032f5c9da7b85c5df.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/directory/rename.png"/></p>
+
+<p>在该示例中，最初，文件夹的名称是 Directory_1，它被重命名为编程语言。</p>
+
+<p>当源目录“<strong>目录 _1 </strong>在系统中不可用时，系统将引发名为<code><a href="../python/errors-exceptions-tutorial">FileNotFoundError</a></code>的异常。同样，当目的地“<strong>编程语言</strong>已经存在于系统中时，再次出现<code><a href="../python/errors-exceptions-tutorial">FileExistsError</a></code> <strong> </strong>异常。</p>
+
+<h2>如何删除目录</h2>
+
+<p>我们可以使用方法<code>rmdir()</code>从系统中删除一个目录，其中传递的参数是目录的路径</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import os
+os.rmdir('C:\\Users\\Desktop\\IMAGES') </code>
+</pre>
+</div>
+
+<p>这个例子意味着删除一个名为 IMAGES 的空文件夹或目录。该文件夹将从系统中删除。</p>
+
+<p>如果我们再次尝试删除已删除的文件夹或系统中不存在的文件夹，会发生什么情况。观察以下示例:</p>
+
+<div class="single-code error">
+<pre>
+<code class="python">import os
+os.rmdir('C:\\Users\\Desktop\\IMAGES') </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+    os.rmdir('C:\\Users\\Desktop\\IMAGES')
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Desktop\\IMAGES'
+</module></pyshell></samp></pre>
+</div>
+
+<p>显然<code>FileNotFoundError</code> <strong> </strong>会加注，因为系统中没有该文件。</p>
+
+<p>考虑我们尝试删除非空目录的场景，这意味着目录由子文件夹或文件组成。口译员会举起<a href="../python/errors-exceptions-tutorial"> <code>OSError</code> <strong> </strong> </a>如下图所示:</p>
+
+<div class="single-code error">
+<pre>
+<code class="python">import os
+os.rmdir('C:\\Users\\Desktop\\Programming Languages') </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Traceback (most recent call last):
+  File "<pyshell>", line 1, in <module>
+    os.rmdir('C:\\Users\\Desktop\\Programming Languages')
+OSError: [WinError 145] The directory is not empty: 'C:\\Users\Desktop\\Programming Languages'
+</module></pyshell></samp></pre>
+</div>
+
+<h2 id="path">路径连接和分割</h2>
+
+<p>到目前为止，我们已经讨论了如何在单个平台上操作目录或文件。为了运行我们的程序而不考虑平台，我们必须使用独立于平台的目录或文件路径。这可以通过使用子模块<strong> os.path </strong>来实现。</p>
+
+<p>与<strong> os.path </strong>子模块相关联的两个重要方法是:</p>
+
+<ol>
+ <li><strong>加入()</strong> -加入 python 中的路径元素<div class="code-example"> <pre>
+<code class="python">&gt;&gt;&gt; import os
+&gt;&gt;&gt; os.path.join('C:','Users','Desktop','Programming Languages') </code>
+</pre> </div></li>
+ <li><strong>拆分()</strong> -在 python 中拆分路径元素。<div class="code-example"> <pre>
+<code class="python">&gt;&gt;&gt; import os
+&gt;&gt;&gt; os.path.split('C:\\Users\\Desktop\\Programming Languages')
+('C:\\Users\\Desktop', 'Programming Languages') </code>
+</pre> </div></li>
+</ol>
+
+<h2>检查目录是否存在</h2>
+
+<p>也可以检查系统中是否存在路径。要检查系统中是否存在目录，我们可以使用<code>exists()</code>功能或<code>isdir()</code>功能。这两个功能都位于子模块<strong> os.path </strong>中。以下示例显示了<code>exists()</code>函数如何检查路径的存在。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">&gt;&gt;&gt; import os
+&gt;&gt;&gt; os.path.exists('C:\\Users\\TP-E540\\Desktop\\Programming Languages')
+True
+&gt;&gt;&gt; os.path.exists('C:\\Users\\TP-E540\\Desktop\\File.txt')
+True
+&gt;&gt;&gt; os.path.exists('C:\\Users\\TP-E540\\Desktop\\New')
+False </code>
+</pre>
+</div>
+
+<p><code>isdir()</code>函数检查目录路径的存在，而不是文件路径的存在。以下示例将阐明这一点:</p>
+
+<div class="code-example">
+<pre>
+<code class="python">&gt;&gt;&gt; import os
+&gt;&gt;&gt; os.path.isdir('C:\\Users\\TP-E540\\Desktop\\Programming Languages')
+True
+&gt;&gt;&gt; os.path.isdir('C:\\Users\\TP-E540\\Desktop\\New.txt')
+False
+&gt;&gt;&gt; os.path.isdir('C:\\Users\\TP-E540\\Desktop\\New dir')
+False </code>
+</pre>
+</div>
+
+<p>所以我们可以总结为<code>exists()</code>函数检查路径是否存在。而<code>isdir()</code>功能检查目录路径是否存在。</p>
+                       &#13;
+                       &#13;
+                       <!-- End Content Area -->&#13;
+&#13;
+                        
+</body>
+</html>

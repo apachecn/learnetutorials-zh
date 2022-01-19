@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Python Program to check the given number is a perfect number</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序检查给定的数字是否是一个完美的数字</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/check-perfect-number">https://learnet utortials . com/python/programs/check-perfect-number</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要检查这个数字是否是一个完美的数字。这是一个基于数字的 python 程序。</p>
+
+<p>为了更好地理解这个例子，我们总是建议您学习下面列出的<a href="../" title="Python tutorial"> Python 编程</a>的基本主题:</p>
+
+<ul>
+ <li><a href="../../python/python-operators" title="operators in python"> Python 运算符</a></li>
+ <li><a href="../../python/decision-making-statements" title="python decision making"> Python 决策语句</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in python"> Python 循环</a></li>
+</ul>
+
+<h2>什么是完全数？</h2>
+
+<p>这个简单的 python 程序是完美的。如果一个数是正数，且该数的所有适当除数之和等于该数本身，则称该数为完全数。在这个基本的 python 程序中，我们需要检查用户的输入是否是一个完美的数字，并打印结果。</p>
+
+<p>例如，让我们取一个数字 6。我们知道 6 的除数是 1，2，3，我们来查一下除数的和，1 + 2 + 3 = 6，所以是匹配的，6 是完全数。</p>
+
+<h2>python 中如何查完全数？</h2>
+
+<p>为了在 python 程序示例中实现这个逻辑，我们必须接受来自用户的数字，并在 python 中打开一个从 1 到该数字的 for 循环。使用 python 语言中的<strong> mod </strong>运算符检查给定数字的所有除数。<code>If</code>python if 条件满足，将该除数加到变量<strong> sum </strong>中，该变量具有除数的前一个和。在<code>for loop</code>的所有迭代后，检查和与数是否相等。如果相等，那么它就是一个完全数<code>else</code>，而不是一个完全数。</p>
+
+<h3>算法</h3>
+
+<p><strong>步骤 1: </strong>使用 python 编程语言中的输入法接受用户输入的数字，并使用<code>int()</code>将字符串转换为整数。</p>
+
+<p><strong>步骤 2: </strong>将总和的变量初始化为<strong>零</strong>。</p>
+
+<p><strong> STEP 3: </strong>打开一个<code>for loop</code>从 1 到数字找到所有的除数。</p>
+
+<p><strong>步骤 4: </strong>使用 if 条件检查数字<strong> mod i </strong>是否为零。如果它是零，那么它是除数。</p>
+
+<p><strong> STEP 5: </strong>使用 python 基本语法，如果是除数，则将数字加和。</p>
+
+<p><strong>步骤 6: </strong>使用<code>if</code>条件检查数字是否等于总和，如果是，则使用 python 语言中的 print 语句打印该数字为完全数。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">n = int(input("Enter any number: "))
+sum1 = 0
+for i in range(1, n):
+    if(n % i == 0):
+        sum1 = sum1 + i
+if (sum1 == n):
+    print("The number is a Perfect number")
+else:
+    print("The number is not a Perfect number")</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter any number : 6
+
+The number is a Perfect number</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

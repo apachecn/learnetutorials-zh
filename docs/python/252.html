@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Python capitalize()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 大写()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/capitalize">https://learnetutorials.com/python/methods/capitalize</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的大写()函数有助于将字符串的第一个字符转换为大写，并将所有剩余的字符转换为小写(如果有)。转换后的字符串作为输出返回，不影响原始字符串。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>string.capitalize()</strong> 
+ </code>
+</pre>
+</div>
+
+<h2>大写()参数:</h2>
+
+<p>大写()函数不接受任何参数。如果字符串的第一个字符已经是大写字母，它将返回原始字符串。</p>
+
+<h2>大写()返回值</h2>
+
+<p>此方法的返回值是原始字符串的副本，方法是将其第一个字符更改为大写，其余字符全部为小写。如果字符串为空，它将返回一个空字符串作为输出。同样，如果我们使用像“12”这样的数字字符串，它将返回一个错误。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>If 字符串</td>
+   <td>第一个字符为大写的字符串</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中大写()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何在 Python 中大写一个句子？</h3>
+
+<pre>
+<code class="python">
+string = "hiii How are You."
+
+capitalized = string.capitalize()
+
+print('Old String is: ', string)
+print('Capitalized String is:', capitalized)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Old String is: hiii How are You.
+Capitalized String is: Hiii how are you.
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:使用非字母第一个字符</h3>
+
+<pre>
+<code class="python">
+string = "* is a multiple operator."
+
+updated_string = string.capitalize()
+
+print('Old String is:', string)
+print('New String is:', updated_string)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Old String is: * is a </samp><code class="python">multiple </code><samp>operator.
+New String is: * is a </samp><code class="python">multiple </code><samp>operator.
+</samp></pre>
+</div>
+                        
+</body>
+</html>

@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>Python rpartition()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python rpartition()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/rpartition">https://learnetutorials.com/python/methods/rpartition</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 rpartition()函数有助于将字符串划分为元组。它首先找出字符串的最后一次出现，并分成包含三个部分的元组。第一部分包含指定字符串之前的部分，第二部分包含指定字符串，第三部分包含给定字符串之后的部分。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>string.rpartition(separator)</strong> #where separator can be numbers as well as symbols
+ </code>
+</pre>
+</div>
+
+<h2>rpartition()参数:</h2>
+
+<p>rpartition()函数采用单个参数。此方法搜索给定字符串的最后一次出现。分区()中的搜索区分大小写。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>分离器</td>
+   <td>要搜索的字符串</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>rpartition()返回值</h2>
+
+<p>返回值是一个元组。如果找不到分隔符参数，则返回两个空字符串和字符串本身。如果我们传递一个空字符串作为分隔符，那么该方法将抛出 ValueError。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>整数</td>
+   <td>返回一个 Unicode 字符</td>
+  </tr>
+ </tbody>
+</table>
+
+<p> </p>
+
+<h2>Python 中 rpartition()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如果找不到分隔符，rpartition()如何工作？</h3>
+
+<pre>
+<code class="python">
+string1 = "Python programming languages"
+
+string2 = string1.rpartition("java")
+
+print(string2)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+('', '','Python programming languages')
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:如果找到了分隔器，rpartition()如何工作？</h3>
+
+<pre>
+<code class="python">
+string1 = "Python programming languages"
+
+string2 = string1.partition("programming")
+
+print(string2)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+('Python','programming','languages')
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 3:如果分隔器为空，rpartition()如何工作？</h3>
+
+<pre>
+<code class="python">
+string1 = "Python programming languages"
+
+string2 = string1.partition(" ")
+
+print(string2)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+('', '','Python programming languages')
+ValueError: empty separator
+</samp></pre>
+</div>
+                        
+</body>
+</html>

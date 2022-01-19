@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>Python format()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 格式()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/format">https://learnetutorials.com/python/methods/format</a></blockquote>&#13;
+                         &#13;
+                        <p>format()方法用于返回指定值的格式化表示形式。它由格式说明符处理，并将格式化的字符串插入字符串的占位符中。占位符可以用编号索引{0}、命名索引{price}甚至空的{ 0 }来表示。<font face="monospace"> </font>的格式()类似于‘String format’方法，两种方法都调用一个对象的 __format__()方法。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>format(value[, format_spec]) </strong>#Where value can be a integer, float or binary format.</code>
+</pre>
+</div>
+
+<h2>格式()参数:</h2>
+
+<p>这个函数有两个参数:在这个格式中，规格可以是</p>
+
+<p>[[填充]对齐][符号][#][0][宽度][，][。精度][类型]</p>
+
+<p>其中，选项为<br/>填充::=任意字符<br/>对齐::= " &lt; " | " &gt; " | "=" | "^" <br/>符号::= "+" | "-" | " " <br/>宽度::=整数<br/>精度::=整数<br/>类型::= " b " | " c " | " d " | " e " | " e " | " f " | " f " | " g " | " g " | " n " | " o " | " s "</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>价值</td>
+   <td>需要格式化的值</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>格式 _ 规格</td>
+   <td>值应该如何格式化的规范。</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>格式()返回值</h2>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>格式规范。</td>
+   <td>格式化表示</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 format()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:格式为()的数字格式</h3>
+
+<pre>
+<code class="python">
+# d, f and b are type
+
+# integer
+print(format(123, "d"))
+
+# float arguments
+print(format(123.4567898, "f"))
+
+# binary format
+print(format(12, "b"))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>123
+123.456790
+1100
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:带有填充、对齐、符号、宽度、精度和类型()的数字格式</h3>
+
+<pre>
+<code class="python">
+# integer 
+print(format(1234, "*&gt;+7,d"))
+
+# float number
+print(format(123.4567, "^-09.3f"))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>*+1,234
+0123.4570
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 3:通过重写 __format__()来使用 format()</h3>
+
+<pre>
+<code class="python">
+# custom __format__() method
+class Person:
+    def __format__(self, format):
+        if(format == 'age'):
+            return '23'
+        return 'None'
+
+print(format(Person(), "age"))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>23
+</samp></pre>
+</div>
+                        
+</body>
+</html>

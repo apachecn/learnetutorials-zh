@@ -1,0 +1,110 @@
+<html>
+<head>
+<title>Python add()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python add()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/add">https://learnetutorials.com/python/methods/add</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 add()函数有助于将指定的元素插入集合中。此方法不允许添加重复的元素。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>set.add(element)</strong> #where element which is to be add
+ </code>
+</pre>
+</div>
+
+<h2><span> </span>添加()参数:</h2>
+
+<p>add()函数接受一个参数。如果集合中已经存在指定的元素，此函数不会添加元素。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>元素</td>
+   <td>添加到集合中的元素</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>添加()返回值<br/></h2>
+
+<p>add()方法不返回值，它只是通过添加一个特定的元素来更新集合。我们也可以使用 add()方法添加元组。像元素一样，相同的元组不能再次添加。</p>
+
+<h2>Python 中 add()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何向集合中添加元素？</h3>
+
+<pre>
+<code class="python">
+# alphabet set
+alphabet = {'a', 'b', 'd', 'e', 'f'}
+
+# adding 'c'
+alphabet.add('c')
+print('Alphabets are:', alphabet)
+
+# adding 'b' again
+alphabet.add('b')
+print('Alphabets:', alphabet)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Alphabets are:{'a', 'b', 'd', 'e', 'c', 'f'}
+Alphabets are:{'a', 'b', 'd', 'e', 'c', 'f'}
+# The order may be different
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:如何向集合中添加元组？</h3>
+
+<pre>
+<code class="python">
+# alphabet set
+alphabet = {'a', 'b', 'c'}
+
+# a tuple ('d', 'e')
+tuple = ('d', 'e')
+
+# adding tuple
+alphabet.add(tuple)
+print('Alphabets are:', alphabet)
+
+# adding same tuple again
+alphabet.add(tuple)
+print('Alphabets are:', alphabet)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Alphabets are: {('d', 'e'), 'c', 'b', 'a'}
+Alphabets are: {('d', 'e'), 'c', 'b', 'a'}
+</samp></pre>
+</div>
+                        
+</body>
+</html>

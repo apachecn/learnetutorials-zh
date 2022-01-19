@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Python Program to solve a quadratic equation</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序求解一个二次方程</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/solve-quadratic-equation">https://learnet utortials . com/python/programs/solve-quadrant-equation</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <h2>如何用 python 解一个二次方程？</h2>
+
+<p>在这个 python 程序示例中，我们求解了一个二次方程<strong> ax2 + bx + c = 0 </strong>，其中<strong> a、b </strong>和<strong> c </strong>是用户输入。而<strong> x </strong>是未知的我们要找出<strong> a </strong>不等于零的地方。如果<strong> a </strong>等于零，那么就不是二次方程；这将是一个线性方程。</p>
+
+<p>解二次方程，我们用公式<strong> x= (-b + sqrt(b2 - 4ac))/2a 或 x= (-b - sqrt(b2 - 4ac))/2a </strong>。这里<strong> b2 - 4ac </strong>叫做判别式。而“<strong> a </strong>”、“<strong> b </strong>”、“<strong> c </strong>被称为<strong>系数</strong>。</p>
+
+<p>在这个针对初学者的 python 程序中，我们要导入的复数<code>math.cmath</code>是 python 编程语言中的一个<a href="../python-modules-packages" title="Python modules">内置模块</a>来做复数的数学运算。<code>cmath</code> <strong> </strong>也接受 int、float 和复数。<code>cmath</code> <strong> </strong>模块方法返回一个复数值。如果返回值是实数，它的虚部为零。</p>
+
+<p>在这个简单的 python 程序中，我们接受<strong> a、b、c </strong>的值，并使用 python 中的<a href="../python-datatypes" title="data types in python">浮点数据类型将其转换为浮点。现在我们必须使用公式<strong> (b**2) - (4*a*c) </strong>找出判别式<strong> d </strong>，并应用该判别式计算<strong> sol1 </strong>和<strong> sol2 </strong>。最后，打印结果。</a></p>
+
+<p>所以我们将一步一步地分解这段 python 代码。</p>
+
+<h3>算法</h3>
+
+<p><strong> STEP 1: </strong>导入<code>cmath</code> <strong> </strong>模块用复数做计算。</p>
+
+<p><strong> STEP 2: </strong>使用 python 语言的输入函数接受<strong> a、b </strong>和<strong> c </strong>的系数值，并使用 float 数据类型将该字符串转换为 float。</p>
+
+<p><strong> STEP 3: </strong>现在，我们必须使用等式计算判别式“<strong> d </strong>”。<strong> b**2 - 4*a*c </strong>我们必须在主二次方程中应用这个判别式。</p>
+
+<p><strong> STEP 4: </strong>现在，我们找到二次方程<strong> (-b-cmath.sqrt(d))/(2*a) </strong>的解，并将结果保存在变量“<strong> sol1 </strong>和<strong> sol2 </strong>中。</p>
+
+<p><strong>步骤 5: </strong>使用格式化方法打印结果。</p>
+
+<p>format 方法用于格式化结果并将该值插入格式占位符。这里在格式方法中，我们使用<strong> {} </strong>括号作为占位符。方法返回字符串值。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">import cmath  
+a = float(input('Enter the value a: '))  
+b = float(input('Enter the value b: '))  
+c = float(input('Enter the value c: '))  
+  
+
+d = (b**2) - (4*a*c)     # calculating the discriminant
+  
+
+sol1 = (-b-cmath.sqrt(d))/(2*a)    # Applying the discriminant in the quadratic formula
+sol2 = (-b+cmath.sqrt(d))/(2*a)  
+print('The result is {0} and {1}'.format(sol1,sol2))    # print the result using the format method</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter the value a: 8
+Enter the value a: 16
+Enter the value a: 8
+
+The result is  -1 + 0j and -1 + 0j
+</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

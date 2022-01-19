@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>Python join()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 联接()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/join">https://learnetutorials.com/python/methods/join</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 join()函数通过使用字符串分隔符连接给定 iterable 的所有元素来帮助创建新字符串。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>string.join(iterable)</strong> #where iterable may be List, Tuple, String, Dictionary and Set.
+ </code>
+</pre>
+</div>
+
+<h2>join()参数:</h2>
+
+<p>join()函数接受一个参数。如果可迭代表包含任何非字符串值，该函数将引发类型错误异常，</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>可迭代的</td>
+   <td>所有返回值都是字符串的任何可迭代对象</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>join()返回值</h2>
+
+<p>返回值始终是串联字符串。如果我们使用字典作为可迭代表，返回值将是键，而不是值。</p>
+
+<p> </p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>可重复的</td>
+   <td>线</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 join()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 join()方法在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+# .join() with lists
+List = ['5', '4', '3', '2']
+separator = ', '
+print(separator.join(List))
+
+# .join() with tuples
+Tuple = ('5', '4', '3', '2')
+print(separator.join(Tuple))
+
+string1 = 'xyz'
+string2 = '123'
+
+# each element of string2 is separated by string1
+# '1'+ 'xyz'+ '2'+ 'xyz'+ '3'
+print('string1.join(string2):', string1.join(string2))
+
+# each element of string1 is separated by string2
+# 'x'+ '123'+ 'y'+ '123'+ 'z'
+print('string2.join(string1):', string2.join(string1))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+5, 4, 3, 2
+5, 4, 3, 2
+string1.join(string2): 1xyz2xyz3
+string2.join(string1): x123y123z
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 join()方法如何在 Python 中处理集合？</h3>
+
+<pre>
+<code class="python">
+# .join() with sets
+num = {'5', '4', '3'}
+separator = ', '
+print(separator.join(num))
+
+string = {'Apple', 'Orange', 'Grapes'}
+separator = '-&gt;-&gt;'
+print(separator.join(string))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+5, 4, 3
+Apple-&gt;-&gt;Orange-&gt;-&gt;Grapes
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:传递超出范围的整数</h3>
+
+<pre>
+<code class="python">
+print(chr(-1))
+print(chr(1114112))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+ValueError: chr() arg not in range(0x110000) 
+ValueError: chr() arg not in range(0x110000)
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 join()方法如何与字典一起工作？</h3>
+
+<pre>
+<code class="python">
+# .join() with dictionaries
+dict = {'test': 1, 'with': 2}
+seperator = '-&gt;'
+
+# joins the keys only
+print(seperator.join(dict))
+
+dict = {1: 'test', 2: 'with'}
+seperator = ', '
+
+# this gives error since key isn't string
+print(seperator.join(dict))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+test-&gt;with
+Traceback (most recent call last):
+  File "...", line 12, in <module>
+TypeError: sequence item 0: expected str instance, int found
+</module></samp></pre>
+</div>
+                        
+</body>
+</html>

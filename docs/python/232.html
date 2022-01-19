@@ -1,0 +1,102 @@
+<html>
+<head>
+<title>Python copy()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 副本()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/list-copy">https://learnetutorials.com/python/methods/list-copy</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 copy()函数有助于返回给定列表的浅层副本。在这里，浅拷贝意味着在新列表中所做的任何更改都不会反映原始列表。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>list.copy()</strong> #where list in which needs to copy
+ </code>
+</pre>
+</div>
+
+<h2>复制()参数:</h2>
+
+<p>copy()函数不接受任何参数。也可以使用“<strong> = </strong>”运算符复制列表。通过以这种方式复制，问题是，如果我们修改复制的新列表，它将影响原始列表，因为新列表引用相同的原始列表对象。</p>
+
+<h2>复制()返回值</h2>
+
+<p>此方法通过复制原始列表返回一个新列表。它不会对原始列表进行任何更改。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>如果列表</td>
+   <td>列表的简单副本</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 copy()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何复制列表？</h3>
+
+<pre>
+<code class="python">
+# mixed list
+org_list = ['abc', 0, 5.5]
+
+# copying a list
+new_list = org_list.copy()
+
+print('Copied List:', new_list)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Copied List: ['abc', 0, 5.5]
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:如何使用切片语法复制列表？</h3>
+
+<pre>
+<code class="python">
+# shallow copy using the slicing syntax
+
+# mixed list
+org_list = ['abc', 0, 5.5]
+
+# copying a list using slicing
+new_list = org_list[:]
+
+# Adding an element to the new list
+new_list.append('def')
+
+# Printing new and old list
+print('Original List:', org_list)
+print('New List:', new_list)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Original List: ['abc', 0, 5.5]
+New List: ['abc', 0, 5.5,'def']
+</samp></pre>
+</div>
+                        
+</body>
+</html>

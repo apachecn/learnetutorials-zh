@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>Python pop()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python pop()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/pop">https://learnetutorials.com/python/methods/pop</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 pop()函数有助于从字典中移除并返回指定的键元素。此方法的返回值应该是被移除项的值。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>dictionary.pop(key[, default])</strong> #where key which is to be searched
+ </code>
+</pre>
+</div>
+
+<h2>pop()参数:</h2>
+
+<p>pop()函数接受两个参数。Python 还支持列表弹出，从列表中移除指定的索引元素。如果没有提供索引，最后一个元素将被删除。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>键</td>
+   <td>要删除的项目的键名</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>系统默认值</td>
+   <td>如果指定的键不存在，将返回的值。</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>pop()返回值</h2>
+
+<p>pop()的返回值取决于给定的参数。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>密钥存在</td>
+   <td>从字典中移除/弹出元素</td>
+  </tr>
+  <tr>
+   <td>密钥不存在</td>
+   <td>缺省值</td>
+  </tr>
+  <tr>
+   <td>密钥不存在&amp;未给出默认值</td>
+   <td>KeyError exception(密钥错误异常)</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 pop()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何用 python 从字典中弹出一个柠檬</h3>
+
+<pre>
+<code class="python">
+# random fruits dictionary
+fruits = { 'mango': 5, 'banana': 4, 'strawberry': 3 }
+
+key = fruits.pop('mango')
+print('The popped item is:', key)
+print('The dictionary is:', fruits)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+The popped item is: 5
+The dictionary is: {'banana': 4, 'strawberry': 3}
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:如何弹出字典中没有的元素</h3>
+
+<pre>
+<code class="python">
+# random fruits dictionary
+fruits = { 'mango': 5, 'banana': 4, 'strawberry': 3 }
+
+key= fruits.pop('orange')
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+KeyError: 'orange'
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 3:如何弹出一个没有出现在带有 defalt 值的字典中的元素</h3>
+
+<pre>
+<code class="python">
+# random fruits dictionary
+fruits = { 'mango': 5, 'banana': 4, 'strawberry': 3 }
+
+key = fruits.pop('orange', 'grapes')
+print('The popped item is:', key)
+print('The dictionary is:', fruits)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+The popped item is: grapes
+The dictionary is: { 'banana': 4,'mango': 5,'strawberry': 3
+</samp></pre>
+</div>
+                        
+</body>
+</html>

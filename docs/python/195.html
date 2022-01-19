@@ -1,0 +1,127 @@
+<html>
+<head>
+<title>Python repr()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python repr()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/repr">https://learnetutorials.com/python/methods/repr</a></blockquote>&#13;
+                         &#13;
+                        <p>内置函数 repr()用于返回给定对象的可打印表示。返回的输出将是一个字符串。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>repr(obj)</strong> #where obj can be a string
+ </code>
+</pre>
+</div>
+
+<h2>repr()参数:</h2>
+
+<p>接受单个参数。在许多对象类型和大多数内建模型中。eval()函数计算作为其参数给出的表达式。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>目标文件</td>
+   <td>必须返回其可打印表示形式的对象</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>返回值</h2>
+
+<p>实际上，repr()函数调用给定对象的 __repr__()函数。我们可以 __repr__()以便 repr()以不同的方式工作。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>目标文件</td>
+   <td>字符串表示</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 repr()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 repr()在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+var = 'foo'
+
+print(repr(var))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>'foo'</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:为自定义对象实现 __repr__ ()</h3>
+
+<pre>
+<code class="python">
+class Person:
+    name = 'Adam'
+
+    def __repr__(self):
+        return repr('Hello ' + self.name )
+
+print(repr(Person()))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+'Hello Adam'
+</pre>
+</div>
+
+<div class="code-example">
+<h3>示例 3:使用类对象</h3>
+
+<pre>
+<code class="python">
+class Color:
+       color='orange'
+       def __repr__(self):
+              return repr(self.color)
+ o=Color()
+ repr(o)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>“‘orange'”
+</samp></pre>
+</div>
+                        
+</body>
+</html>

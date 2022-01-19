@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Python copy()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 副本()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/copy">https://learnetutorials.com/python/methods/copy</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 copy()函数有助于创建字典的副本。我们可以说它返回了一个浅拷贝，这意味着新字典中的任何更改都不会反映原始字典。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>dict.copy()</strong> 
+ </code>
+</pre>
+</div>
+
+<h2>复制()参数:</h2>
+
+<p>copy()方法不接受任何参数。</p>
+
+<h2>复制()返回值</h2>
+
+<p>有时我们使用=运算符来复制字典，区别在于=运算符创建对字典的引用，而 copy()创建一个新字典。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>词典</td>
+   <td>字典副本</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 copy()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 copy()如何用于词典？</h3>
+
+<pre>
+<code class="python">
+originaldict = {5:'five', 6:'six'}
+newdict = originaldict.copy()
+
+print('Orignal: ', originaldict)
+print('New: ', newdict)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Orignal:  {5: 'five', 6: 'six'}
+New:  {5: 'five', 6: 'six'}
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:Python 使用=运算符复制字典</h3>
+
+<pre>
+<code class="python">
+originaldict = {5:'five', 6:'six'}
+newdict = originaldict
+
+# removing all elements from the list
+newdict.clear()
+
+print('New: ', newdict)
+print('Original: ', originaldict)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+New:  {}
+Original:  {}
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 3:Python 使用 copy()复制字典</h3>
+
+<pre>
+<code class="python">
+originaldict = {5:'five', 6:'six'}
+newdict = originaldict.copy()
+
+# removing all elements from the list
+newdict.clear()
+
+print('New: ', newdict)
+print('Original: ', originaldict)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+New:  {}
+Original:  {5: 'five', 6: 'six'}
+</samp></pre>
+</div>
+                        
+</body>
+</html>

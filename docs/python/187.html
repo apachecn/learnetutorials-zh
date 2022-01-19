@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Python object()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 对象()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/object">https://learnetutorials.com/python/methods/object</a></blockquote>&#13;
+                         &#13;
+                        <p>内置函数对象()返回一个空对象。这个对象是所有类的基础。它保存默认的内置属性和方法。不可能向该对象添加新的属性或方法。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>o = object()</strong> #where o is the object
+ </code>
+</pre>
+</div>
+<h2>对象()参数:</h2>
+
+<p>object()函数不接受任何参数。</p>
+
+<p> </p>
+
+<h2>对象()返回值</h2>
+
+<p>object()函数返回一个无特征的对象。这是所有阶层的基础。</p>
+
+<p> </p>
+
+<h2>Python 中 object()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 object()是如何工作的？</h3>
+
+<pre>
+<code class="python">
+test = object()
+
+print(type(test))
+print(dir(test))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>test = object()
+
+print(type(test))
+print(dir(test))</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:演示对象的属性()</h3>
+
+<pre>
+<code class="python">
+# declaring the objects of class object
+obj1 = object()
+obj2 = object()
+  
+# checking for object equality
+print ("Is obj1 equal to obj2 : " + str(obj1 == obj2))
+  
+# trying to add attribute to object
+obj1.name = "GeeksforGeeks"
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>Is obj1 equal to obj2 : False
+</samp></pre>
+</div>
+                        
+</body>
+</html>

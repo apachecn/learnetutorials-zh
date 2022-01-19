@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>Python bytearray()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python bytearray（）</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/bytearray">https://learnetutorials.com/python/methods/bytearray</a></blockquote>&#13;
+                         &#13;
+                        <p>顾名思义，bytearray 是一个对象，它是一个字节数组。这个字节数组在数据处理方面有着巨大的应用。例如，在编码、压缩和映射数据时，使用字节数组。</p>
+
+<p>在 python 中<code>bytearray()</code>函数以一个对象为输入，可以产生相应的可变字节数组。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>bytearray(a, encoding, error)</strong> #where a can be an object or an integer </code>
+</pre>
+</div>
+
+<h2>bytearray()参数</h2>
+
+<p>取 3 个参数，其中第一个参数可以是一个对象，如果该对象是一个字符串，则将编码格式指定为第二个参数。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>参数</th>
+   <th>描述</th>
+   <th>必需/可选</th>
+  </tr>
+  <tr>
+   <td>价值</td>
+   <td>该值可以是整数、字符串或可迭代的</td>
+   <td>可选择的</td>
+  </tr>
+  <tr>
+   <td><br/>编码</td>
+   <td>如果字符串作为参数传递，则指定字符串编码</td>
+   <td>如果第一个参数是字符串，则需要</td>
+  </tr>
+  <tr>
+   <td>错误</td>
+   <td>要指定出错时要做什么</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>字节数组()返回值</h2>
+
+<p>根据作为输入传递的参数类型，返回值会有所不同。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>输出</th>
+  </tr>
+  <tr>
+   <td>整数</td>
+   <td>指定大小的字节数组已初始化</td>
+  </tr>
+  <tr>
+   <td>字符串作为第一个参数，编码作为第二个参数</td>
+   <td>编码为字节的字符串</td>
+  </tr>
+  <tr>
+   <td>可重复的</td>
+   <td>字节数组与可迭代数组大小相同</td>
+  </tr>
+  <tr>
+   <td>无参数</td>
+   <td>创建没有元素的字节数组</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>字节射线()示例</h2>
+
+<div class="code-example">
+<h3>传递整数作为参数</h3>
+
+<pre>
+<code class="python">byte_array = bytearray(3) 
+print(byte_array)</code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>bytearray(b'\x00\x00\x00')
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>将字符串作为参数传递</h3>
+
+<pre>
+<code class="python">string = "Happy!" print(bytearray(string, 'utf-8'))</code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>bytearray(b'Happy!')
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>将 iterable 作为参数传递</h3>
+
+<pre>
+<code class="python">keys = {1 : ‘a’,2:’b’} 
+print(bytearray(keys))</code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>bytearray(b'\x01\x02') When dictionary is passed its keys will be converted to bytearray
+</samp></pre>
+</div>
+                        
+</body>
+</html>

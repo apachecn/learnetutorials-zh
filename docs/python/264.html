@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>Python isdecimal()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>python isdiction()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/isdecimal">https://learnetutorials.com/python/methods/isdecimal</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 isdecimal()函数有助于检查字符串的所有字符是否都是十进制的。如果所有字符都是十进制(0-9)，则函数返回 true，否则返回 false。此方法用于 Unicode 对象。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>string.isdecimal()</strong> 
+ </code>
+</pre>
+</div>
+
+<h2>isdecimal()参数:</h2>
+
+<p>isdecimal()不接受任何参数。十进制字符是那些以 10 为基数的数字。</p>
+
+<h2>isdecimal()返回值</h2>
+
+<p>返回值始终是布尔值。如果字符串包含空格、符号或字母，此方法将返回 False。如果是空字符串，函数将返回 False。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>如果都是十进制的</td>
+   <td>真实的</td>
+  </tr>
+  <tr>
+   <td>如果不是十进制的</td>
+   <td>错误的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 isdecimal()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 isdecimal()在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+string = "12345"
+print(string.isdecimal())
+
+# contains alphabets
+string = "123abc45"
+print(string.isdecimal())
+
+# contains alphabets and spaces
+string = "An5 Hii 345"
+print(string.isdecimal())
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+True
+False
+False
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:当字符串包含数字和数字字符时，isdecimal()是如何工作的？</h3>
+
+<pre>
+<code class="python">
+string = '12345'
+print(string .isdecimal())
+
+#s = '²1234'
+string  = '\u00B51234'
+print(string .isdecimal())
+
+# string  = '½'
+string  = '\u00BD'
+print(string .isdecimal())
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+True
+False
+False
+</samp></pre>
+</div>
+                        
+</body>
+</html>

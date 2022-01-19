@@ -1,0 +1,106 @@
+<html>
+<head>
+<title>Python islower()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>python islower()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/islower">https://learnetutorials.com/python/methods/islower</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 islower()函数有助于检查字符串中的字母是否都是小写的。如果所有字母都是小写的，函数返回真。如果它至少包含一个大写字母，那么它将返回 False。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>string.islower()</strong> 
+ </code>
+</pre>
+</div>
+
+<h2>islower()参数:</h2>
+
+<p>islower()方法不接受任何参数。该函数将只检查字母字符，不检查数字、符号和空格。</p>
+
+<h2>islower()返回值</h2>
+
+<p>返回值始终是布尔值。如果给定的字符串只包含符号或数字，此方法将返回 false。需要检查的字符串必须包含至少一个字母字符。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>所有小写字母</td>
+   <td>真实的</td>
+  </tr>
+  <tr>
+   <td>至少一个大写字母</td>
+   <td>错误的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 islower()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 islower()方法在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+string = 'python programming'
+print(string.islower())
+
+string = 'python123 programming345'
+print(string.islower())
+
+string = 'Python programming'
+print(string.islower())
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+True
+True
+False
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:如何在 Python 中的程序中使用 islower()？</h3>
+
+<pre>
+<code class="python">
+string = 'hi how are you?'
+if string.islower() == True:
+  print('All are lowercase letters.')
+else:
+  print('Contains uppercase letter.')
+  
+string = 'Hi how are you?'
+if string.islower() == True:
+  print('String does not contain uppercase letter.')
+else:
+  print('String Contains uppercase letter.')
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+All are lowercase letters.
+String Contains uppercase letter.
+</samp></pre>
+</div>
+                        
+</body>
+</html>

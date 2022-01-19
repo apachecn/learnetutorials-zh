@@ -1,0 +1,155 @@
+<html>
+<head>
+<title>Python issubclass()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python issubclass()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/issubclass">https://learnetutorials.com/python/methods/issubclass</a></blockquote>&#13;
+                         &#13;
+                        <p>如果函数的第一个参数是第二个参数的子类，则 isinstance()函数返回 true。实际上，我们可以说这个函数是用来检查给定的类是否是另一个类的子类。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>issubclass(class, classinfo) </strong> #where class specify the class name
+ </code>
+</pre>
+</div>
+
+<p>字节()参数:</p>
+
+<p>取 2 个参数。我们还可以传递一个类元组作为 classinfo 参数，在这种情况下，如果类是元组中任何类的子类，函数将返回 True。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>班级</td>
+   <td>要检查的类别</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>分类(classify)</td>
+   <td>类、类型或类和类型的元组</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>字节()返回值<br/></h2>
+
+<p>它返回真或假的布尔值。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>类是子类</td>
+   <td>真实的</td>
+  </tr>
+  <tr>
+   <td>类不是子类</td>
+   <td>错误的</td>
+  </tr>
+  <tr>
+   <td>在任何其他情况下</td>
+   <td>TypeError exception</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 issubclass()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 issubclass()是如何工作的？</h3>
+
+<pre>
+<code class="python">
+
+class Polygon:
+  def __init__(polygonType):
+    print('Polygon is a ', polygonType)
+
+class Triangle(Polygon):
+  def __init__(self):
+
+    Polygon.__init__('triangle')
+    
+print(issubclass(Triangle, Polygon))
+print(issubclass(Triangle, list))
+print(issubclass(Triangle, (list, Polygon)))
+print(issubclass(Polygon, (list, Polygon)))
+</code></pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+
+<samp>True
+False
+True
+True
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:检查内置类的子类</h3>
+
+<pre>
+<code class="python">
+print('bool is the subclass of int: ', issubclass(bool, int))
+print('float is the subclass of int: ', issubclass(float, int))
+print('str is the subclass of list: ', issubclass(str, list))
+
+import collections
+print('collections.OrderedDict is the subclass of dict: ', issubclass(collections.OrderedDict, dict))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+
+<samp>bool is the subclass of int: True
+float is the subclass of int: False
+str is vsubclass of list: False
+collections.OrderedDict is the subclass of dict: True </samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 3: issubclass()方法使用一个元组来指定多个 classinfo 名称</h3>
+
+<pre>
+<code class="python">
+print(issubclass(bool, (int, str, list)))
+print(issubclass(float, (int, str, list))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>True
+False
+</samp>
+</pre>
+</div>
+                        
+</body>
+</html>

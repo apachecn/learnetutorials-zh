@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Python Program to find all pythagorean triples in a range</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>寻找一个范围内所有毕达哥拉斯三元组的 Python 程序</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/pythagorean-triples-range">https://learnnetutortials . com/python/programs/毕达哥拉斯-三元组-范围</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要计算毕达哥拉斯三元组。这是一个基于数字的 python 程序。</p>
+
+<p>为了更好地理解这个例子，我们总是建议您学习下面列出的<a href="../" title="Python tutorial"> Python 编程</a>的基本主题:</p>
+
+<ul>
+ <li><a href="../../python/python-operators" title="operators in python"> Python 运算符</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in python"> Python 循环</a></li>
+</ul>
+
+<h2>什么是毕达哥拉斯三元组？</h2>
+
+<p>这个简单的 python 程序就是在给定的范围内找到所有的毕达哥拉斯三元组。要理解这个问题，需要毕达哥拉斯三元组的基础知识。如果 a**2 + b**2 = c**2，一组三个正数 a、b 和 c 被称为毕达哥拉斯三元组。这样的数字集通常表示为(a，b，c)。</p>
+
+<p>让我们举一个例子(3，4，5)这三个数字是众所周知的毕达哥拉斯三元组，其中 3**2 + 4**2 = 5**2 == 9 + 16 = 25。</p>
+
+<h2>如何在 python 中找到毕达哥拉斯三元组？</h2>
+
+<p>为了在 python 编程语言中应用这个逻辑，我们接受用户的输入作为限制，以检查限制中的所有毕达哥拉斯三重数。然后打开一个<code>while loop</code> <strong> </strong>直到数量小于极限。然后打开一个从<strong> 1 </strong>到<strong> m+1 </strong>的<code>for loop</code>，我们要计算 m*m-n*n，并将这个值存储在一个变量中。现在计算 2*m*n 并将其存储在一个变量中，计算并将其存储在变量 c 中。现在打开一个<code>if</code>条件来检查 c 是否大于极限，中断程序。否则检查<code>if </code> a==0 或 b ==0 或 c ==0 如果是这样，中断 python 程序，然后打印变量 a b 和 c，最后将 m 递增 1。</p>
+
+<h3>算法</h3>
+
+<p><strong> STEP 1: </strong>接受用户使用 python 编程中输入法的限制。</p>
+
+<p><strong>步骤 2: </strong>初始化变量<strong> c </strong>和<strong> m </strong>。</p>
+
+<p><strong>第三步:</strong>开 a <code>while loop</code>直到<strong> c </strong>小于极限。</p>
+
+<p><strong> STEP 4: </strong>开一个<code>for loop</code>从<strong> 1 </strong>到<strong> m+1 </strong>计算三个变量 a、b、c</p>
+
+<p><strong>第五步:</strong>打开<code>if</code>条件，检查<strong> c </strong>是否大于极限，程序是否中断。</p>
+
+<p><strong>步骤 6: </strong>使用和<code>if</code>条件检查变量 a、b 或 c 是否为零，如果是，中断程序。</p>
+
+<p><strong> STEP 7: </strong>将变量 a b 和 c 打印为毕达哥拉斯三元组。并将 m 增加<strong> 1 </strong>。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">limit=int(input("Enter upper limit:"))
+c=0
+m=2
+while(c&lt;limit):
+    for n in range(1,m+1):
+        a=m*m-n*n
+        b=2*m*n
+        c=m*m+n*n
+        if(c&gt;limit):
+            break
+        if(a==0 or b==0 or c==0):
+            break
+        print(a,b,c)
+    m=m+1</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter upper limit:17
+3 4 5
+8 6 10
+5 12 13
+
+</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

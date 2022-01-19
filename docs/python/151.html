@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>Python chr()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python chr()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/chr">https://learnetutorials.com/python/methods/chr</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 chr()函数将整数作为参数，并输出相应的 Unicode 字符</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>chr(i)</strong> #where i is an integer in the range 0 to 1,114,111
+ </code>
+</pre>
+</div>
+
+<h2>chr()参数:</h2>
+
+<p>函数的作用是:只取一个整数作为参数，并返回相应的字符</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>整数</td>
+   <td>整数必须在 0 到 1，114，111 的<br/>范围内</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>chr()返回值<br/></h2>
+
+<p>返回值始终是 Unicode 字符串</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>整数</td>
+   <td>返回一个 Unicode 字符</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 chr()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:传递范围内的整数</h3>
+
+<pre>
+<code class="python">
+print(chr(64))
+print(chr(65))
+print(chr(100))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+@ 
+A
+d
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:传递超出范围的整数</h3>
+
+<pre>
+<code class="python">
+print(chr(-1))
+print(chr(1114112))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+ValueError: chr() arg not in range(0x110000) 
+ValueError: chr() arg not in range(0x110000)
+</samp></pre>
+</div>
+                        
+</body>
+</html>

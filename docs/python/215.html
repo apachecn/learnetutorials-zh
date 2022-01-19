@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Python items()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 项目()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/items">https://learnetutorials.com/python/methods/items</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 items()函数返回一个 view 对象，该对象显示字典中所有元素的键值(元组)对。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>dictionary.items()</strong> 
+ </code>
+</pre>
+</div>
+
+<h2>项目()参数:</h2>
+
+<p>items()方法不接受任何参数。</p>
+
+<h2>项目()返回值</h2>
+
+<p>如果我们对字典进行任何更改，它也会反映视图对象。如果字典是空的，结果将是一个空视图。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>词典</td>
+   <td>查看对象</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 items()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何使用 items()获取字典的所有项？</h3>
+
+<pre>
+<code class="python">
+# random fruits dictionary
+fruits = { 'mango': 5, 'banana': 4, 'strawberry': 3 }
+
+print(fruits.items())
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+dict_items([('mango', 5), ('banana', 4), ('strawberry', 3)])
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:修改字典时项()的工作？</h3>
+
+<pre>
+<code class="python">
+# random fruits dictionary
+fruits = { 'mango': 5, 'banana': 4, 'strawberry': 3 }
+
+itemlist = fruits.items()
+print('Original list:', itemlist)
+
+# delete an item from dictionary
+del[fruits['mango']]
+print('Updated list:', itemlist)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Original list: dict_items([('mango', 5), ('banana', 4), ('strawberry', 3)])
+Updated list: dict_items([('banana', 4), ('strawberry', 3)])
+</samp></pre>
+</div>
+                        
+</body>
+</html>

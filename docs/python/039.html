@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Python Program to check if user input value is english alphabet or not</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序检查用户输入值是否是英文字母</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/check-alphabet-or-not">https://learnet utortials . com/python/programs/check-alphabet-or-not</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要检查给定的数据是否是英文字母。这是一个初级 python 程序。</p>
+
+<p>为了更好地理解这个例子，我们总是建议您学习下面列出的<a href="../" title="Python tutorial"> Python 编程</a>的基本主题:</p>
+
+<ul>
+ <li><a href="../../python/syntax-comments" title="Python Syntax"> Python 语法</a></li>
+ <li><a href="../../python/python-datatypes" title="Datatypes in Python"> Python 数据类型</a></li>
+ <li><a href="../../python/decision-making-statements" title="Python decision making statements"> Python 决策语句</a></li>
+</ul>
+
+<h2>python 中如何检查输入是不是字母表？</h2>
+
+<p>这个 python 程序是为了检查用户输入的是字母表还是其他什么。在正常情况下，用户必须输入数字或特殊字符或大写或小写字母。所以基本逻辑是检查条件，就好像用户输入是在小写“<strong> a </strong>和“<strong> z </strong>之间或者大写“<strong> A </strong>和“<strong> Z </strong>之间”。如果是这样，我们必须把它打印成字母表，否则它就不是字母表。我们可以应用这个逻辑，因为每个字母表都有一个 ASCII 值，所以我们可以很容易地在 python 中使用小于和大于<code>if</code>条件。</p>
+
+<h3>算法</h3>
+
+<p><strong> STEP 1: </strong>使用 python 语言的输入函数接受用户的输入值，并将该值存储在变量中。</p>
+
+<p><strong>步骤 2: </strong>使用<code>if</code>条件检查输入值是在“<strong> a </strong>和“<strong> z </strong>之间还是在“<strong> A </strong>和“<strong> Z </strong>之间”。我们应用字母表的 ASCII 值来应用 if 条件。</p>
+
+<p><strong>步骤 3: </strong>打印结果，因为输入的输入值是字母表。</p>
+
+<p><strong> STEP 4: </strong>使用 python 编程中的<code>else</code>语句，打印输入值不是字母表。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">ch = input("Enter any input value: ")
+
+if((ch&gt;='a' and ch&lt;= 'z') or (ch&gt;='A' and ch&lt;='Z')):    # checking the condition using the if statement as the entered value is between the alphabet ASCII value. 
+
+    print(ch, "Entered value is an Alphabet")
+
+else:
+
+    print(ch, "Entered value is not an Alphabet")</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter any input value: J
+
+J Entered value is an Alphabet</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

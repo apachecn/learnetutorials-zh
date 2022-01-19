@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Python Program to remove the key from a dictionary</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>从字典中删除关键字的 Python 程序</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/remove-key-dictionary">https://learnet utortials . com/python/programs/remove-key-dictionary</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要从字典中移除密钥。这是一个基于数字的 python 程序。</p>
+
+<p>为了更好地理解这个例子，我们总是建议您学习下面列出的<a href="../" title="Python tutorial"> Python 编程</a>的基本主题:</p>
+
+<ul>
+ <li><a href="../../python/identifiers-variables" title="operators in python">Python-标识符、变量</a></li>
+ <li><a href="../../python/decision-making-statements" title="operators in python"> Python 决策</a></li>
+</ul>
+
+<h2>python 中的字典是什么？</h2>
+
+<p>在字典上的这个基本 python 程序中，我们需要从中移除一个键。字典是一组以无序格式排列的元素，如键和值对。如果我们知道关键字，字典对于检索值很方便，因为每个值都与一个关键字相关联。</p>
+
+<p>我们可以使用大括号将值添加到字典中，python 字典中的每个元素都用逗号分隔。在字典中，所有的值都必须有一个<strong>键</strong>。所以我们需要添加<strong>键值对</strong>格式。此外，密钥必须是字符串或元组，或者是数字，并且是唯一的。在值的情况下，没有这样的条件，因为它可以是任何东西或任何格式。</p>
+
+<h2>如何从 python 字典中移除键值？</h2>
+
+<p>在这个简单的 python 程序中，我们需要移除用户给出的一个键。为此，我们用其中的一些值和键初始化一个预定义的字典。然后我们使用<code>print</code>功能打印字典。现在我们接受用户的密钥，我们想删除它。如果条件成立，打开<strong>检查钥匙，如果发现使用<code>del</code>功能删除钥匙。否则我们打印的密钥不在字典和<code>exit</code>程序中。如果我们找到了钥匙，打印更新的字典。</strong></p>
+
+<h3>算法</h3>
+
+<p><strong>步骤 1: </strong>用一组<strong>键值对</strong>初始化预定义的字典。</p>
+
+<p><strong>步骤 2: </strong>使用<code>print</code>功能打印字典。</p>
+
+<p><strong> STEP 3: </strong>接受来自用户的键值，我们要删除。</p>
+
+<p><strong>步骤 4: </strong>使用<code>if</code>条件检查键值是否存在于字典中，</p>
+
+<p><strong>步骤 5: </strong>如果找到，使用<code>del</code>删除键值。</p>
+
+<p><strong> STEP 6: </strong> <code>Else</code>打印未找到的按键，退出程序。</p>
+
+<p><strong>步骤 7: </strong>如果找到键值。使用 python 语言打印更新后的词典。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">d = {'a':1,'b':2,'c':3,'d':4}
+print("dictionary before deletion")
+print(d)
+key=input("Enter key to delete:")
+if key in d: 
+    del d[key]
+else:
+    print("Cant able to found the key")
+    exit(0)
+print("Dictionary after deletion")
+print(d)</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>dictionary before deletion
+{'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
+Enter the key to delete: c
+
+Dictionary after deletion
+{'a': 1, 'b': 2, 'd': 4}</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

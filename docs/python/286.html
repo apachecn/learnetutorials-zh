@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>Python rfind()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>python rfind()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/rfind">https://learnetutorials.com/python/methods/rfind</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 rfind()函数有助于返回最高索引，这意味着原始字符串中给定子字符串的最后一次出现。如果没有找到子字符串，函数将返回-1。我们还可以指定搜索的开始和结束位置。</p>
+
+<div class="syntax">
+<pre>
+<code class="python"> 
+<strong>str.rfind(sub[, start[, end]] )</strong> #where start &amp; end are integer values
+ </code>
+</pre>
+</div>
+
+<h2>rfind()参数:</h2>
+
+<p>rfind()函数接受三个参数。此方法类似于 rindex()方法，不同之处在于，如果在 rindex()方法中找不到子字符串，它将引发 ValueError 异常，</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>潜水艇</td>
+   <td>要搜索的字符串</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>开始</td>
+   <td>从哪里开始搜索。默认值为 0</td>
+   <td>可选择的</td>
+  </tr>
+  <tr>
+   <td>目标</td>
+   <td>在哪里结束搜索。默认值是字符串的结尾</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>返回值</h2>
+
+<p>返回值始终是整数。rfind()方法总是执行区分大小写的搜索。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>If 子串</td>
+   <td>整数(最高索引)</td>
+  </tr>
+  <tr>
+   <td>如果没有子字符串</td>
+   <td>-1</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中的 rfind()方法示例</h2>
+
+<div class="code-example">
+<h3>示例 rfind()在 Python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+string = "Hii, How are you."
+# substring exist
+val = string.rfind("o")
+print("Substring1 index:", val)
+
+# substring not exist
+value = string.rfind("s")
+print("Substring2 index:", value)
+
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Substring1 index: 14
+Substring2 index: -1
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 rfind()如何在 Python 中使用开始和结束？</h3>
+
+<pre>
+<code class="python">
+string = "Python programming language"  
+# calling function  
+string2 = string.rfind("m",5) # Only starting index is passed  
+print("Substring index:", string2)
+
+string2 = string.rfind("o",1,7) # Start and End both indexes are passed  
+print("Substring index:", string2)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Substring index: 14
+Substring index: 4
+</samp></pre>
+</div>
+                        
+</body>
+</html>

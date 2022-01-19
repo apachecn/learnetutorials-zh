@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Python Program to print the duplicate elements in an array</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>打印数组中重复元素的 Python 程序</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/print-duplicate-arrayelements">https://learnet utortials . com/python/programs/print-copy-arrayelements</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要检查数组的重复元素。这是一个基于列表的 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/python-lists" title="Python List"> Python 列表</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in Python"> Python 循环</a></li>
+ <li><a href="../../python/decision-making-statements" title="Python decision making statements"> Python 决策语句</a></li>
+</ul>
+
+<h2>如何使用 python 检查数组中的重复元素？</h2>
+
+<p>在这个初级 python 程序中，我们需要打印数组中的重复元素，如果有的话。因此，我们必须将数组中的每个元素与所有其他元素进行比较，以了解该元素是否有任何重复。我们必须对数组中的每个元素继续这样做。如果我们找到了一个元素的副本，请使用 python 中的 print 将该元素打印为副本。</p>
+
+<p>获取预定义的数组后，我们必须比较数组中的元素。要将每个元素与数组中的所有其他元素进行比较，请使用 python 中的嵌套 for 循环。外部的<code>for loop</code>是获取数组的每个元素，内部的<code>for loop</code>是使用 python <code>if</code>条件将该元素与该数组中的所有其他元素进行比较。如果我们找到了副本，那么将该元素打印为副本，并断开内部的<code>for loop</code>。</p>
+
+<h3>算法</h3>
+
+<p><strong> STEP 1: </strong>初始化数组；正如我们在上面的 python 程序中所述，我们也可以使用输入法接受来自用户的数组元素。</p>
+
+<p><strong>步骤 2: </strong>使用打印语句，打印“重复的元素是。”</p>
+
+<p><strong> STEP 3: </strong>使用从 0 到数组长度的外部<code>for loop</code>将每个元素与数组中的其他元素进行比较。</p>
+
+<p><strong>步骤 4: </strong>使用从外循环的下一个元素到数组长度的内部<code>for loop</code>，并使用 if 条件将该元素与数组中的所有其他元素进行比较。</p>
+
+<p><strong> STEP 5: </strong>如果发现任何重复，则打印该元素，否则使用 python 编程语言中的 print 语句打破内部 for 循环。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">  
+arr = [1, 2, 3, 4, 2, 7, 8, 8, 3];     
+     
+print("The duplicate elements are: ");    
+ 
+for i in range(0, len(arr)):    
+
+    for j in range(i+1, len(arr)):    
+
+        if(arr[i] == arr[j]):    
+
+            print(arr[j]);    </code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>the duplicate elements are
+
+2
+3
+8</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

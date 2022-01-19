@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>Python Program to print disarium numbers between 1 and 100</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>打印 1 到 100 之间的数字的 Python 程序</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/print-disarium-numbers">https://learnet utortials . com/python/programs/print-disarium-numbers</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <h4>在这个简单的 python 程序中，我们需要打印一个范围内的 Disarium 数字。这是一个数字 python 程序。</h4>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/python-functions-tutorials" title="Python Functions"> Python 函数</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in Python"> Python 循环</a></li>
+ <li><a href="../../python/decision-making-statements" title="Python decision making statements"> Python 决策语句</a></li>
+</ul>
+
+<h2>什么是灾难数字？</h2>
+
+<p>在这个基本的 python 程序示例中，我们需要知道 disarium 数字，以及如何在一定范围内打印 Disarium 数字。我们在之前的节目中已经解释过了。二进制数是一个数，其中各位置的幂的数字之和等于数本身。</p>
+
+<h2>如何在 python 中打印一个范围内的 Disarium 数字？</h2>
+
+<p>假设我们取数字 89；我们必须检查它是否是一个数字。所以我们要加上 1 的 8 次方和 9 的平方，就是 8 + 81 = 89。所以，89 号是一个灾难性的数字。在这个简单的 python 程序中，我们需要打印 1 到 100 之间的所有数字。所以我们必须检查每个数字是否在这个范围内。</p>
+
+<p>我们使用两个用户定义的函数来求解这个程序，一个用于查找数字的长度，另一个用于检查该数字是否是对称的。然后在主程序中，我们调用 disarium number check 函数，然后从<strong> sumdigit </strong>函数调用 length 函数。</p>
+
+<p><strong> DIsarium Check 函数:</strong>在这个 python 语言的用户函数中，我们调用另一个函数来获取数字的长度。我们为余数和总和初始化两个变量，在 python 中打开一个 while 循环，直到数字等于零，使用<strong> mod </strong>运算符获取余数。我们使用算术运算，例如将总和=总和+提醒增加到长度。之后，我们将数字除以 10，去掉最后一个数字，然后将长度减 1。</p>
+
+<p><strong>长度函数:</strong>这里，我们将一个变量初始化为长度为零，并打开一个<code>while loop</code>直到数字不等于零。在每次迭代中，我们将长度变量增加 1，并通过将数字除以 10 从数字中删除一个数字。然后在<code>while loop</code>结束后，使用 python 语言中的参数传递方法返回长度。</p>
+
+<h3>算法</h3>
+
+<p><strong>步骤 1: </strong>将结果的变量初始化为零。</p>
+
+<p><strong>步骤 2: </strong>使用 python 中的 print，显示一条消息“显示设备编号”</p>
+
+<p><strong>步骤 3: </strong>使用 python 编程语言中的 range 方法，使用<code>for loop</code>检查从 1 到 100 的每个数字。</p>
+
+<p><strong>第 4 步:</strong>调用函数检查数字是否不一致，并将该函数的值返回给结果变量。</p>
+
+<p><strong> STEP 5: </strong>在那个调用函数内部，它调用另一个函数来计算数字的长度。</p>
+
+<p><strong>第 6 步:</strong>用“<code>if</code>条件”检查结果是否与数字相同。如果是，打印号码。</p>
+
+<h4><strong>用户定义的函数 sumDigit() </strong></h4>
+
+<p><strong>步骤 1: </strong>将余数和和初始化为零。</p>
+
+<p><strong> STEP 2: </strong>调用函数计算长度。</p>
+
+<p><strong>第三步:</strong>打开一个<code>while loop</code>直到数字不等于零。</p>
+
+<p><strong>步骤 4: </strong>使用<strong>模块</strong>操作符从数字中分割出数字。</p>
+
+<p><strong> STEP 5: </strong>计算总和为总和+ (rem**len)。</p>
+
+<p><strong>第六步:</strong>用 10 除数字，去掉数字中的一位。</p>
+
+<p><strong>第 7 步:</strong>将长度减 1 并返回总和。</p>
+
+<h4><strong>用户定义的函数长度(n) </strong></h4>
+
+<p><strong> STEP 1: </strong>首先，我们初始化一个长度为零的变量。</p>
+
+<p><strong>第二步:</strong>打开一个<code>while loop</code>直到数字不等于零。</p>
+
+<p><strong>步骤 3: </strong>在每次迭代中将长度增加 1。</p>
+
+<p><strong>第四步:</strong>将数字除以 10，去掉计数的数字。</p>
+
+<p><strong> STEP 5: </strong>使用 python 编程语法返回长度。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">def Length(n):    
+    length = 0;    
+    while(n != 0):                    # calculating the length of the number
+        length = length + 1;    
+        n = n//10;    
+    return length;    
+     
+#sumDigit()  
+def sumdigit(num):    
+    rem = sum = 0;    
+    len = Length(num);     # checking the number is disarium or not
+        
+    while(num &gt; 0):    
+        rem = num%10;   
+        sum = sum + (rem**len);    
+        num = num//10;    
+        len = len - 1;    
+    return sum;    
+      
+result = 0;    
+     
+
+print("Disarium numbers between 1 and 100 are");    
+for i in range(1, 101):           # printing disarium numbers
+    result = sumdigit(i);    
+        
+    if(result == i):    
+        print(i),   </code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Disarium numbers between 1 and 100 are
+
+1  2  3  4  5  6  7  8  9  89</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

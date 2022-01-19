@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Python Program to check the year is Leap year or not</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序检查年份是否是闰年</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/check-leap-year">https://learnetutorials.com/python/programs/check-leap-year</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>为了更好地理解这个例子，我们总是建议您学习下面列出的<a href="../" title="Python tutorial"> Python 编程</a>的基本主题:</p>
+
+<ul>
+ <li><a href="../../python/syntax-comments" title="Python Syntax"> Python 语法</a></li>
+ <li><a href="../../python/python-datatypes" title="Datatypes in Python"> Python 数据类型</a></li>
+ <li><a href="../../python/decision-making-statements" title="Python decision making statements"> Python 决策语句</a></li>
+</ul>
+
+<h2>什么是闰年？</h2>
+
+<p>闰年是有 366 天的一年。实际上，我们理解为检查 2 月有 28 天。现在我们必须知道如何在 python 程序中检查这一点。</p>
+
+<h2>如何在 python 程序中检查闰年？</h2>
+
+<p>闰年是可以被<strong> 4 </strong>整除的一年。该解决方案适用于除百年[00 年结束的年份]以外的所有年份。我们必须检查它是否能被<strong> 400 </strong>整除；如果它能被<strong> 400 </strong>完全整除，那将是一个闰年。</p>
+
+<p>在 python 程序中，因此我们必须使用<code>if</code>条件和<code>elif</code>语句来检查它是否可以被<strong> 4 </strong>或<strong> 400 </strong>整除，以确认该年是否是闰年。Python 语言使用<strong> Mod </strong>运算符进行可分性检查。</p>
+
+<h3>算法</h3>
+
+<p><strong>步骤 1: </strong>从用户处接受该年的值。(python 编程语言只接受使用输入函数的字符串，因此我们必须在使用 int 运算符保存值之前将该字符串转换为整数)。</p>
+
+<p><strong> STEP 2: </strong>使用 if 条件和 mod 运算符检查给定年份是否可被<strong> 4 </strong>整除，是否不可被<strong> 100 </strong>整除。然后将给定年份打印为闰年。</p>
+
+<p><strong> STEP 3: </strong>使用<code>elif</code> <strong> </strong>语句检查年份是否完全被<strong> 100 </strong>整除，然后打印给定年份不是闰年。</p>
+
+<p><strong> STEP 4: </strong>使用<code>elif</code>语句检查给定的年份是否可以被<strong> 400 </strong>整除，打印的年份是闰年。</p>
+
+<p><strong> STEP 5: </strong>使用 python 语言的<code>else</code>语句打印给定年份不是闰年。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">year = int(input("Please enter the year to check: "))  # accept the year from user
+
+# Leap Year Check
+
+if (
+    year % 4 == 0 and year % 100 != 0
+):  # checking the year is divisible by 4 and not divisible by 100
+    print(year, "it is a leap year")  # print its a leap year
+elif year % 100 == 0:
+
+    # check the year divisible by 100
+
+    print(year, "Entered value is not a leap year")
+elif year % 400 == 0:
+
+    # checking the year is divisible by 400
+
+    print(year, "it is a leap year")
+else:
+    print(year, "Entered value is not a leap year")
+</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Please enter the year to check:  2004
+
+2004 it is a leap year</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

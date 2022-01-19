@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Python Program to check the number is a happy number</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序检查的数字是一个快乐的数字</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/check-happy-number">https://learnet utortials . com/python/programs/check-happy-number</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们必须检查一个快乐的数字。这是一个初级 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/python-functions-tutorials" title="Python Functions"> Python 函数</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in Python"> Python 循环</a></li>
+ <li><a href="../../python/decision-making-statements" title="Python decision making statements"> Python 决策语句</a></li>
+</ul>
+
+<h2>幸福的数字是什么？</h2>
+
+<p>在这个 python 程序示例中，我们需要检查一个快乐的数字。如果一个数中所有数字的平方和在重复做的时候得到一，这个数就被称为快乐数。如果结果是 4 的无穷循环，那么这个数就被称为不快乐数。让我们举个例子来检查一个数字是不是幸福的数字，以便理解清楚。</p>
+
+<p>坐 32 路。现在，让我们分开号码，检查快乐的号码或不快乐的号码。</p>
+
+<ol>
+ <li>3**2 + 2**2 = 13 [我们将数字分开，取该数字中数字平方的和，所以这里 3 平方+ 2 平方= 13。]</li>
+ <li>1**2 + 3**2 = 10 [再次将结果数 13 拆分为 1**2 和 3**2，取两位数的平方和，结果数为 10]</li>
+ <li>1**</li>
+</ol>
+
+<h2>如何在 python 中检查快乐数字？</h2>
+
+<p>为了解决这个 python 程序，我们使用 python 中的 while 循环应用逻辑，直到用户定义函数的结果是 1 或 4。在 python 中使用一个用户定义的函数<a href="../../python/python-functions-tutorials" title="functions in python"> </a>，在这里我们将数字从主程序传递给函数，然后我们初始化两个变量用于提醒和求和为零。然后从大于零的<code>while loop</code> <strong> </strong>开始检查一个快乐的数字。</p>
+
+<p>使用<strong> mod </strong>运算符将数字的余数乘以 10，我们将<strong>和</strong>与提醒方块相加。然后我们将数字除以 10，将数字分开，取下一个数字。最后，我们返回<strong>总和</strong>作为结果。然后使用 python 中的 if 条件检查结果是否为 1。如果是这样，将数字打印为一个快乐的数字。否则不是一个快乐的数字。</p>
+
+<h3>算法</h3>
+
+<p><strong>步骤 1: </strong>预定义一个数字，检查是否有快乐的数字。我们还可以使用输入功能来接收用户的输入。</p>
+
+<p><strong> STEP 2: </strong>初始化存储 python 程序结果的变量。</p>
+
+<p><strong> STEP 3: </strong>打开一个<code>while loop</code>直到结果是 1 或者 4，调用 python 编程语言中的自定义函数检查数字是不是快乐数字。我们将数字作为参数传递给函数。</p>
+
+<h4><strong>用户定义的函数 is number(num)</strong></h4>
+
+<p><strong>步骤 1: </strong>初始化提醒，<strong>将变量</strong>求和为零。</p>
+
+<p><strong>第二步:</strong>打开一个<code>while loop</code>直到数字等于零。</p>
+
+<p><strong>第三步:</strong>我们使用<strong>模块</strong>操作符进行提醒。</p>
+
+<p><strong>第 4 步:</strong>求和是用余数的平方加和。</p>
+
+<p><strong>第五步:</strong>将数字除以 10，并返回<strong>和</strong>。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">def isHNumber(num):
+   rem = sum = 0
+   while(num &gt; 0):
+      rem = num%10
+      sum = sum + (rem*rem)
+      num = num//10
+   return sum;
+num = 86
+result = num
+while(result != 1 and result != 4):
+   result = isHNumber(result);
+print("The number is being checked")
+if(result == 1):
+   print(str(num) + " is a happy number");
+elif(result == 4):
+   print(str(num) + " isn't a happy number");</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>82 is a happy number</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

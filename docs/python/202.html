@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>Python str()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 字符串()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/str">https://learnetutorials.com/python/methods/str</a></blockquote>&#13;
+                         &#13;
+                        <p>内置函数 str()用于将给定对象转换为字符串格式。输出字符串的行为取决于参数编码和错误。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>str(object, encoding='utf-8', errors='strict')</strong> #where object is whoes string representation needed
+ </code>
+</pre>
+</div>
+
+<h2>str()参数:</h2>
+
+<p>取三个参数。参数错误有以下六种类型</p>
+
+<p><strong>严格的</strong> -失败时会引发一个 UnicodeDecodeError 异常。</p>
+
+<p><strong>忽略</strong> -从结果中忽略不可编码的 Unicode</p>
+
+<p><strong>替换</strong> -将不可编码的 Unicode 替换为问号</p>
+
+<p><strong>xmlcharfreplace</strong>-代替不可编码的 Unicode 插入 XML 字符引用</p>
+
+<p><strong>backlashread</strong>-它插入一个\ uNNNN espace 序列，而不是不可编码的 Unicode</p>
+
+<p><strong>名称替换</strong> -它插入了一个\N{而不是不可编码的 Unicode...}转义序列</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>目标</td>
+   <td>要返回其字符串表示形式的对象。如果未提供，则返回空字符串</td>
+   <td>需要</td>
+  </tr>
+  <tr>
+   <td>编码</td>
+   <td>给定对象的编码。未提供时 UTF-8 的默认值</td>
+   <td>可选择的</td>
+  </tr>
+  <tr>
+   <td>错误</td>
+   <td>解码失败时的响应。默认为“严格”</td>
+   <td>可选择的</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>字符串()返回值</h2>
+
+<p>这将返回一个可打印格式的字符串对象。如果缺少参数编码和错误，str()函数将在内部调用对象的 __str__()方法。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>投入</th>
+   <th>返回值</th>
+  </tr>
+  <tr>
+   <td>If 对象</td>
+   <td>线</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 中 str()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 1:如何使用 str()进行转换</h3>
+
+<pre>
+<code class="python">
+output = str(25)
+print(output)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>25</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 str()如何处理字节？</h3>
+
+<pre>
+<code class="python">
+# bytes
+byt = bytes('pythön', encoding='utf-8')
+
+print(str(byt, encoding='ascii', errors='ignore'))
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>pythn
+</samp></pre>
+</div>
+
+<p>如果对象是 bytes 或 bytearray，str()在内部调用 bytes.decode(编码，错误)。</p>
+                        
+</body>
+</html>

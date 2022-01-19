@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Python Program to reverse a number</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序反转一个数字</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/reverse-number">https://learnetutorials.com/python/programs/reverse-number</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们必须反转一个数字。这是一个初级 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/syntax-comments" title="Python Syntax"> Python 语法</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Strings in Python"> Python 循环</a></li>
+ <li><a href="../../python/python-operators" title="Python operators"> Python 运算符</a></li>
+</ul>
+
+<h2>一个数字的反义词是什么？</h2>
+
+<p>在这个简单的 python 程序中，我们需要反转一个数字。反转一个数字意味着我们以相反的顺序打印这个数字。例如，如果我们有一个数字 12345，我们必须使用 python 将其打印为 54321。</p>
+
+<h2>如何在 python 中找到一个数的逆序？</h2>
+
+<p>为了解决这个初学 python 的数字问题，我们使用<strong> Mod </strong>运算符乘以 10 来取数字的最后一位。然后，我们通过取反向变量* 10 +上一步提取的数字来计算反向。最后用<strong> 10 </strong>除最后一位数字，取<strong> </strong> <code>while loop</code>下一次迭代的下一位数字。python 中的 while 循环将一直持续到数字等于零。然后使用 python 基本语法中的<code>print</code>语句打印数字。</p>
+
+<h3>算法</h3>
+
+<p><strong> STEP 1: </strong>使用输入法输入数字，并使用 python 编程语言将该字符串转换为整数。</p>
+
+<p><strong>步骤 2: </strong>将变量初始化为零，以存储反转的数字。</p>
+
+<p><strong>第三步:</strong>使用<code>while loop</code>直到数字大于零。这个循环将继续使整个数字反转。</p>
+
+<p><strong>步骤 4: </strong>使用 python 中的<strong> Mod </strong>运算符从数字中提取数字。</p>
+
+<p><strong>步骤 5: </strong>使用公式<strong> rev*10 +数字</strong>计算反向。(乘以 10 得到正确位置的数字。)</p>
+
+<p><strong>第六步:</strong>将数字分开，最后一位数字除以<strong> 10 </strong>。</p>
+
+<p><strong> STEP 7: </strong>使用 python 语言基础中的 print 语句将结果打印为一个反转的数字。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">n=int(input("Enter number: "))
+
+rev=0
+
+while(n&gt;0):
+
+    dig=n
+
+    rev=rev*10+dig
+
+    n=n//10
+
+print("Reverse of the number:",rev)</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter number:12345
+
+Reverse of the number: 54321</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

@@ -1,0 +1,669 @@
+<html>
+<head>
+<title>Python Date and Time</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 日期和时间</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/date-time">https://learnetutorials.com/python/date-time</a></blockquote>&#13;
+                        &#13;
+                       <!-- Content Area -->&#13;
+&#13;
+&#13;
+                       <p>在本教程中，您将借助示例掌握如何在 python 中处理日期和时间。您将浏览用于操作日期和时间的不同模块，如何以特定格式读取和打印时间等。</p>
+
+<h2 id="fact">关于日期和时间的事实</h2>
+
+<p>在深入研究日期和时间之前，让我们先回顾一下过去的日子，了解一下计算机是如何计算时间的。直指事实，几乎所有的电脑都是基于<strong> Unix Epoch time </strong>来计时的，也就是 1970 年 1 月 1 日 00:00:00 UTC。UTC(协调世界时)，通常被称为 GMT(格林威治标准时间)是指经度在 0 的时间。</p>
+
+<p>像其他编程语言一样，python 也包含 Unix 时间概念，其标准库包含一个名为时间的流行模块。时间模块获得了一个名为 time()的函数，该函数输出自 unix 纪元以来的秒数。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">&gt;&gt;&gt; import time
+&gt;&gt;&gt; time.time()
+1599329118.616698 </code>
+</pre>
+</div>
+
+<p>这种 Unix 时间表示对人类来说难以置信地难以解析，因此它需要另一种方式向用户传达时间。这可以通过将 Unix 时间转换为 UTC 来实现，UTC 在<strong>时区偏移</strong>的帮助下再次转换为当地时间。时区偏移量的所有值的数据库由<strong>互联网分配号码管理局</strong>维护，简称为<strong> IANA </strong>。</p>
+
+<h2 id="stand">日期和时间标准化</h2>
+
+<p>由于人类很难用秒来确定时间，所以时间格式是以年、月、日、小时等来计算的。我们生活的世界在地理、语言、文化等各个方面都充满了多样性。因此，有必要对时间格式进行标准化，以避免所有不必要的复杂性和沟通错误。国际标准组织提出了 ISO -8601，它规定了数据格式应该按照最重要到最不重要数据的顺序。要明确的是，标准化的日期格式如下:</p>
+
+<div class="syntax">
+<pre>
+<code class="python">YYYY-MM-DD HH:MM:SS </code>
+</pre>
+</div>
+
+<p>其中 YYYY 用四位数表示年份，MM 和 DD 用两位数表示月和日。同样，HH、MM 和 SS 代表小时、分钟和秒的两位数形式。</p>
+
+<p>这样做的主要好处是避免了日期格式的模糊性。例如，当月份值是一个有效数字时，月-日-年或日-月-年经常被误解。</p>
+
+<h2 id="mod">Python 日期和时间模块</h2>
+
+<p>Python 提供了三个不同的模块来处理日期和时间。它们如下所示:</p>
+
+<ol>
+ <li>日历模块</li>
+ <li>日期时间模块</li>
+ <li>时间模块</li>
+</ol>
+
+<p>让我们从模块<strong> datetime </strong>开始学习，它有助于在 python 中操作日期和时间。</p>
+
+<h2>Datetime 模块中的常数</h2>
+
+<p>使用日期时间模块中的两个常量<strong> MINYEAR </strong>和<strong> MAXYEAR </strong>可以导出系统中表示的最小和最大年份。<br/><strong>MINYEAR</strong>返回日期和日期时间对象中允许的最小年数，即<code>1</code>，而<strong> MAXYEAR </strong>给出日期和日期时间对象中允许的最大年数表示，即<code>9999</code>。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">import datetime
+
+#constants in datetime Module
+import datetime
+print(datetime.MINYEAR)
+print(datetime.MAXYEAR) </code>
+</pre>
+</div>
+
+<div class="output">
+<pre>
+<samp>1
+9999
+</samp></pre>
+</div>
+
+<h2 id="class">Datetime 模块中的类</h2>
+
+<p>为了操作日期和时间，Python datetime 模块包含下面的类，这些类在这里制成表格。</p>
+
+<table border="1">
+ <thead>
+  <tr>
+   <th>班级</th>
+   <th>返回或描述</th>
+   <th>属性</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>日期时间.日期</td>
+   <td>理想化的约会</td>
+   <td>年、月和日</td>
+  </tr>
+  <tr>
+   <td>日期时间.时间</td>
+   <td>理想化的时间</td>
+   <td>小时、分钟、秒、微秒和 tzinfo</td>
+  </tr>
+  <tr>
+   <td>datetime.datetime</td>
+   <td>日期和时间组合</td>
+   <td>年、月、日、小时、分钟、秒、微秒和时间信息</td>
+  </tr>
+  <tr>
+   <td>datetime.timedelta</td>
+   <td>两个实例之间的持续时间</td>
+   <td>周、天、小时、分钟、秒、微秒、毫秒，</td>
+  </tr>
+  <tr>
+   <td>datetime.tzinfo</td>
+   <td>时区信息</td>
+   <td>无</td>
+  </tr>
+  <tr>
+   <td>日期时间.时区</td>
+   <td>实现 tzinfo 抽象基类</td>
+   <td>无</td>
+  </tr>
+ </tbody>
+</table>
+
+<p>类的对象日期、时间、日期时间和时区是不可变的，因此是可以修改的。所以这些对象可以作为字典的关键字。</p>
+
+<h2 id="obj">Python 日期对象</h2>
+
+<p>python 中的日期对象处理理想化的 Gerogian 日历中的日期。它代表标准格式的日期。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">datetime.date(year,month,day) </code>
+</pre>
+</div>
+
+<p>这里的参数必须且应该是一个整数，其规定范围如下:</p>
+
+<ul>
+ <li>年份必须介于 1 和 9999 之间(含 1 和 9999)</li>
+ <li>月份必须介于 1 和 12 之间(含 1 和 12)</li>
+ <li>日期必须介于 1 和 31 之间，包括，取决于年和月。</li>
+</ul>
+
+<p>如果任何参数未能满足这些范围规格，则它会遇到<strong>值错误</strong>。</p>
+
+<h2 class="h3">如何获取日期</h2>
+
+<ol>
+ <li>
+ <h3>使用 today()方法</h3>
+
+ <p>方法<code>today()</code>用于获取当前本地日期。在这个例子中，我们已经导入了模块<strong> datetime </strong>，并为类 datetime.date 创建了一个对象<code>d_ob </code>，该对象调用方法<code>today()</code>。</p>
+
+ <div class="code-example">
+ <pre>
+<code class="python">import datetime
+
+#Current date
+d_ob = datetime.date.today()
+print(d_ob) </code>
+</pre>
+ </div>
+
+ <div class="output">
+ <pre>
+<samp>2020-09-06
+</samp></pre>
+ </div>
+
+ <p>结果为您提供了当前的本地日期。</p>
+ </li>
+ <li>
+ <h3>使用 fromtimestamp()方法</h3>
+
+ <p>Unix 时间戳是以特定日期和 1970 年 1 月 1 日之间的秒数表示的时间。例如，1599468233 是时间戳。借助于名为 fromtimestamp()的方法，可以将时间戳转换为实际日期。</p>
+
+ <div class="code-example">
+ <pre>
+<code class="python">from datetime import date
+ts = date.fromtimestamp(1599468233)
+print('Date from Timestamp is',ts) </code>
+</pre>
+ </div>
+
+ <div class="output">
+ <pre>
+<samp>Date from Timestamp is 2020-09-07 
+</samp></pre>
+ </div>
+ </li>
+ <li>
+ <h3>使用 fromisoformat()方法</h3>
+
+ <p>以字符串形式给出的日期可以使用<code>fromisoformat()</code>方法转换为标准格式。这是一个非常酷的方法，它总是以 YYYY-MM-DD 格式输出日期。</p>
+
+ <div class="code-example">
+ <pre>
+<code class="python">from datetime import date
+str = date.fromisoformat('2020-02-14')
+print(str) </code>
+</pre>
+ </div>
+
+ <div class="output">
+ <pre>
+<samp>2020-02-14
+</samp></pre>
+ </div>
+ </li>
+ <li>
+ <h3>使用 fromisocalendar()方法</h3>
+
+ <p>方法<code>fromisocalendar </code>给出年、周、日作为参数传递的日期。</p>
+
+ <div class="code-example">
+ <pre>
+<code class="python">from datetime import date
+cal_date = date.fromisocalendar(year=2020,week=20,day=5)
+print(cal_date)</code>
+</pre>
+ </div>
+
+ <div class="output">
+ <pre>
+<samp>2020-05-15
+</samp></pre>
+ </div>
+ </li>
+</ol>
+
+<h2 id="dt-obj">Python 日期时间对象</h2>
+
+<p>现在假设如果你想得到当前日期和时间，你可以使用<code>datetime </code>模块中的另一个类，也就是<code>datetime.datetime</code>。日期时间对象是与日期对象和时间对象一起工作的单个对象。</p>
+
+<div class="syntax">
+<pre>
+ <code class="python">datetime.datetime(year,month,day,hour=0,minute = 0,sec = 0,tzinfo = None)
+
+
+</code></pre>
+</div>
+
+<p>常用的方法如下:</p>
+
+<ol>
+ <li><h3>当前日期和时间的现在()方法</h3> Datetime 类调用如下例所示的 now()方法获取当前的本地日期和时间。<div class="code-example"> <pre>
+<code class="python">import datetime
+
+#Current date
+dt_ob = datetime.datetime.now()
+print(dt_ob)
+</code></pre> <p> </p> </div> <div class="output"> <pre>
+<samp>2020-09-06 15:39:27.272038
+</samp></pre> </div></li>
+ <li>
+ <h3>当前日期和时间的 today()方法</h3>
+
+ <div class="code-example">
+ <pre>
+<code class="python">import datetime
+
+#Current date
+dt_ob = datetime.datetime.today()
+print(dt_ob)
+</code></pre>
+
+ <p> </p>
+ </div>
+
+ <div class="output">
+ <pre>
+<samp>2020-09-06 15:39:27.272038
+</samp></pre>
+ </div>
+
+ <p>您还可以通过传递示例中给出的关键字参数来实例化日期时间类:唯一的区别是，这里我们没有调用任何特定的方法，而是提供了日期和时间。</p>
+
+ <div class="code-example">
+ <pre>
+<code class="python">from datetime import datetime
+ dt_ob3 = datetime(year = 2020,m = 29,hour = 6,minute = 30,sec
+print(dt_ob3)
+</code></pre>
+
+ <p> </p>
+ </div>
+
+ <div class="output">
+ <pre>
+<samp>2020-10-29 06:30:45
+</samp></pre>
+ </div>
+
+ <p>也有可能检索单独的实体，如单独的年或单独的月或单独的小时。这可以用点符号来完成。</p>
+
+ <div class="code-example">
+ <pre>
+<code class="python">from datetime import datetime
+ dt_ob = datetime(year = 2020,m = 29,hour = 6,minute = 30,sec
+print('Current Year is',dt_ob.year)
+print('Current time is ',dt_ob.hour)
+print('Timestamp of the date is',dt_ob.timestamp())
+ 
+  </code></pre>
+ </div>
+
+ <div class="output">
+ <pre>
+Current Year is  2020
+Current Minute is 6
+Timestamp of the date is 1603938645.0
+</pre>
+ </div>
+ </li>
+ <li><h3>使用 fromtimestamp()方法</h3><div class="code-example"><pre>
+<code class="python">from datetime import datetime
+ts = datetime.fromtimestamp(1599468233)
+print('Date from Timestamp is',ts)
+</code></pre><p/></div><div class="output"><pre>
+
+<samp>Date from Timestamp is 2020-09-07 12:43:53
+</samp></pre></div></li>
+</ol>
+
+<h2 id="timedelta">什么是 python 中的 timedelta 类</h2>
+
+<p>时间增量类是一个通常在<code>datetime</code>模块中与前述类一起使用的类，用于查找两个日期或时间的差异，即持续时间。在下面的示例中，我们创建了两个日期对象 d1 和 d2，它们的差异存储在 d3 中。这里，d3 属于<code>timedelta</code>类。类似地，两个日期时间对象的不同会给你一个<code>timedelta</code>对象。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">from datetime import date,time,datetime
+
+from datetime import date,time,datetime
+d1= date(2020,9,2)
+d2=date(2019,9,7)
+d3 =d1-d2
+print('Difference is ',d3)
+print("Type is ",type(d3))
+
+t1=datetime(2020,9,2,11,45,30)
+t2=datetime(2018,9,7,10,50,40)
+print('time Difference is ',(t1-t2)) </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Difference is  361 days, 0:00:00
+Type is  &lt;class 'datetime.timedelta'&gt;
+time Difference is  726 days, 0:54:50
+
+</samp></pre>
+</div>
+
+<h2 id="mani">如何操作两个时间增量对象</h2>
+
+<p>要操作<code>timedelta</code>对象，我们首先需要从<code>datetime</code>模块导入<code>timedelta</code>类。</p>
+
+<div class="code-example">
+<pre>
+<code class="python">#timedelta objects difference
+from datetime import timedelta
+td1 = timedelta(weeks=2,days=3)
+td2 = timedelta(weeks=1,days=5)
+td3 = td1-td2
+print(td3)
+</code></pre>
+
+<p> </p>
+</div>
+
+<div class="output">
+<pre>
+<samp>5 days, 0:00:00
+</samp></pre>
+</div>
+
+<h3>负时间增量对象</h3>
+
+<div class="code-example">
+<pre>
+<code class="python">#timedelta objects difference
+from datetime import timedelta td5 = timedelta(sec
+td  = timedelta(sec
+td7 = td5-td6
+print(td7)
+print(abs(td7))
+
+</code></pre>
+</div>
+
+<div class="output">
+<pre>
+<samp>-1 day, 23:59:30
+</samp></pre>
+</div>
+
+<h3>以秒为单位的时间增量对象</h3>
+
+<p>要以秒为单位获取 timedelta 对象，我们可以使用名为 total_seconds()的方法，该方法以秒为单位表示持续时间。</p>
+
+<p>从日期时间导入时间增量</p>
+
+<div class="code-example">
+<pre>
+<code class="python">td1 = timedelta(weeks=2,days=3)
+print(td1.total_seconds()) </code></pre>
+
+<p> </p>
+</div>
+
+<div class="output">
+<pre>
+<samp>1468800.0
+</samp></pre>
+</div>
+
+<h2 id="format">Python 日期时间格式</h2>
+
+<p>我们之前讨论过，在不同的国家，日期和时间的格式是不同的。例如，在美国，他们所依赖的常用日期格式是年月日，而在英国，该格式是年月日。如果月份是一个有效的数字，就会产生歧义。因此，python 中需要一种方法来处理这种模糊性，所以这里有两种格式化方法:</p>
+
+<h2>strftime（）</h2>
+
+<p>Strftime 方法()是在所有三个类(日期、时间、日期时间)中定义的格式化方法，用于将给定的日期、时间和日期时间表示为可读的字符串，它只包含一个名为 format 的参数，在该参数中我们指定需要日期的格式。</p>
+
+<p>下面的可视化让您更清楚地了解概念。</p>
+
+<div class="img-div"><img alt="strptime" src="../Images/0d1f11d32e428e802151c1b025db1540.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/datetime/strftime.png"/></div>
+
+<div class="code-example">
+<h3>strftime()方法示例</h3>
+
+<pre>
+<code class="python">
+from datetime import datetime
+
+t = datetime.today()
+print(t)
+
+f1 = t.strftime("%m/%d/%Y, %H:%M:%S")
+# MM/DD/YYYY H:M:S format
+print("Format 1:", f1)
+
+f2 = t.strftime("%d/%m/%Y, %H:%M:%S")
+# DD/MM/YYYY H:M:S format
+print("Format 2:", f2)
+</code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+2020-09-27 16:15:36.913768
+Format 1: 09/27/2020, 16:15:36
+Format 2: 27/09/2020, 16:15:36
+</samp></pre>
+</div>
+
+<h2>strptime（）</h2>
+
+<p>这是另一种仅由 datetime 对象支持的格式化方法，与 strftime()方法正好相反。这里，datetime 对象是从给定的字符串创建的。它包含两个参数</p>
+
+<ol>
+ <li>日期和时间的字符串(' 02-14-2020 ')</li>
+ <li>字符串的格式(%d/%m/%Y)</li>
+</ol>
+
+<p>基于以上两个参数，它生成一个 datetime 对象作为结果。下面的可视化澄清了这个想法。</p>
+
+<div class="img-div"><img alt="strptime" src="../Images/b996c446623bd37c64b6aec5d806b551.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/datetime/strptime1.png"/></div>
+
+<div class="code-example">
+<h3>strptime()方法示例</h3>
+
+<pre>
+<code class="python">from datetime import datetime
+
+Str = "June 5,2020"
+print(Str)
+
+dt_ob=datetime.strptime(Str,"%B %d,%Y")
+print(dt_ob)
+</code></pre>
+
+<p> </p>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>June 5,2020
+2020-06-05 00:00:00
+</samp></pre>
+</div>
+
+<h3>strptime()中的值错误</h3>
+
+<p>当传递给 strptime()方法的字符串和格式代码不匹配时，python 将引发 ValueError。例如，</p>
+
+<div class="code-example">
+<pre>
+<code class="python">
+from datetime import datetime
+
+Str = "June 5,2020"
+
+dt_ob=datetime.strptime(Str,"%d %B ,%Y")
+print(dt_ob)
+</code></pre>
+
+<p> </p>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>ValueError: time data 'June 5,2020' does not match format '%d %B ,%Y'
+</samp></pre>
+</div>
+
+<h2 id="table">str time()和 strptime()的格式代码。</h2>
+
+<table>
+ <thead>
+  <tr>
+   <th>管理的</th>
+   <th>意义</th>
+   <th>例子</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>%a</td>
+   <td>工作日的缩写版本。</td>
+   <td>珊，老兄，Sat</td>
+  </tr>
+  <tr>
+   <td>%A</td>
+   <td>工作日的完整版本。</td>
+   <td>星期天，星期一，…，星期六</td>
+  </tr>
+  <tr>
+   <td>%w</td>
+   <td>Weekday 为十进制数，其中 0 为星期日，1 为星期一，6 为星期六。</td>
+   <td>0, 1, …, 6</td>
+  </tr>
+  <tr>
+   <td>%d</td>
+   <td>以零填充的十进制数表示的一个月中的某一天。</td>
+   <td>01, 02, …, 31</td>
+  </tr>
+  <tr>
+   <td>%b</td>
+   <td>月份的缩写</td>
+   <td>一月，二月，…，十二月</td>
+  </tr>
+  <tr>
+   <td>%B</td>
+   <td>月份的完整版本</td>
+   <td>一月，二月，…，十二月</td>
+  </tr>
+  <tr>
+   <td>%m</td>
+   <td>月是一个用零填充的十进制数。</td>
+   <td>01, 02, …, 12</td>
+  </tr>
+  <tr>
+   <td>%y</td>
+   <td>不包括世纪的年份的简短版本</td>
+   <td>00, 01, …, 99</td>
+  </tr>
+  <tr>
+   <td>%Y</td>
+   <td>年的完整版本，包括世纪</td>
+   <td>0001, 0002, …, 2013, 2014, …, 9998, 9999</td>
+  </tr>
+  <tr>
+   <td>%H</td>
+   <td>小时作为零填充的十进制数。- 24 小时</td>
+   <td>00, 01, …, 23</td>
+  </tr>
+  <tr>
+   <td>%I</td>
+   <td>小时作为零填充的十进制数- 12 小时</td>
+   <td>  01, 02, …, 12</td>
+  </tr>
+  <tr>
+   <td>%p</td>
+   <td>上午或下午。</td>
+   <td>上午，下午</td>
+  </tr>
+  <tr>
+   <td>%M</td>
+   <td>分钟是一个用零填充的十进制数。</td>
+   <td>00, 01, …, 59</td>
+  </tr>
+  <tr>
+   <td>%S</td>
+   <td>第二个是用零填充的十进制数。</td>
+   <td>00, 01, …, 59</td>
+  </tr>
+  <tr>
+   <td>%f</td>
+   <td>微秒为十进制数，左边用零填充。</td>
+   <td>000000, 000001, …, 999999</td>
+  </tr>
+  <tr>
+   <td>%z</td>
+   <td>HHMM[SS []形式的世界协调时偏移量。ffffff]]</td>
+   <td>(空)、+0000、-0400、+1030、+063415、-030712.345216</td>
+  </tr>
+  <tr>
+   <td>%Z</td>
+   <td>时区名称</td>
+   <td>(空)、UTC、EST、CST</td>
+  </tr>
+  <tr>
+   <td>%j</td>
+   <td>以零填充的十进制数表示的一年中的某一天。</td>
+   <td>001, 002, …, 366</td>
+  </tr>
+  <tr>
+   <td>%U</td>
+   <td>一年中的周数(周日是一周的第一天)作为零填充的十进制数。</td>
+   <td>00, 01, …, 53</td>
+  </tr>
+  <tr>
+   <td>%W</td>
+   <td>一年中的周数(星期一为一周的第一天)为十进制数。</td>
+   <td>00, 01, …, 53</td>
+  </tr>
+  <tr>
+   <td>%c</td>
+   <td>日期和时间本地表示。</td>
+   <td>1988 年 8 月 16 日 21:30</td>
+  </tr>
+  <tr>
+   <td>%x</td>
+   <td>当地代表的日期。</td>
+   <td>88 年 6 月 8 日(无)；1988 年 16 月 8 日(en_US)</td>
+  </tr>
+  <tr>
+   <td>%X</td>
+   <td>时间局部表示。</td>
+   <td>21:30:00</td>
+  </tr>
+  <tr>
+   <td>%%</td>
+   <td>文字“%”字符。</td>
+   <td>%</td>
+  </tr>
+ </tbody>
+</table>
+                       &#13;
+                       &#13;
+                       <!-- End Content Area -->&#13;
+&#13;
+                        
+</body>
+</html>

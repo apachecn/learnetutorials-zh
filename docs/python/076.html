@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>Python Program to left shift elements in an array</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序左移数组中的元素</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/leftrotate-array-elements">https://learnet utortials . com/python/programs/left rotate-array-elements</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要在数组中左移元素。这是一个中级 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/syntax-comments" title="Python Syntax"> Python 语法</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in Python"> Python 循环</a></li>
+ <li><a href="../../python/python-lists" title="Python list"> Python 列表或数组</a></li>
+</ul>
+
+<h2>什么是左移位或左旋转数组？</h2>
+
+<p>在这个简单的 python 程序中，我们需要向左旋转数组的元素<strong> n 次</strong>。python 中的数组是由公共变量索引的一组相同类型的元素。数组元素以数组[0]=第一个元素，数组[1] =第二个元素的形式存储在顺序列表中，就像这样。</p>
+
+<p>例如，考虑一个数组 A 包含元素 1，2，3，4，5 数组 A = [ 1，2，3，4，5 ]所以我们假设要将元素向左旋转两次。在第一次旋转中，数组会是这样的 A = [2，3，4，5，1]，第二次旋转后，数组会变成这样的 A =[3，4，5，1，2]我们可以旋转任意多次。</p>
+
+<h2>python 中数组如何左移？</h2>
+
+<p>让我们以基本的 python 程序逻辑为例，我们打开一个<code>for loop</code>，然后将数组的第一个元素保存成一个变量。打开内部 for 循环，将元素左移一位，并追加保存的变量中的最后一个元素。python 中的外部 for 循环将一直持续到我们需要向左旋转元素的次数。</p>
+
+<h3>算法</h3>
+
+<p><strong>步骤 1: </strong>使用一些元素初始化数组。并给 n 赋值，作为我们想要在 python 语言中向左旋转数组的次数。</p>
+
+<p><strong> STEP 2: </strong>现在我们使用 python 编程中的<strong> </strong> <code>len()</code>方法和<code>range()</code>方法，使用从零到数组长度的 for 循环来显示原始数组。</p>
+
+<p><strong>步骤 3: </strong>使用量程方法打开外环，直到数字 n 从零开始。</p>
+
+<p><strong> STEP 4: </strong>将第一个元素<strong>a【I】</strong>存储到变量中。</p>
+
+<p><strong> STEP 5: </strong>打开内部循环，从数组的第一个元素遍历到数组长度减一。我们必须使用少于一个来追加变量的最后一个元素。</p>
+
+<p><strong> STEP 6: </strong>使用<strong> a[j] = a[j+1] </strong>的方法应用左移，会将第一个元素变为第二个元素。</p>
+
+<p><strong> STEP 7: </strong>从我们存储原始数组第一个元素的变量中追加数组的最后一个元素。</p>
+
+<p><strong> STEP 8: </strong>使用 python 编程语言中的 for 循环和 print 语句打印结果数组。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">arr = [1, 2, 3, 4, 5];     
+    
+n = 1;    # how many times array should be shifted
+   
+print("Original array: ");    
+for i in range(0, len(arr)):    # displaying the first or real array
+    print(arr[i]),     
+     
+for i in range(0, n):    # rotate the element of array using for loop 
+    
+    first = arr[0];    # saving the first element to a variable
+        
+    for j in range(0, len(arr)-1):    
+       
+        arr[j] = arr[j+1];    #shifting to left by one 
+            
+  
+    arr[len(arr)-1] = first;    # adding the first element to array from the variable
+     
+print();    
+     
+
+print("Array after left rotation: ");    
+for i in range(0, len(arr)):    
+    print(arr[i]),    </code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Original array: 
+1
+2
+3
+4
+5
+
+Array after left rotation: 
+2
+3
+4
+5
+1</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

@@ -1,0 +1,645 @@
+<html>
+<head>
+<title>Python Dictionary</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 词典</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/python-dictionaries">https://learnetutorials.com/python/python-dictionaries</a></blockquote>&#13;
+                        &#13;
+                       <!-- Content Area -->&#13;
+&#13;
+&#13;
+                       <p>在本 python 教程中，您将通过示例掌握 Python 字典的所有知识；如何创建字典，如何修改 python 字典，如何删除字典以及对字典的标准操作。除此之外，我们将学习操纵字典的方法。</p>
+
+<p>字典是无序和可变的项目的集合。字典项目通常表示为用花括号{}括起来的键:值对。每个键:值对用逗号分隔。简而言之，字典是一个键值映射，如下图所示。</p>
+
+<div class="img-div"><img alt="Mapping" src="../Images/7866206949a3a54c37b323fe2754b044.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/dictionary/mapping.png"/></div>
+
+<h2>Python 字典的主要特性</h2>
+
+<ul id="features">
+ <li>字典是可变的。</li>
+ <li>词典本质上是动态的。</li>
+ <li>字典可以像列表一样嵌套</li>
+ <li>键是唯一且不可变的，而值是可变的</li>
+</ul>
+
+<h2>如何用 Python 创建字典</h2>
+
+<p id="create">python 中的字典可以通过在花括号{}中包含逗号分隔的键值对来定义。创建字典的另一种方法是通过内置的<code>dict()</code>功能。</p>
+
+<div class="syntax">
+<h3>词典的句法</h3>
+
+<pre>
+<code class="python">&lt;dict_name&gt; = {
+      &lt;key&gt;:&lt;value&gt;,
+      &lt;key&gt;:&lt;value&gt;,
+      .
+      .
+      &lt;key&gt;:&lt;value&gt;
+}
+</code>
+</pre>
+</div>
+
+<p><strong>空字典:</strong>零项 Python 字典。</p>
+
+<div class="code-example">
+<h3>示例:如何定义空字典</h3>
+
+<pre>
+<code class="python">emp_dict ={}
+print(type(emp_dict))
+</code></pre>
+
+<p> </p>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+&lt;class 'dict'&gt;
+</samp></pre>
+</div>
+
+<p><strong>同质字典:</strong>具有相同不可变数据类型的关键字的字典。</p>
+
+<div class="code-example">
+<h3>示例:如何创建同构词典</h3>
+
+<pre>
+<code class="python">int_dict={1:'Odd',2:'Even'}
+print(int_dict)
+</code></pre>
+
+<p> </p>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+{1: 'Odd', 2: 'Even'}
+</samp></pre>
+</div>
+
+<p><strong>混合字典:</strong>具有不同不可变数据类型的键的字典。</p>
+
+<div class="code-example">
+<h3>示例:混合词典</h3>
+
+<pre>
+<code class="python">mix_dict={1:'Student','name':'Tom','Marks':[45,46,47,48,50 ]}
+print(mix_dict)
+</code></pre>
+
+<p> </p>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+{1: 'Student', 'name': 'Tom', 'Marks': [45, 46, 47, 48, 50]}
+</samp></pre>
+</div>
+
+<p>到目前为止，我们已经讨论了各种类型的词典及其创作。创建字典的另一种可能方法是使用名为 dict()的函数。</p>
+
+<div class="code-example">
+<h3>示例:dict()函数</h3>
+
+<pre>
+<code class="python">fn_dict = dict({'Name':'John','Age':30})
+print(fn_dict)
+</code></pre>
+
+<p> </p>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+{'Name': 'John', 'Age': 30}
+</samp></pre>
+</div>
+
+<h2>字典中键和值的属性</h2>
+
+<p id="prop">python 字典中的两个重要因素是键和值。它们的属性如下所示。</p>
+
+<ol>
+ <li>The key must be unique means there should be no duplication. If a dictionary contains duplicate keys then the last assignment will be considered.
+ <div class="code-example">
+ <h3>示例:说明密钥不包含重复项</h3>
+
+ <pre>
+<code class="php">
+fn_dict = dict({'Name':'John','Age':30 ,'Name':'Charles'})
+print(fn_dict)
+ </code>
+</pre>
+ </div>
+
+ <p><strong>输出:</strong></p>
+
+ <div class="output">
+ <pre>
+<samp>
+{'Name': 'Charles', 'Age': 30}
+</samp></pre>
+ </div>
+ </li>
+ <li>Keys are immutable means they are unchangeable over the lifetime after creation. Keys can be integer, string, tuples but never be a list.
+ <div class="code-single error">
+ <p>示例:当键是列表时显示错误</p>
+
+ <pre>
+<code class="php">
+D = {['odd']:(1,3,5,7,9)}
+print(D)
+ </code>
+</pre>
+ </div>
+
+ <p><strong>输出:</strong></p>
+
+ <div class="output">
+ <pre>
+<samp>
+D = {['odd']:[1,3,5,7,9]}
+TypeError: unhashable type: 'list'
+</samp></pre>
+ </div>
+ </li>
+ <li>Values are free of restrictions and they can be any data type and can be of any length.
+ <div class="code-example">
+ <h3>示例:显示值可以是任何类型和任何长度</h3>
+
+ <pre>
+<code class="php">
+D = {'odd':[1,3,5,7,9]}
+print(D)
+ </code>
+</pre>
+ </div>
+
+ <p><strong>输出:</strong></p>
+
+ <div class="output">
+ <pre>
+<samp>{'odd': [1, 3, 5, 7, 9]}
+</samp></pre>
+ </div>
+ </li>
+</ol>
+
+<h2>什么是 Python 中的嵌套字典？</h2>
+
+<p id="nested">在 Python 中，包含另一个字典的字典称为嵌套字典。嵌套可以在任何级别进行，没有任何限制。这可以可视化，以便更好地理解。</p>
+
+<div class="img-div"><img alt="Nested Dictionary" src="../Images/361fa6f5d8a36aa0560c505280e86627.png" data-original-src="https://559987-1802630-raikfcquaxqncofqfm.stackpathdns.com/assets/images/tutorials/dictionary/nested.png"/></div>
+
+<div class="code-example">
+<h3>嵌套词典</h3>
+
+<pre>
+<code class="php">University= {
+ 'UN_Name':'Oxford',
+ 'Stud':{   'St1_Name':'Tom','St2_Name':'Becky' }
+}
+print(University) </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>{'UN_Name': 'Oxford', 'Stud': {'St1_Name': 'Tom', 'St2_Name': 'Becky'}}
+</samp></pre>
+</div>
+
+<h2>Python 中如何访问字典值？</h2>
+
+<p id="access">我们知道字典是一个无序的<code>key: value</code>对的集合。即使它们看起来像它们是如何定义的，当涉及到访问时，数字索引不起作用。这是因为 python 将数值解释为键而不是索引。那么我们如何从字典中获取值呢？</p>
+
+<p>字典使用键从字典中检索值。为了访问值，我们使用相同的方括号，里面是键，而不是索引。我们也可以使用 get()方法来实现同样的目的。</p>
+
+<p>为了理解，让我们检查下面的例子。</p>
+
+<div class="code-example">
+<h3>从字典中访问值</h3>
+
+<pre>
+<code class="php">mix_dict={1:'Student','name':'Tom','Marks':[45,46,47,48,50 ]}
+print('mix_dict[1] = ',mix_dict[1])
+print("mix_dict['name'] = ",mix_dict['name'])
+print("mix_dict['Marks'] = ", mix_dict.get('Marks') </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>mix_dict[1] =  Student
+mix_dict['name'] =  Tom
+mix_dict['Marks'] =  [45, 46, 47, 48, 50]
+</samp></pre>
+</div>
+
+<h2>访问未定义的值</h2>
+
+<p id="undefined">现在，假设您试图使用字典中没有定义的键来访问一个值。会发生什么？</p>
+
+<p>显然，结果会是一个例外。如果我们引用了字典中没有的键，解释器会发出<code>KeyError</code>。只有当我们使用方括号[]来访问值时，才会出现这种情况。<code>get()</code>方法返回<code>None </code>作为输出。</p>
+
+<div class="code-example">
+<h3>访问未定义的键时出现键错误</h3>
+
+<pre>
+<code class="php">
+D= { 'A':'Apple','B':'Banana'}
+print(D.get('C'))
+print(D['C'])
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+None
+print(D['C'])
+KeyError: 'C'</samp>
+<samp>
+</samp></pre>
+</div>
+
+<h2 id="access-nested">如何从嵌套字典中访问值</h2>
+
+<div class="code-example">
+<h3>示例:从嵌套字典中访问值</h3>
+
+<pre>
+<code class="php">
+D={ 
+   'D1':{2:4,3:9},
+   'D2':{4:64,5:125} 
+}
+print(D['D1'])
+print(D['D2'])
+print(D['D1'][3])
+print(D['D2'][5])
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+{2: 4, 3: 9}
+{4: 64, 5: 125}
+9
+125</samp>
+<samp>
+</samp></pre>
+</div>
+
+<h2>如何修改 Python 集</h2>
+
+<p id="modify">字典的可变行为使得通过添加单个或一组条目或替换现有值来修改字典成为可能。向字典添加条目的三种方法如下。</p>
+
+<ol>
+ <li>
+ <p>向空字典添加单个条目</p>
+
+ <div class="code-example">
+ <h3>示例:如何向空集合添加元素</h3>
+
+ <pre>
+<code class="php">Student ={}
+Student[' First_Name']='Charles'
+Student['Last_Name'] = 'Smith'
+print("\n Dictionary after adding two entries one at a time :",Student)
+ </code>
+</pre>
+ </div>
+
+ <p><strong>输出:</strong></p>
+
+ <div class="output">
+ <pre>
+<samp>
+Dictionary after adding two entries one at a time :
+{' First_Name': 'Charles', 'Last_Name': 'Smith'}
+</samp></pre>
+ </div>
+ </li>
+ <li><strong>update()</strong> function : to add multiple entries to dictionary in one shot
+ <div class="code-example">
+ <h3>示例:如何在一个镜头中添加多个元素</h3>
+
+ <pre>
+<code class="php">
+Student = {' First_Name': 'Charles', 'Last_Name': 'Smith'}
+Student.update({'ID':10001, 'Department':'Science'})
+print("\n Dictionary after adding multiple entries in one shot :", Student)
+ </code>
+</pre>
+ </div>
+
+ <p><strong>输出:</strong></p>
+
+ <div class="output">
+ <pre>
+<samp>
+Dictionary after adding multiple entries in one shot :
+{' First_Name': 'Charles', 'Last_Name': 'Smith', 'ID': 10001, 'Department': 'Science'}
+</samp></pre>
+ </div>
+ </li>
+ <li>Nesting a dictionary by adding another dictionary
+ <div class="code-example">
+ <h3>示例:向现有词典添加词典</h3>
+
+ <pre>
+<code class="php">Student = {' First_Name': 'Charles', 'Last_Name': 'Smith', 'ID': 10001, 'Department': 'Science'}
+Student['Marks'] ={'Physics':100 ,'Chemistry':98}
+print("\n Dictionary after nesting : \n ",Student)
+</code>
+</pre>
+ </div>
+
+ <p><strong>输出:</strong></p>
+
+ <div class="output">
+ <pre>
+<samp>Dictionary after nesting :
+{' First_Name': 'Charles', 'Last_Name': 'Smith', 'ID': 10001, 'Department': 'Science', 'Marks': {'Physics': 100, 'Chemistry': 98}}
+</samp></pre>
+ </div>
+ </li>
+</ol>
+
+<p>我们还可以通过更改或替换现有值来修改字典。这可以通过引用它的键来完成。在下面的示例中，通过引用其键 Last_Name，将现有值 Smith 更改为 David。</p>
+
+<p>我们还可以通过更改或替换现有值来修改字典。这可以通过引用它的键来完成。在下面的示例中，通过引用其键 Last_Name，将现有值 Smith 更改为 David。</p>
+
+<div class="code-example">
+<h3>示例:更改字典中的值</h3>
+
+<pre>
+<code class="php">
+Student = {' First_Name': 'Charles', 'Last_Name': 'Smith'}
+Student['Last_Name']='David'
+print(Student)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>{' First_Name': 'Charles', 'Last_Name': 'David'}</samp></pre>
+</div>
+
+<h2>如何在 Python 中从字典中移除元素</h2>
+
+<p id="remove">修改字典的另一种方法是移除其中的元素。有各种方法可以删除字典中的元素。它们列在下面。</p>
+
+<ol>
+ <li><strong>pop()</strong> Method: is a built-in function in a dictionary. It is used to remove a distinct item from a dictionary by referring to its key and this method returns the removed value.
+
+ <div class="code-example">
+ <h3>示例:使用 pop()方法从字典中移除元素</h3>
+
+ <pre>
+<code class="php">
+Student = {' First_Name': 'Charles', 'Last_Name': 'Smith'}
+print(Student.pop('Last_Name'))
+print("Dictionary after removal is:",Student)
+ </code>
+</pre>
+ </div>
+
+ <p><strong>输出:</strong></p>
+
+ <div class="output">
+ <pre>
+<samp>
+Smith
+Dictionary after removal is: {' First_Name': 'Charles'}
+</samp></pre>
+ </div>
+ </li>
+ <li><strong>popitem()</strong> Method: is a built-in function used to remove the last inserted key-value pair from the dictionary and will return the key-value pairs.
+ <div class="code-example">
+ <h3>示例:使用 popitem()方法从字典中移除元素</h3>
+
+ <pre>
+<code class="php">
+Student = {' First_Name': 'Charles', 'Last_Name': 'Smith','Age':27}
+print(Student.popitem())
+print("Dictionary after removal is:",Student)
+ </code>
+</pre>
+ </div>
+
+ <p><strong>输出:</strong></p>
+
+ <div class="output">
+ <pre>
+<samp>
+('Age', 27)
+</samp></pre>
+ </div>
+ </li>
+ <li><strong>clear()</strong> Method: is a built-in function used to remove or clear all the elements in a dictionary.
+ <div class="code-example">
+ <h3>示例:使用 clear()方法移除元素</h3>
+
+ <pre>
+<code class="php">
+Student = {' First_Name': 'Charles', 'Last_Name': 'Smith','Age':27}
+print(Student.clear())
+print("Dictionary after removal is:",Student)
+ </code>
+</pre>
+ </div>
+
+ <p><strong>输出:</strong></p>
+
+ <div class="output">
+ <pre>
+<samp>None
+</samp></pre>
+ </div>
+ </li>
+ <li><strong>del keyword:</strong> can be used to remove either individual elements or the entire dictionary itself.
+ <div class="code-example">
+ <h3>示例:使用 del 关键字移除元素</h3>
+
+ <pre>
+<code class="php">
+Student = {' First_Name': 'Charles', 'Last_Name': 'Smith','Age':27}
+del Student['Age']
+print("Dictionary after removal is:",Student)
+del Student
+print("Dictionary after removal is:",Student)
+</code>
+</pre>
+ </div>
+
+ <p><strong>输出:</strong></p>
+
+ <div class="output">
+ <pre>
+<samp>Dictionary after removal is: {' First_Name': 'Charles', 'Last_Name': 'Smith'}
+    print("Dictionary after removal is:",Student)
+NameError: name 'Student' is not defined
+</samp></pre>
+ </div>
+ </li>
+</ol>
+
+<h2>如何在 Python 字典中执行成员资格验证</h2>
+
+<p id="member">与其他数据类型一样，我们可以使用成员操作符来验证字典中键的存在。这两个成员操作符是:</p>
+
+<ul>
+ <li>中的<strong>:只有当关键字出现在字典中时才返回真。</strong></li>
+ <li><strong>不在</strong>中:字典中没有关键字时返回 false。</li>
+</ul>
+
+<div class="code-example">
+<h3>示例:成员资格验证</h3>
+
+<pre>
+<code class="php">
+D ={
+   0:'Red',
+   2:'Green',
+   4:'Blue'
+   }
+print(0 in D)
+print(3 not in D)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>True
+True
+</samp></pre>
+</div>
+
+<h2>Python 字典内置函数</h2>
+
+<p id="functions">为了完成一些特定的任务，python 有一些内置的字典功能。它们列在下表中。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>功能</th>
+   <th>描述</th>
+  </tr>
+  <tr>
+   <td>全部()</td>
+   <td>如果字典中的所有键都为真，则返回真</td>
+  </tr>
+  <tr>
+   <td>任何()</td>
+   <td>如果字典中的任何键为真，则返回真</td>
+  </tr>
+  <tr>
+   <td>len()</td>
+   <td>返回字典中键值对的数量</td>
+  </tr>
+  <tr>
+   <td>已排序()</td>
+   <td>返回已排序的键列表</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>Python 字典方法</h2>
+
+<p id="methods">像函数一样，Python 字典也有执行特殊任务和返回特定值的方法。它们在下表中列出。</p>
+
+<table>
+ <tbody>
+  <tr>
+   <th>方法</th>
+   <th>描述</th>
+  </tr>
+  <tr>
+   <td><a href="../python/methods/clear">晴()</a></td>
+   <td>清除字典中的所有项目</td>
+  </tr>
+  <tr>
+   <td>复制()</td>
+   <td>返回字典的一个简单副本</td>
+  </tr>
+  <tr>
+   <td>fromkeys(seq[，v])</td>
+   <td>返回一个新字典，其中包含来自 seq 的键和相关值 v。</td>
+  </tr>
+  <tr>
+   <td>得到(钥匙[d])</td>
+   <td>返回键的关联值。</td>
+  </tr>
+  <tr>
+   <td>项目()</td>
+   <td>返回键值对格式的列表</td>
+  </tr>
+  <tr>
+   <td>按键()</td>
+   <td>返回字典中的键列表</td>
+  </tr>
+  <tr>
+   <td>砰的一声</td>
+   <td>移除字典中引用其键的元素</td>
+  </tr>
+  <tr>
+   <td>popitem()</td>
+   <td>移除并返回最后插入的条目</td>
+  </tr>
+  <tr>
+   <td>setdefault（key[，d]）</td>
+   <td>如果密钥不可用，则将密钥设置为默认值</td>
+  </tr>
+  <tr>
+   <td>更新()</td>
+   <td>用新条目或替换现有条目返回更新的词典。</td>
+  </tr>
+  <tr>
+   <td>值()</td>
+   <td>返回字典中的值列表</td>
+  </tr>
+ </tbody>
+</table>
+                       &#13;
+                       &#13;
+                       <!-- End Content Area -->&#13;
+&#13;
+                        
+</body>
+</html>

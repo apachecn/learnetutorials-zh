@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Python Program to remove punctuation mark from the string</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序删除字符串中的标点符号</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/remove-punctuation-mark">https://learnet utortials . com/python/programs/remove-标点符号</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要删除字符串中的标点符号。这是一个初级 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/syntax-comments" title="Python Syntax"> Python 语法</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in Python"> Python 循环</a></li>
+ <li><a href="../../python/decision-making-statements" title="Python decision making statements"> Python 决策语句</a></li>
+</ul>
+
+<h2>什么是标点符号？</h2>
+
+<p>标点符号是在字符串或句子中插入一些特殊符号的做法，以使其更有意义和好看。在这个字符串 python 程序中，我们必须删除字符串或句子中的所有标点符号。标点符号用于获得字符串的适当影响。</p>
+
+<h2>python 中的标点符号怎么去掉？</h2>
+
+<p>比如<em> <strong>“不要出门”，</strong> </em> <strong>她说</strong>。在这个基本的 python 程序中，我们需要去掉标点符号，然后字符串会是‘不要出去’她说。</p>
+
+<p>在这个 python 程序示例中，我们将标点符号定义为字符串中使用的 24 个符号。现在，我们在 python 中接受来自用户的字符串，并将其存储在一个变量中，我们使用 python for 循环遍历直到字符串结束。用一个<code>if condition</code>检查是否不是标点符号；如果是这样，我们将字符添加到变量中并打印该变量。</p>
+
+<h3>算法</h3>
+
+<p><strong>步骤 1: </strong>使用变量定义标点符号。</p>
+
+<p><strong> STEP 2: </strong>使用 python 编程语言中的输入函数接受用户的输入。</p>
+
+<p><strong>步骤 3: </strong>初始化一个<strong>无点</strong>变量。</p>
+
+<p><strong>第四步:</strong>用<code>for loop</code>穿过绳子。</p>
+
+<p><strong>步骤 5: </strong>使用<code>if</code>条件检查字符，并使用 python 语言将该字符添加到<strong>无点</strong>变量中。</p>
+
+<p><strong>步骤 6: </strong>打印<strong>无点</strong>字符串。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">punctuation = '''''!()-[]{};:'"\,&lt;&gt;./?@#$%^&amp;*_~'''  
+
+str = input("Enter a string: ") 
+ 
+no_punct = ""  
+
+for char in str:  
+
+   if char not in punctuation:  
+
+       no_punct = no_punct + char  
+
+print(no_punct)  </code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter the string : "Don't go outside," she said.
+
+Dont go outside she said</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

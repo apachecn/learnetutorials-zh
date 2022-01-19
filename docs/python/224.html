@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Python append()</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 追加()</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/methods/append">https://learnetutorials.com/python/methods/append</a></blockquote>&#13;
+                         &#13;
+                        <p>python 中的 append()函数有助于将给定的项目添加到现有列表的末尾。</p>
+
+<div class="syntax">
+<pre>
+<code class="python">
+<strong>list.append(item)</strong> #where item can be numbers, strings, dictionaries etc
+ </code>
+</pre>
+</div>
+
+<h2>追加()参数:</h2>
+
+<p>append()函数接受一个参数。</p>
+
+<table>
+ <thead>
+  <tr>
+   <th scope="col">参数</th>
+   <th scope="col">描述</th>
+   <th scope="col">必需/可选</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>项目</td>
+   <td>要添加到列表末尾的项目</td>
+   <td>需要</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2>追加()返回值</h2>
+
+<p>这个方法不返回任何值，这意味着它不返回任何值。实际上，这个方法更新了现有的列表。</p>
+
+<h2>Python 中 append()方法的示例</h2>
+
+<div class="code-example">
+<h3>示例 append()在 python 中是如何工作的？</h3>
+
+<pre>
+<code class="python">
+# flowers list
+flowers = ['Rose', 'Lotus', 'Jasmine']
+
+# 'Sunflower' is appended to the flowers list
+flowers.append('Sunflower')
+
+# Updated flowers list
+print('Updated flowers list: ', flowers )
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+Updated flowers list:  ['Rose', 'Lotus', 'Jasmine', 'Sunflower']
+</samp></pre>
+</div>
+
+<div class="code-example">
+<h3>示例 2:如何使用 append()向列表中添加列表</h3>
+
+<pre>
+<code class="python">
+# flowers list
+flowers = ['Rose', 'Lotus', 'Jasmine']
+
+
+# flowers list
+flowers = ['Rose', 'Lotus', 'Jasmine']
+
+# list of vegetables 
+vegetables = ['Tomato', 'Potato']
+
+# appending vegetables list to the flowers list
+flowers.append(vegetables)
+
+print('Updated list: ', flowers)
+ </code>
+</pre>
+</div>
+
+<p><strong>输出:</strong></p>
+
+<div class="output">
+<pre>
+<samp>
+
+Updated list:  ['Rose', 'Lotus', 'Jasmine', ['Tomato', 'Potato']]
+</samp></pre>
+</div>
+                        
+</body>
+</html>

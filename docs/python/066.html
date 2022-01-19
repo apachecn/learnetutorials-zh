@@ -1,0 +1,153 @@
+<html>
+<head>
+<title>Python Program to simple calculator</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>Python 程序到简单计算器</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/calculator-program">https://learnet utortials . com/python/programs/calculator-program</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们必须制作一个计算器。这是一个初级 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/python-functions-tutorials" title="Python functions"> Python 函数</a></li>
+ <li><a href="../../python/python-operators" title="Operators in Python"> Python 运算符</a></li>
+ <li><a href="../../python/decision-making-statements" title="Python decision making statements"> Python 决策语句</a></li>
+</ul>
+
+<h2>如何用 python 制作计算器？</h2>
+
+<p>在这个 python 程序中，我们必须制作一个简单的计算器。计算器用于在 python 中进行算术运算，如加法、减法、乘法和除法。在这个 python 程序中，我们使用用户定义的函数进行加法、减法、乘法和除法。为此，我们使用<strong> def </strong>来定义诸如加、减、乘、除等函数。我们让用户使用 python 中的 if 条件选择操作，并将参数传递给相应的函数，并从函数返回结果，使用 python 中的<code>print</code>语句打印结果。</p>
+
+<h3>算法</h3>
+
+<p><strong> STEP 1: </strong>打印加减乘除等简单操作，使用 python 编程中的输入功能接受用户的输入并保存到选项中。</p>
+
+<p><strong>步骤 2: </strong>接受用户的两个数字，并使用<strong> int() f </strong>功能将其转换为整数。</p>
+
+<p><strong> STEP 3: </strong>使用 if 语句检查选择是否为 1，如果条件得到满足，它将调用函数将数字相加并作为参数传递，并打印返回值。</p>
+
+<p><strong> STEP 4: </strong>使用<code>elif</code>语句检查选择是否为 2，如果是，则调用函数将两个数字相减并作为参数传递，并打印返回值。</p>
+
+<p><strong> STEP 5: </strong>使用<code>elif</code> <strong> </strong>语句检查选择是否为 3，如果是，调用函数乘法，将两个数字作为参数传递并打印返回值。</p>
+
+<p><strong> STEP 6: </strong>使用<code>elif</code> <strong> </strong>语句检查选择是否为 4，如果是，调用名为 divide 的函数，传递参数并打印返回值。</p>
+
+<p><strong> STEP 7: </strong>使用 else 语句作为打印无效输入。使用 def 定义函数，加、减、乘、除并传递程序参数，返回函数中相应操作的结果。</p>
+
+<h4><strong>用户功能添加(x，y): </strong></h4>
+
+<p><strong> STEP 1: </strong>将参数<strong> x </strong>和<strong> y </strong>相加，结果返回主程序。</p>
+
+<h4><strong>用户功能减去(x，y): </strong></h4>
+
+<p><strong>步骤 1: </strong>减去参数 x 任意 y 返回结果。</p>
+
+<h4><strong>用户函数乘(x，y): </strong></h4>
+
+<p><strong> STEP 1: </strong>将参数 x 和 y 相乘，返回结果。</p>
+
+<h4><strong>用户功能划分(x，y) </strong></h4>
+
+<p><strong>第一步:</strong>将参数<strong> x </strong>和<strong> y </strong>相除，返回结果。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">def add(x, y):  
+
+   """This function adds two numbers"""
+
+   return x + y 
+
+def subtract(x, y): 
+
+   """This function subtracts two numbers""" 
+
+   return x - y 
+
+def multiply(x, y): 
+
+   """This function multiplies two numbers""" 
+
+   return x * y 
+
+def divide(x, y): 
+
+   """This function divides two numbers"""  
+
+   return x / y  
+
+# take input from the user  
+
+print("Select operation.")  
+
+print("1.Add")  
+
+print("2.Subtract")  
+
+print("3.Multiply")  
+
+print("4.Divide")  
+  
+choice = input("Enter choice(1/2/3/4):")  
+  
+num1 = int(input("Enter first number: "))  
+
+num2 = int(input("Enter second number: "))  
+  
+if choice == '1':  
+
+   print(num1,"+",num2,"=", add(num1,num2))  
+  
+elif choice == '2':  
+
+   print(num1,"-",num2,"=", subtract(num1,num2))  
+  
+elif choice == '3':  
+
+   print(num1,"*",num2,"=", multiply(num1,num2))  
+
+elif choice == '4':  
+
+   print(num1,"/",num2,"=", divide(num1,num2))  
+
+else:  
+
+   print("Invalid input")  </code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Select Operation
+
+1. Add
+2. Subtract
+3. Multiply
+4. Divide
+
+Enter the choice 1/2/3/4
+1
+
+Enter first number : 4
+Enter second number : 7
+
+4 + 7 = 11</samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>

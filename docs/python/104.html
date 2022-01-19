@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Python Program to display an identity matrix</title>
+<link href="../Styles/Style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<h1>显示单位矩阵的 Python 程序</h1>
+<blockquote>原文:<a href="https://learnetutorials.com/python/programs/display-identity-matrix">https://learnet utortials . com/python/programs/display-identity-matrix</a></blockquote>&#13;
+                            &#13;
+                           <!-- Content Area -->&#13;
+                                                         <div id="pgm-list" style="">&#13;
+                                                                <div class="single-pgm">&#13;
+                                  <p>在这个简单的 python 程序中，我们需要打印一个身份矩阵。这是一个矩阵 python 程序。</p>
+
+<p>要理解这个例子，您应该了解以下 Python 编程主题:</p>
+
+<ul>
+ <li><a href="../../python/python-lists" title="Python list"> Python 列表</a></li>
+ <li><a href="../../python/python-loop-tutorials" title="Loops in Python"> Python 循环</a></li>
+ <li><a href="../../python/decision-making-statements" title="Python decision making statements"> Python 决策语句</a></li>
+</ul>
+
+<h2>什么是身份矩阵？</h2>
+
+<p>在这个关于矩阵的简单 python 程序中，我们必须显示一个身份矩阵。单位矩阵是任意阶的方阵，其中主对角矩阵中的元素是 1，而矩阵中的所有其他元素都是 0。在这个矩阵 python 程序中，我们需要打印一个用户输入订单的身份矩阵。对角矩阵可以表示为 A =</p>
+
+<p>[ 1 0 0 ]</p>
+
+<p>[ 0 1 0 ]</p>
+
+<p>[ 0 0 1 ]</p>
+
+<p>我们检查对角线有 1，所有其他元素都是 0。</p>
+
+<h2>我们如何用 python 打印一个身份矩阵？</h2>
+
+<p>为了在这个 python 程序中应用标识矩阵逻辑，我们从用户那里接受矩阵的顺序，并在 python 中使用两个嵌套 For 循环来遍历矩阵中的行和列。对于单位矩阵中的对角线值，行号和列号必须相同。像矩阵[1，1] [2，2] [3，3]。所以我们必须用 python 中的 if 条件来检查条件<strong> i = j </strong>，如果条件满足就打印一个。否则我们打印零。毕竟，<strong>对于循环</strong>迭代，我们打印身份矩阵。</p>
+
+<h3>算法</h3>
+
+<p><strong>步骤 1: </strong>使用输入法接受用户的订单，并使用 Python 编程语言中的<code>int()</code>将字符串转换为整数。</p>
+
+<p><strong>步骤 2: </strong>使用从零到 n 的外部<code>for loop</code>迭代矩阵的行。</p>
+
+<p><strong>步骤 3: </strong>使用内部<code>for loop</code>迭代矩阵每行的列。</p>
+
+<p><strong>步骤 4: </strong>使用条件“<code>if</code>检查“<strong>I = j”</strong>并打印<strong> 1 </strong>如果条件满足。</p>
+
+<p><strong>第 5 步:</strong>如果条件失败，在位置上打印零。使用 python 基本语法。</p>
+
+<p><strong>注意:</strong>我们使用 sep 参数打印分隔符值，并使用“<strong> end= </strong>”使用 print 语句追加值。</p>
+                                   </div>&#13;
+                                  <h2>Python 源代码</h2>&#13;
+                                  <div class="code-example">&#13;
+                                      <pre>&#13;
+                                          <code class="profile hljs">n=int(input("Enter a number: "))
+for i in range(0,n):
+    for j in range(0,n):
+        if(i==j):
+            print("1",sep=" ",end=" ")
+        else:
+            print("0",sep=" ",end=" ")
+    print()</code>&#13;
+                                      </pre>&#13;
+                                      <!-- <div class="d-flex justify-content-between">
+                                          <a class="btn btn-outline-primary btn-sm run-btn">Run Code >></a>
+                                      </div> -->&#13;
+                                  </div>&#13;
+                                  <h2>输出</h2>&#13;
+                                   <div class="output">&#13;
+                                       <pre><samp>Enter a number: 4
+1 0 0 0 
+0 1 0 0 
+0 0 1 0 
+0 0 0 1 </samp></pre>&#13;
+                                   </div>&#13;
+&#13;
+                                                 &#13;
+                             </div>&#13;
+&#13;
+                           <!-- End Content Area -->&#13;
+&#13;
+                            
+</body>
+</html>
