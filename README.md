@@ -10,6 +10,19 @@
 * [在线阅读（Gitee）](https://apachecn.gitee.io/doc-template/)
 * [ApacheCN 学习资源](http://docs.apachecn.org/)
 
+## 目录
+
++   [人工智能中文教程](docs/ai/README.md)
++   [C 中文教程](docs/c/README.md)
++   [Golang 中文教程](docs/golang/README.md)
++   [HTML 中文教程](docs/html/README.md)
++   [Java 中文教程](docs/java/README.md)
++   [机器学习中文教程](docs/ml/README.md)
++   [PHP 中文教程](docs/php/README.md)
++   [Python 中文教程](docs/python/README.md)
++   [R 中文教程](docs/r/README.md)
++   [网络安全中文教程](docs/sec/README.md)
+
 ## 贡献指南
 
 本项目需要校对，欢迎大家提交 Pull Request。
