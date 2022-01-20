@@ -245,7 +245,7 @@
         +   [Python `isdisjoint()`](244.md)
         +   [Python `issubset()`](245.md)
         +   [Python `pop()`](246.md)
-        +   [Python `symmetric_difference()](247.md)
+        +   [Python `symmetric_difference()`](247.md)
         +   [Python `symmetric_difference_update()`](248.md)
         +   [Python `union()`](249.md)
         +   [Python `update()`](250.md)
